@@ -1,0 +1,41 @@
+{
+  "name": "popov/shop-it",
+  "license": "BSD-3-Clause",
+  "type": "magento-module",
+  "description": "Shop IT",
+  "authors":[{
+    "name": "Serhii Popov"
+  }],
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*",
+    "aydin-hassan/magento-core-composer-installer" : "~1.0",
+    "firegento/magento" : "1.9.3.2",
+    "popov/magento-deleter": "dev-master",
+    "popov/magento-magmi-import": "dev-master"
+  },
+  "require-dev": {
+    "ecomdev/mage-ci": "dev-master"
+  },
+  "repositories":[
+    {
+      "type":"composer",
+      "url":"https://packages.firegento.com"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/popovsergiy/magento-deleter.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/popovsergiy/magento-magmi-import.git"
+    }
+  ],
+  "extra": {
+    "magento-root-dir": "htdocs/",
+    "magento-deploystrategy": "symlink",
+
+    "magento-force": true
+  }
+}
+
+
