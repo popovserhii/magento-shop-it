@@ -1,0 +1,19 @@
+<?php
+/**
+ * MageWorx
+ * MageWorx XSitemap Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_XSitemap
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+?>
+<?php $_items = $this->getCollection(); ?>
+<?php if ($_items->getSize()): ?>
+<h3><?php echo $this->__('Pages') ?></h3>
+<ul class="mageworx-pages">
+<?php foreach ($_items as $_item): ?>
+<li class="page-url"><a href="<?php echo $this->getItemUrl($_item) ?>"><?php echo $_item->title ?></a></li>
+<?php endforeach; ?>
+</ul>
+<?php endif ?>

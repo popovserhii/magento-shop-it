@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoXTemplates Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoXTemplates
+ * @copyright  Copyright (c) 2016 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+<config>
+    <modules>
+        <MageWorx_SeoXTemplates>
+            <version>1.5.0</version>
+        </MageWorx_SeoXTemplates>
+    </modules>
+    <admin>
+        <routers>
+            <adminhtml> 
+                <args> 
+                    <modules> 
+                        <MageWorx_SeoXTemplates after="Mage_Adminhtml">MageWorx_SeoXTemplates_Adminhtml</MageWorx_SeoXTemplates> 
+                    </modules> 
+                </args> 
+            </adminhtml> 
+        </routers> 
+    </admin>
+    <global>
+        <models>
+            <mageworx_seoxtemplates>
+                <class>MageWorx_SeoXTemplates_Model</class>
+                <resourceModel>mageworx_seoxtemplates_mysql4</resourceModel>
+            </mageworx_seoxtemplates>
+            <mageworx_seoxtemplates_mysql4>
+                <class>MageWorx_SeoXTemplates_Model_Mysql4</class>
+                <entities>
+                    <template_product>
+                        <table>mageworx_seoxtemplates_template_product</table>
+                    </template_product>
+                    <template_relation_product>
+                        <table>mageworx_seoxtemplates_template_relation_product</table>
+                    </template_relation_product>
+                    <template_relation_attributeset>
+                        <table>mageworx_seoxtemplates_template_relation_attributeset</table>
+                    </template_relation_attributeset>
+                    <template_category>
+                        <table>mageworx_seoxtemplates_template_category</table>
+                    </template_category>
+                    <template_relation_category>
+                        <table>mageworx_seoxtemplates_template_relation_category</table>
+                    </template_relation_category>
+                     <template_blog>
+                        <table>mageworx_seoxtemplates_template_blog</table>
+                    </template_blog>
+                    <template_relation_blog>
+                        <table>mageworx_seoxtemplates_template_relation_blog</table>
+                    </template_relation_blog>
+                </entities>
+            </mageworx_seoxtemplates_mysql4>            
+        </models>
+        <resources>
+            <mageworx_seoxtemplates_setup>
+                <setup>
+                    <module>MageWorx_SeoXTemplates</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </mageworx_seoxtemplates_setup>
+        </resources>
+        <blocks>
+            <mageworx_seoxtemplates>
+                <class>MageWorx_SeoXTemplates_Block</class>
+            </mageworx_seoxtemplates>
+        </blocks>
+        <helpers>
+            <mageworx_seoxtemplates>
+                <class>MageWorx_SeoXTemplates_Helper</class>
+            </mageworx_seoxtemplates>
+        </helpers>       
+        <template>
+            <email>
+                <mageworx_seoxtemplates_generate_error_email_template translate="label" module="mageworx_seoxtemplates">
+                    <label>Extended SEO Templates generate Warnings</label>
+                    <file>mageworx/seoxtemplates/seoxtemplates_generate_warning.html</file>
+                    <type>text</type>
+                </mageworx_seoxtemplates_generate_error_email_template>
+            </email>
+        </template>                
+    </global>
+    <frontend>
+        <events>   
+            <catalog_product_load_after>
+                <observers>
+                    <mageworx_seoxtemplates_modify_product_properties>
+                        <class>MageWorx_SeoXTemplates_Model_Observer_Product</class>
+                        <method>updateProductProperties</method>
+                    </mageworx_seoxtemplates_modify_product_properties>
+                </observers>
+            </catalog_product_load_after>
+            <catalog_category_load_after>
+                <observers>
+                    <mageworx_seoxtemplates_modify_category_properties>
+                        <class>MageWorx_SeoXTemplates_Model_Observer_Category</class>
+                        <method>updateCategoryProperties</method>
+                    </mageworx_seoxtemplates_modify_category_properties>
+                </observers>
+            </catalog_category_load_after>
+            <core_block_abstract_to_html_before>
+                <observers>
+                    <seoxtemplates_modify_category_head>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoXTemplates_Model_Observer_Category</class>
+                        <method>modifyCategoryAndHead</method>
+                    </seoxtemplates_modify_category_head>
+                </observers>
+            </core_block_abstract_to_html_before>
+            <!-- Product Seo Name instead Product Name for <h1> tags only. -->
+            <!--core_block_abstract_to_html_after>
+                <observers>
+                    <mageworx_seoxtemplates_replace_name>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoXTemplates_Model_Observer_Seoname</class>
+                        <method>replaceName</method>
+                    </mageworx_seoxtemplates_replace_name>
+                </observers>
+            </core_block_abstract_to_html_after-->
+        </events>
+    </frontend>
+    <adminhtml>
+        <events>   
+            <model_delete_after>
+                <observers>
+                    <mageworx_seoxtemplates_delete_blog_post_relation>
+                        <class>MageWorx_SeoXTemplates_Model_Observer_Blog</class>
+                        <method>deleteBlogTemplateRelations</method>
+                    </mageworx_seoxtemplates_delete_blog_post_relation>
+                </observers>                 
+            </model_delete_after>
+        </events>
+        <layout>
+            <updates>
+                <mageworx_seoxtemplates>
+                    <file>mageworx_seoxtemplates.xml</file>
+                </mageworx_seoxtemplates>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <MageWorx_SeoXTemplates>
+                    <files>
+                        <default>MageWorx_SeoXTemplates.csv</default>
+                    </files>
+                </MageWorx_SeoXTemplates>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <mageworx_seo>
+            <mageworx_seoxtemplates>                
+                <template_limit>50</template_limit>
+                <crop_default_category>0</crop_default_category>
+                <enabled_cron_notify>0</enabled_cron_notify>
+                <error_email><![CDATA[]]></error_email>
+                <error_email_template>mageworx_seoxtemplates_generate_error_email_template</error_email_template>
+                <error_email_identity>general</error_email_identity>
+            </mageworx_seoxtemplates>
+        </mageworx_seo>
+    </default>
+    <crontab>
+        <jobs>
+            <mageworx_seoxtemplates_product_meta_title_generate> 
+                <schedule>
+                    <cron_expr>0 1 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mageworx_seoxtemplates/observer_cron::scheduledForPmtGenerateTemplates</model>
+                </run>
+            </mageworx_seoxtemplates_product_meta_title_generate>
+            <mageworx_seoxtemplates_product_meta_description_generate>
+                <schedule>
+                    <cron_expr>20 1 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mageworx_seoxtemplates/observer_cron::scheduledForPmdGenerateTemplates</model>
+                </run>
+            </mageworx_seoxtemplates_product_meta_description_generate>
+            <mageworx_seoxtemplates_product_meta_keywords_generate> 
+                <schedule>
+                    <cron_expr>40 1 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mageworx_seoxtemplates/observer_cron::scheduledForPmkGenerateTemplates</model>
+                </run>
+            </mageworx_seoxtemplates_product_meta_keywords_generate>
+            <mageworx_seoxtemplates_product_name_generate>
+                <schedule>
+                    <cron_expr>0 2 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mageworx_seoxtemplates/observer_cron::scheduledForPnGenerateTemplates</model>
+                </run>
+            </mageworx_seoxtemplates_product_name_generate>
+            <mageworx_seoxtemplates_product_url_key_generate> 
+                <schedule>
+                    <cron_expr>20 2 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mageworx_seoxtemplates/observer_cron::scheduledForPukGenerateTemplates</model>
+                </run>
+            </mageworx_seoxtemplates_product_url_key_generate>
+            <mageworx_seoxtemplates_product_description_generate> 
+                <schedule>
+                    <cron_expr>40 2 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mageworx_seoxtemplates/observer_cron::scheduledForPdGenerateTemplates</model>
+                </run>
+            </mageworx_seoxtemplates_product_description_generate>
+            <mageworx_seoxtemplates_product_short_description_generate> 
+                <schedule>
+                    <cron_expr>0 3 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mageworx_seoxtemplates/observer_cron::scheduledForPsdGenerateTemplates</model>
+                </run>
+            </mageworx_seoxtemplates_product_short_description_generate>            
+            <mageworx_seoxtemplates_product_image_alt_generate>
+                <schedule>
+                    <cron_expr>20 3 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mageworx_seoxtemplates/observer_cron::scheduledForPiaGenerateTemplates</model>
+                </run>
+            </mageworx_seoxtemplates_product_image_alt_generate>
+            
+            <mageworx_seoxtemplates_category_meta_title_generate>
+                <schedule>
+                    <cron_expr>40 3 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mageworx_seoxtemplates/observer_cron::scheduledForCmtGenerateTemplates</model>
+                </run>
+            </mageworx_seoxtemplates_category_meta_title_generate>
+            <mageworx_seoxtemplates_category_meta_description_generate> 
+                <schedule>
+                    <cron_expr>0 4 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mageworx_seoxtemplates/observer_cron::scheduledForCmdGenerateTemplates</model>
+                </run>
+            </mageworx_seoxtemplates_category_meta_description_generate>
+            <mageworx_seoxtemplates_category_meta_keywords_generate> 
+                <schedule>
+                    <cron_expr>20 4 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mageworx_seoxtemplates/observer_cron::scheduledForCmkGenerateTemplates</model>
+                </run>
+            </mageworx_seoxtemplates_category_meta_keywords_generate>
+            <mageworx_seoxtemplates_category_description_generate> 
+                <schedule>
+                    <cron_expr>40 4 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mageworx_seoxtemplates/observer_cron::scheduledForCdGenerateTemplates</model>
+                </run>
+            </mageworx_seoxtemplates_category_description_generate>
+            <mageworx_seoxtemplates_blog_title_generate> 
+                <schedule>
+                    <cron_expr>0 5 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mageworx_seoxtemplates/observer_cron::scheduledForBtGenerateTemplates</model>
+                </run>
+            </mageworx_seoxtemplates_blog_title_generate>
+            <mageworx_seoxtemplates_blog_meta_description_generate> 
+                <schedule>
+                    <cron_expr>10 5 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mageworx_seoxtemplates/observer_cron::scheduledForBmdGenerateTemplates</model>
+                </run>
+            </mageworx_seoxtemplates_blog_meta_description_generate>
+            <mageworx_seoxtemplates_blog_meta_keywords_generate> 
+                <schedule>
+                    <cron_expr>20 5 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mageworx_seoxtemplates/observer_cron::scheduledForBmkGenerateTemplates</model>
+                </run>
+            </mageworx_seoxtemplates_blog_meta_keywords_generate>        
+        </jobs>
+    </crontab>
+</config>

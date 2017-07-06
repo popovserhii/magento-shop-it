@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx_SeoRedirects Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoRedirects
+ * @copyright  Copyright (c) 2016 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+<config>
+    <menu>
+        <catalog translate="title" module="catalog">
+            <children>
+                <mageworx_seoredirects translate="title" module="mageworx_seoredirects">
+                    <title>SEO Redirects</title>
+                    <sort_order>100</sort_order>
+                    <children>
+                        <product translate="title">
+                            <title>For Deleted Products</title>
+                            <sort_order>1</sort_order>
+                            <action>adminhtml/mageworx_seoredirects_redirect_product</action>
+                        </product>
+                        <settings translate="title">
+                            <title>Settings</title>
+                            <sort_order>5</sort_order>
+                            <action>adminhtml/system_config/edit/section/mageworx_seo/</action>
+                        </settings>
+                    </children>
+                </mageworx_seoredirects>
+            </children>
+        </catalog>        
+    </menu>    
+    <acl>
+        <resources>
+            <admin>
+                <children>                    
+                    <catalog translate="title" module="catalog">
+                        <children>
+                            <mageworx_seoredirects>
+                                <title>SEO Redirects</title>
+                                <children>
+                                    <product translate="title">
+                                        <title>For Deleted Products</title>
+                                        <sort_order>5</sort_order>
+                                    </product>
+                                    <settings translate="title">
+                                        <title>Settings</title>
+                                        <sort_order>30</sort_order>
+                                    </settings>
+                                </children>
+                            </mageworx_seoredirects>
+                        </children>
+                    </catalog>                   
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mageworx_seo>
+                                        <title>MageWorx &gt; SEO Suite</title>
+                                        <sort_order>600</sort_order>
+                                        <children>                                         
+                                            <seoredirects>
+                                                <title>SEO Redirects</title>
+                                                <sort_order>100</sort_order>
+                                            </seoredirects>
+                                        </children>
+                                    </mageworx_seo>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

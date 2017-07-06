@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MageWorx_SeoRedirects>
+            <active>true</active>
+            <codePool>community</codePool>
+            <extension_name>SEO Redirects</extension_name>
+            <depends>
+                <MageWorx_SeoAll />
+            </depends>
+        </MageWorx_SeoRedirects>
+    </modules>
+</config>

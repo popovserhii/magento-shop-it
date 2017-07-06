@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoCrossLinks Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoCrossLinks
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+<config>
+    <sections>
+        <mageworx_seo translate="label" module="mageworx_seocrosslinks">
+            <label>SEO Suite Ultimate</label>
+            <tab>mageworx</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>600</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <seocrosslinks>
+                    <label>SEO Cross Links</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>15</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label comment">
+                            <label><![CDATA[Enable ▾]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[If enabled, the Cross Links will be inserted on the fly on all the relevant pages.<br>Also, Cross Links can be individually disabled for any Product/Category page (in the pages Meta Information Tab).]]></comment>
+                        </enabled>
+                        <replacement_count_product translate="label comment">
+                            <label><![CDATA[Total Max Replacement Count<br>for Product Page]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>22</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>required-entry validate-percents</validate>
+                            <comment><![CDATA[Cross Links can be displayed in the description fields]]></comment>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </replacement_count_product>
+                        <replacement_count_category translate="label comment">
+                            <label><![CDATA[Total Max Replacement Count<br>for Category Page]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>26</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>required-entry validate-percents</validate>
+                            <comment><![CDATA[Cross Links can be displayed in the description fields]]></comment>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </replacement_count_category>
+                        <replacement_count_cms_page translate="label comment">
+                            <label><![CDATA[Total Max Replacement Count<br>for CMS Page]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>28</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>required-entry validate-percents</validate>
+                            <comment><![CDATA[Cross Links can be displayed in the content field (with the exception of the widget contents).<br>NOTE: Cross Links can not be created on the homepage.]]></comment>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </replacement_count_cms_page>
+                        <replacement_count_blog_page translate="label comment">
+                            <label><![CDATA[Total Max Replacement Count<br>for AW Blog Page]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>required-entry validate-percents</validate>
+                            <comment><![CDATA[Cross Links can be displayed in the post content field (with the exception of the widget contents).]]></comment>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </replacement_count_blog_page>
+                        <use_name_for_title translate="label">
+                            <label><![CDATA[Use Product/Category Name<br>in the Cross Link's Alt Tag]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seocrosslinks/source_title</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>0</can_be_empty>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </use_name_for_title>
+                        <product_attributes translate="label">
+                            <label><![CDATA[Replace on Product Page In]]></label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>mageworx_seocrosslinks/source_productAttributes</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>0</can_be_empty>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </product_attributes>
+                        <edit_fields_separator translate="label">
+							<label><![CDATA[Show Default Values for Cross Link Edit Page]]></label>
+							<frontend_model>mageworx_seocrosslinks/adminhtml_config_frontend_separator</frontend_model>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</edit_fields_separator>
+                        <default_reference translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Default Reference]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seocrosslinks/source_reference</source_model>
+                            <sort_order>52</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </default_reference>
+                        <default_replacement_count translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Default Replacement Count]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>54</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <validate>required-entry validate-percents</validate>
+                        </default_replacement_count>
+                        <default_priority translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Default Priority]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>56</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <validate>required-entry validate-percents</validate>
+                            <comment><![CDATA[100 is the highest priority.]]></comment>
+                        </default_priority>
+                        <default_status translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Enable by Default]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>58</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </default_status>
+                        <default_destination translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Default Values for<br>&nbsp;&nbsp;&nbsp;&nbsp;'Destination' Tab]]></label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>mageworx_seocrosslinks/source_defaultDestination</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>0</can_be_empty>
+                        </default_destination>
+                        <grig_columns_separator translate="label">
+							<label><![CDATA[Manage Columns in Cross Link Grid]]></label>
+							<frontend_model>mageworx_seocrosslinks/adminhtml_config_frontend_separator</frontend_model>
+							<sort_order>80</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</grig_columns_separator>
+                        <default_grid_columns translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Grid Columns]]></label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>mageworx_seocrosslinks/source_defaultGridColumns</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>0</can_be_empty>
+                        </default_grid_columns>
+                    </fields>
+                </seocrosslinks>
+            </groups>
+        </mageworx_seo>
+    </sections>
+</config>

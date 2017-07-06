@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoMarkup Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoMarkup
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+<layout version="0.1.0">   
+    <catalog_product_view>
+        <reference name="head">
+            <block type="mageworx_seomarkup/markup_product" name="mageworx_seomarkup_product" />
+        </reference>
+    </catalog_product_view>
+    <catalog_category_view>
+        <reference name="head">
+            <block type="mageworx_seomarkup/markup_category" name="mageworx_seomarkup_category" />
+        </reference>
+    </catalog_category_view>    
+    <cms_page_view>
+        <reference name="head">
+            <block type="mageworx_seomarkup/markup_page" name="mageworx_seomarkup_page" />
+        </reference>
+    </cms_page_view>
+    <cms_index_index>
+        <update handle="cms_page_view" />
+    </cms_index_index>
+    <default>
+        <reference name="head">
+            <block type="mageworx_seomarkup/markup_common" name="mageworx_seomarkup_common" />
+        </reference>
+    </default>
+</layout>

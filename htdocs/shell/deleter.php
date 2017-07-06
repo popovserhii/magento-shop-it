@@ -1,0 +1,1 @@
+/cygdrive/d/WebServer/git/shop-it/vendor/popov/magento-deleter/shell/deleter.php

@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoXTemplates Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoXTemplates
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+<config>    
+    <sections>
+        <mageworx_seo translate="label" module="mageworx_seoxtemplates">
+            <label>SEO Suite</label>
+            <tab>mageworx</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>600</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>        
+                <seoxtemplates>
+                    <label>SEO Extended Templates</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>15</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <use_product_seo_name translate="label">
+                            <label><![CDATA[Use Product SEO Name for Product Pages]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Product SEO Name will be displayed instead of the product name on product pages in the frontend.<br>
+                                    It is used to change the H1 tag on product pages.]]>
+                            </comment>
+                        </use_product_seo_name>
+                        <use_category_seo_name translate="label">
+                            <label><![CDATA[Use Category SEO Name for Category Pages]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>17</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Category SEO Name will be displayed instead of the category name on category pages in the frontend.<br>
+                                    It is used to change the H1 tag on category pages.]]>
+                            </comment>
+                        </use_category_seo_name>
+                        <template_limit translate="label">
+                            <label><![CDATA[Number of Items for One-Time Processing during Templates Applying]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-number validate-greater-than-zero</validate>
+                        </template_limit>
+                        <crop_root_category translate="label">
+                            <label><![CDATA[Crop Root Category from Category Template Variable [categories]]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </crop_root_category>
+                        <crop_meta_title translate="label comment">
+                            <label><![CDATA[Crop Meta Title ▾]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[It cuts the meta title if it exceeds the specified length]]></comment>
+                        </crop_meta_title>
+                        <max_title_length translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Max Length for Meta&nbsp;Title]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>required-entry validate-digits validate-greater-than-zero </validate>
+                            <comment><![CDATA[Recommended length up to 70 characters.]]></comment>
+                            <depends>
+                                <crop_meta_title>1</crop_meta_title>
+                            </depends>
+                        </max_title_length>    
+                        <crop_meta_description translate="label comment">
+                            <label><![CDATA[Crop Meta Description ▾]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[It cuts the meta description if it exceeds the specified length]]></comment>
+                        </crop_meta_description>                    
+                        <max_description_length translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Max Length for<br>&nbsp;&nbsp;&nbsp;&nbsp;Meta Description]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>required-entry validate-digits validate-greater-than-zero </validate>
+                            <comment><![CDATA[Recommended length up to 150 characters.]]></comment>
+                            <depends>
+                                <crop_meta_description>1</crop_meta_description>
+                            </depends>
+                        </max_description_length>
+                        <enabled_cron_notify translate="label">
+                            <label><![CDATA[Enable E-mail <br> Error Notification ▾]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[]]>
+                            </comment>
+                        </enabled_cron_notify>
+                        <error_email translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Error Email Recipient</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>55</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled_cron_notify>1</enabled_cron_notify>
+                            </depends>
+                        </error_email>
+                        <error_email_identity translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Error Email Sender</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_email_identity</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <enabled_cron_notify>1</enabled_cron_notify>
+                            </depends>
+                        </error_email_identity>                   
+                    </fields>               
+                </seoxtemplates>
+            </groups>
+        </mageworx_seo>
+    </sections>
+</config>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * SeoAll Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoAll
+ * @copyright  Copyright (c) 2016 MageWorx (http://www.mageworx.com/)
+ */-->
+
+
+<config>    
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mageworx_seo translate="title" module="mageworx_seoall">
+                                        <title>MageWorx &gt; SEO Suite</title>
+                                        <sort_order>600</sort_order>
+                                        <children>                                         
+                                            <seoall>
+                                                <title>SEO Common</title>
+                                                <sort_order>100</sort_order>
+                                            </seoall>
+                                        </children>
+                                    </mageworx_seo>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

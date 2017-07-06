@@ -1,0 +1,973 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoMarkup Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoMarkup
+ * @copyright  Copyright (c) 2016 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+<config>
+    <sections>
+        <mageworx_seo translate="label" module="mageworx_seomarkup">
+            <label>SEO Markup</label>
+            <tab>mageworx</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>600</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <richsnippets translate="label" module="mageworx_seomarkup">
+                    <label><![CDATA[SEO Markup: Open Graph Protocol & Rich Snippets]]></label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enable_all translate="label">
+                            <label>Enable Using Markup</label>
+							<frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </enable_all>
+                        <website_separator translate="label">
+							<label>Website Info:</label>
+							<frontend_model>mageworx_seomarkup/adminhtml_system_config_frontend_separator</frontend_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</website_separator>
+                        <enable_website_og translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Enable In Open Graph</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_website_og>
+                        <website_og_logo translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Facebook Logo:</label>
+                            <comment>Allowed file types: PNG, GIF, JPG, JPEG.</comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>mageworx_seomarkup/system_config_backend_logoFacebook</backend_model>
+                            <base_url type="media" scope_info="1">facebook_logo</base_url>
+                            <sort_order>34</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </website_og_logo>
+                        <enable_website_tw translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Enable In Twitter Cards ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_website_tw>
+                        <website_tw_logo translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Twitter Logo:</label>
+                            <comment>Allowed file types: PNG, GIF, JPG, JPEG.</comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>mageworx_seomarkup/system_config_backend_logoTwitter</backend_model>
+                            <base_url type="media" scope_info="1">twitter_logo</base_url>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </website_tw_logo>
+                        <website_tw_username translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Twitter Username</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>54</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_website_tw>1</enable_website_tw>
+                            </depends>
+                        </website_tw_username>
+                        <enable_website translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Enable In Rich Snippets ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <comment><![CDATA[Website Info will be added by Schema.org: JSON-LD]]></comment>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_website>
+                        <website_name translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Website Name</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[If empty, the default store name will be used.]]></comment>
+                        </website_name>
+                        <website_about translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>About</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </website_about>
+                        <website_use_search translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Add Search Action</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_website>1</enable_website>
+                            </depends>
+                        </website_use_search>
+                        <seller_separator translate="label">
+							<label>Merchant (Seller) Info:</label>
+							<frontend_model>mageworx_seomarkup/adminhtml_system_config_frontend_separator</frontend_model>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</seller_separator>
+                        <enable_seller translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Enable In Rich Snippets ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <comment><![CDATA[Seller's Info will be added by Schema.org: JSON-LD]]></comment>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_seller>
+                        <seller_type translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Seller Type (by Schema.org)]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_storeType</source_model>
+                            <sort_order>112</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </seller_type>
+                        <seller_name translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Name</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </seller_name>
+                        <seller_description translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Description</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </seller_description>
+                        <same_as_links translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Social Links</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[The list of social media links <br /><b>Example:</b><br />https://twitter.com/mageworxteam<br />https://www.facebook.com/mageworx]]></comment>
+                        </same_as_links>
+                        <seller_phone translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Phone</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </seller_phone>
+                        <seller_fax translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Fax</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>160</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </seller_fax>
+                        <seller_email translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Email</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>170</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </seller_email>
+                        <seller_location translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Location</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>190</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[<b>Example:</b> Seattle]]></comment>
+                        </seller_location>
+                        <seller_region translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>State/Region</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[<b>Example:</b> WA]]></comment>
+                        </seller_region>
+                        <seller_street translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Street</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>210</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[<b>Example:</b><br>20341 Whitworth Institute<br>405 N. Whitworth]]></comment>
+                        </seller_street>
+                        <seller_post_code translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Zip Code</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>220</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </seller_post_code>
+                        <breadcrumbs_separator translate="label">
+                            <label>Breadcrumbs Settings:</label>
+							<frontend_model>mageworx_seomarkup/adminhtml_system_config_frontend_separator</frontend_model>
+							<sort_order>230</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </breadcrumbs_separator>
+                        <enable_breadcrumbs translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Enable in Breadcrumbs</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>240</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_breadcrumbs>
+                        <breadcrumbs_method>
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Markup Method]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_breadcrumbsMethod</source_model>
+                            <sort_order>250</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </breadcrumbs_method>
+                        <page_separator translate="label">
+							<label>CMS Page Info:</label>
+							<frontend_model>mageworx_seomarkup/adminhtml_system_config_frontend_separator</frontend_model>
+							<sort_order>260</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</page_separator>
+                        <enable_page_og translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Enable In Open Graph</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>270</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_page_og>
+                        <enable_page_tw translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Enable In Twitter Cards ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>280</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_page_tw>
+                        <page_tw_username translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Twitter Username</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>290</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_page_tw>1</enable_page_tw>
+                            </depends>
+                        </page_tw_username>
+                        <category_separator translate="label">
+							<label>Category Page Info</label>
+							<frontend_model>mageworx_seomarkup/adminhtml_system_config_frontend_separator</frontend_model>
+							<sort_order>300</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</category_separator>
+                        <enable_category_og translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Enable In Open Graph</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>306</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_category_og>
+                        <enable_category_rs translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Enable in Rich Snippets</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>310</sort_order>
+                            <comment><![CDATA[Only in JSON-LD Method]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_category_rs>
+                        <category_robots_restriction translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Disable for NOINDEX Robots</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>320</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_category_rs>1</enable_category_rs>
+                            </depends>
+                        </category_robots_restriction>
+                        <product_offer_in_category translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Show Product Offers</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>326</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_category_rs>1</enable_category_rs>
+                            </depends>
+                        </product_offer_in_category>
+                        <product_separator translate="label">
+							<label>Product Page Info:</label>
+							<frontend_model>mageworx_seomarkup/adminhtml_system_config_frontend_separator</frontend_model>
+							<sort_order>330</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</product_separator>
+                        <enable_product_og translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Enable In Open Graph</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>334</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_product_og>
+                        <enable_product_tw translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Enable In Twitter Cards</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>336</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_product_tw>
+                        <product_tw_username translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Twitter Username</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>338</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_website_tw>1</enable_website_tw>
+                            </depends>
+                        </product_tw_username>
+                        <enable_product translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Enable In Rich Snippets</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>340</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_product>
+                        <product_method translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Rich Snippet Method]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_productMethod</source_model>
+                            <sort_order>350</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_method>
+                        <add_product_meta_price translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fix Price Format]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>352</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Price will be added in the meta tag]]></comment>
+                            <depends>
+                                <product_method>injection_microdata</product_method>
+                            </depends>
+                        </add_product_meta_price>
+                        <enable_rating translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Add Rating ▾]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>355</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_rating>
+                        <best_rating translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Best Rating]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>360</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-number validate-greater-than-zero</validate>
+                            <depends>
+                                <enable_rating>1</enable_rating>
+                            </depends>
+                            <comment><![CDATA[Works with JSON-LD method.]]></comment>
+                        </best_rating>
+                        <attribute_code_description translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Description Attribute Code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_attributes</source_model>
+                            <sort_order>370</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[If empty, use the default short description.]]></comment>
+                        </attribute_code_description>
+                        <enable_sku translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Add SKU</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>380</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_sku>
+                        <attribute_code_sku translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>SKU Attribute Code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_attributes</source_model>
+                            <sort_order>390</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[If empty, use the default 'sku'.]]></comment>
+                            <depends>
+                                <enable_sku>1</enable_sku>
+                            </depends>
+                        </attribute_code_sku>
+                        <enable_payment translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Add Payment Methods ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>400</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_payment>
+                        <payment_list translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Payment Methods]]></label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_payment</source_model>
+                            <sort_order>410</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <comment><![CDATA[If empty, the payment method(-s) will be detected automatically.]]></comment>
+                            <depends>
+                                <enable_payment>1</enable_payment>
+                            </depends>
+                        </payment_list>
+                        <enable_delivery translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Add Delivery Methods</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>420</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_delivery>
+                        <delivery_list translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Delivery Methods]]></label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_delivery</source_model>
+                            <sort_order>430</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <comment><![CDATA[If empty, the delivery method(-s) will be detected automatically.]]></comment>
+                            <depends>
+                                <enable_delivery>1</enable_delivery>
+                            </depends>
+                        </delivery_list>
+                        <enable_category translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Add Category ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>440</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_category>
+                        <category_deepest translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Use Deepest Category</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>450</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Set 'Yes', if products are assifned to multiple categories and sub-categories in the same chain.]]></comment>
+                            <depends>
+                                <enable_category>1</enable_category>
+                            </depends>
+                        </category_deepest>
+                        <enable_color translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Add Color ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>460</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_color>
+                        <attribute_code_color translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Color Attribute Code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_attributes</source_model>
+                            <sort_order>470</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_color>1</enable_color>
+                            </depends>
+                        </attribute_code_color>
+                        <enable_manufacturer translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Add Manufacturer ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>480</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_manufacturer>
+                        <attribute_code_manufacturer translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Manufacturer Attribute Code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_attributes</source_model>
+                            <sort_order>490</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_manufacturer>1</enable_manufacturer>
+                            </depends>
+                        </attribute_code_manufacturer>
+                        <enable_brand translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Add Brand ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>500</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_brand>
+                        <attribute_code_brand translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Brand Attribute Code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_attributes</source_model>
+                            <sort_order>510</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_brand>1</enable_brand>
+                            </depends>
+                        </attribute_code_brand>
+                        <enable_model translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Add Model ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>520</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_model>
+                        <attribute_code_model translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Model Attribute Code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_attributes</source_model>
+                            <sort_order>530</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_model>1</enable_model>
+                            </depends>
+                        </attribute_code_model>
+                        <enable_gtin translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Add Gtin ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>540</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_gtin>
+                        <attribute_code_gtin translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Gtin Attribute Code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_attributes</source_model>
+                            <sort_order>550</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_gtin>1</enable_gtin>
+                            </depends>
+                        </attribute_code_gtin>
+                        <enable_weight translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Add Weight ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>560</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_weight>
+                        <weight_unit translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Weight Unit</label>
+                            <source_model>mageworx_seomarkup/system_config_source_weight_unit</source_model>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>570</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_weight>1</enable_weight>
+                            </depends>
+                        </weight_unit>
+                        <enable_dimensions translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Add Dimensions ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>580</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[The recommended format is<br> '[Number] {Length unit of measure}'. E.g., '7 ft', '10'.]]></comment>
+                        </enable_dimensions>
+                        <dimensions_unit translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Dimensions Unit</label>
+                            <frontend_type>text</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <validate>validate-alpha</validate>
+                            <sort_order>590</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[If dimensions are digital, enter dimensionality unit<br> (E.g. <i>mm</i>, <i>inch</i>), in other case leave a field empty.]]></comment>
+                            <depends>
+                                <enable_dimensions>1</enable_dimensions>
+                            </depends>
+                        </dimensions_unit>
+                        <enable_height translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Add Height ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>600</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_dimensions>1</enable_dimensions>
+                            </depends>
+                        </enable_height>
+                        <attribute_code_height translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Height Attribute Code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_attributes</source_model>
+                            <sort_order>610</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_height>1</enable_height>
+                                <enable_dimensions>1</enable_dimensions>
+                            </depends>
+                        </attribute_code_height>
+                        <enable_width translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Add Width ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>620</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_dimensions>1</enable_dimensions>
+                            </depends>
+                        </enable_width>
+                        <attribute_code_width translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Width Attribute Code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_attributes</source_model>
+                            <sort_order>630</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_width>1</enable_width>
+                                <enable_dimensions>1</enable_dimensions>
+                            </depends>
+                        </attribute_code_width>
+                        <enable_depth translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Add Depth ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>640</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_dimensions>1</enable_dimensions>
+                            </depends>
+                        </enable_depth>
+                        <attribute_code_depth translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Depth Attribute Code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_attributes</source_model>
+                            <sort_order>650</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_depth>1</enable_depth>
+                                <enable_dimensions>1</enable_dimensions>
+                            </depends>
+                        </attribute_code_depth>
+                        <enable_condition translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Add Condition ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>660</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_condition>
+                        <attribute_code_condition translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Condition Attribute Code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_attributes</source_model>
+                            <sort_order>670</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_condition>1</enable_condition>
+                            </depends>
+                        </attribute_code_condition>
+                        <condition_value_new translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Condition Value For New</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>680</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_condition>1</enable_condition>
+                            </depends>
+                        </condition_value_new>
+                        <condition_value_refurbished translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Attribute Value<![CDATA[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>For Refurbished</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>690</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_condition>1</enable_condition>
+                            </depends>
+                        </condition_value_refurbished>
+                        <condition_value_used translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Attribute Value For Used</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>700</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_condition>1</enable_condition>
+                            </depends>
+                        </condition_value_used>
+                        <condition_value_damaged translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Attribute Value For Damaged</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>710</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_condition>1</enable_condition>
+                            </depends>
+                        </condition_value_damaged>
+                        <condition_value_default translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Default Value For Condition</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_condition</source_model>
+                            <sort_order>720</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Used if the attribute isn't found.]]></comment>
+                            <depends>
+                                <enable_condition>1</enable_condition>
+                            </depends>
+                        </condition_value_default>
+                        <enable_product_custom_properties translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Add Custom Properties ▾]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>730</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_product_custom_properties>
+                        <product_custom_properties translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Custom Properties</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>740</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[A comma-delimited list of <a href="http://schema.org/Product">schema.org</a> property name and attribute codes.<br /><b>Example:</b><br />
+                                    mpn,mpn_code <br />
+                                    For microdata will be converted to:<br />
+                                    &lt;meta itemprop="mpn" content="123456"><br />
+                                    For JSON-LD will be converted to: <br> { ... "mpn":"12343" ... }<br />
+                            ]]>
+                            </comment>
+                            <depends>
+                                <enable_product_custom_properties>1</enable_product_custom_properties>
+                            </depends>
+                        </product_custom_properties>
+                        <event_separator translate="label">
+							<label>Event Info</label>
+							<frontend_model>mageworx_seomarkup/adminhtml_system_config_frontend_separator</frontend_model>
+							<sort_order>750</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</event_separator>
+                        <enable_event translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Enable Event ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>760</sort_order>
+                            <comment><![CDATA[For events like a food fest, music concert, sports contest and <a href="https://schema.org/Event">others</a>. Implemented with the JSON-LD Markup method.]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_event>
+                        <event_attribute_set translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Event Attribute Set]]></label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_attributeSet</source_model>
+                            <sort_order>770</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA['Event' is an entity, set by default.]]></comment>
+                        </event_attribute_set>
+                        <event_type translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Event Type (by Schema.org)</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_eventType</source_model>
+                            <sort_order>772</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </event_type>
+                        <event_best_rating translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Best Rating]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>780</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-number validate-greater-than-zero</validate>
+                        </event_best_rating>
+                        <attribute_code_location_name translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Location Name Attribute Code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_attributes</source_model>
+                            <comment>Required field</comment>
+                            <sort_order>800</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </attribute_code_location_name>
+                        <attribute_code_address_locality translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Address Locality Attribute Code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_attributes</source_model>
+                            <comment>Required field</comment>
+                            <sort_order>810</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </attribute_code_address_locality>
+                        <attribute_code_address_street translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Street Address Attribute Code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_attributes</source_model>
+                            <sort_order>830</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </attribute_code_address_street>
+                        <attribute_code_start_date translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Start Date Attribute Code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seomarkup/system_config_source_attributes</source_model>
+                            <comment>Required field</comment>
+                            <sort_order>840</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </attribute_code_start_date>
+                    </fields>
+                </richsnippets>
+            </groups>
+        </mageworx_seo>
+    </sections>
+</config>

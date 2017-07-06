@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoFriendlyLN Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoFriendlyLN
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mageworx_seo translate="title" module="seofriendlyln">
+                                        <title>MageWorx &gt; SEO Suite Ultimate</title>
+                                        <sort_order>600</sort_order>
+                                        <children>                                         
+                                            <seofriendlyln>
+                                                <title>SEO Friendly LN URLs</title>
+                                                <sort_order>100</sort_order>
+                                            </seofriendlyln>                                            
+                                        </children>
+                                    </mageworx_seo>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

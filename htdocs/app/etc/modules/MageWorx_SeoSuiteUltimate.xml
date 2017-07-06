@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoSuite Ultimate Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoSuiteUltimate
+ * @copyright  Copyright (c) 2016 MageWorx (http://www.mageworx.com/)
+ */
+-->
+<config>
+    <modules>
+        <MageWorx_SeoSuiteUltimate>
+            <active>true</active>
+            <codePool>community</codePool>
+            <extension_name>SEO Suite Ultimate</extension_name>
+            <url>http://www.mageworx.com/seo-suite-ultimate-magento-extension.html</url>
+            <url_m2>http://www.mageworx.com/magento-2-seo-extension.html</url_m2>
+            <includes>
+                <MageWorx_All>1</MageWorx_All>
+                <MageWorx_SeoAll>1</MageWorx_SeoAll>
+                <MageWorx_SeoBase>1</MageWorx_SeoBase>
+                <MageWorx_SeoCrossLinks>1</MageWorx_SeoCrossLinks>
+                <MageWorx_SeoExtended>1</MageWorx_SeoExtended>
+                <MageWorx_SeoExtended>1</MageWorx_SeoExtended>
+                <MageWorx_SeoFriendlyLN>1</MageWorx_SeoFriendlyLN>
+                <MageWorx_SeoMarkup>1</MageWorx_SeoMarkup>
+                <MageWorx_SeoRedirects>1</MageWorx_SeoRedirects>
+                <MageWorx_SeoReports>1</MageWorx_SeoReports>
+                <MageWorx_SeoXTemplates>1</MageWorx_SeoXTemplates>
+                <MageWorx_XSitemap>1</MageWorx_XSitemap>
+            </includes>
+        </MageWorx_SeoSuiteUltimate>
+        <MageWorx_SeoSuite>
+            <active>false</active>
+        </MageWorx_SeoSuite>
+    </modules>
+</config>

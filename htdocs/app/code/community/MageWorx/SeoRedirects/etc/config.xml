@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx_SeoRedirects Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoRedirects
+ * @copyright  Copyright (c) 2016 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+<config>
+    <modules>
+        <MageWorx_SeoRedirects>
+            <version>1.0.3</version>
+        </MageWorx_SeoRedirects>
+    </modules>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <MageWorx_SeoRedirects after="Mage_Adminhtml">MageWorx_SeoRedirects_Adminhtml</MageWorx_SeoRedirects>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>    
+    <global>
+        <models>
+            <mageworx_seoredirects>
+                <class>MageWorx_SeoRedirects_Model</class>
+                <resourceModel>mageworx_seoredirects_resource</resourceModel>
+            </mageworx_seoredirects>
+            <mageworx_seoredirects_resource>
+                <class>MageWorx_SeoRedirects_Model_Resource</class>
+                <entities>
+                    <redirect_product>
+                        <table>mageworx_seoredirects_product_redirect</table>
+                    </redirect_product>
+                </entities>
+            </mageworx_seoredirects_resource>           
+        </models>
+        <resources>
+            <mageworx_seoredirects_setup>
+                <setup>
+                    <module>MageWorx_SeoRedirects</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+            </mageworx_seoredirects_setup>
+        </resources>
+        <blocks>
+            <mageworx_seoredirects>
+                <class>MageWorx_SeoRedirects_Block</class>
+            </mageworx_seoredirects>
+        </blocks>
+        <helpers>
+            <mageworx_seoredirects>
+                <class>MageWorx_SeoRedirects_Helper</class>
+            </mageworx_seoredirects>
+        </helpers>
+    </global>
+    <frontend>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <mageworx_do_product_redirect>
+                        <type>singleton</type>
+                        <class>mageworx_seoredirects/observer_productRedirectMaker</class>
+                        <method>redirect</method>
+                    </mageworx_do_product_redirect>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+    </frontend>
+    <adminhtml>
+        <layout>
+            <updates>
+                <mageworx_seoredirects>
+                    <file>mageworx_seoredirects.xml</file>
+                </mageworx_seoredirects>
+            </updates>
+        </layout>
+        <events>
+            <catalog_product_delete_before>
+                <observers>
+                    <mageworx_create_redirect_for_product>
+                        <class>mageworx_seoredirects/observer_productRedirectCreator</class>
+                        <method>createRedirect</method>
+                    </mageworx_create_redirect_for_product>
+                </observers>
+            </catalog_product_delete_before>
+        </events>
+        <translate>
+            <modules>
+                <MageWorx_SeoRedirects>
+                    <files>
+                        <default>MageWorx_SeoRedirects.csv</default>
+                    </files>
+                </MageWorx_SeoRedirects>
+            </modules>
+        </translate>     
+    </adminhtml>
+    <default>
+        <mageworx_seo>
+            <seoredirects>
+                <enabled_for_dead_product>1</enabled_for_dead_product>
+                <product_redirect_by_priority>0</product_redirect_by_priority>
+                <product_redirect_type>301</product_redirect_type>
+                <product_redirect_count_stable_day>90</product_redirect_count_stable_day>
+            </seoredirects>
+        </mageworx_seo>
+    </default>
+    <crontab>
+        <jobs>
+            <mageworx_seoredirects_product_clean>
+                <schedule>
+                    <cron_expr>0 1 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mageworx_seoredirects/observer_cron_cleanProductRedirect::scheduledCleanRedirects</model>
+                </run>
+            </mageworx_seoredirects_product_clean>
+        </jobs>
+    </crontab>
+</config>

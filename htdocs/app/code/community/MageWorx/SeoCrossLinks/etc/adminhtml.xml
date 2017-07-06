@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoCrossLinks Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoCrossLinks
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+
+<config>
+    <menu>
+        <catalog translate="title" module="catalog">
+            <children>
+                <mageworx_seocrosslinks translate="title" module="mageworx_seocrosslinks">
+                    <title>SEO Cross Linking</title>
+                    <sort_order>110</sort_order>
+                    <children>
+                        <crosslink translate="title">
+                            <title>Cross Links</title>
+                            <sort_order>1</sort_order>
+                            <action>adminhtml/mageworx_seocrosslinks_crosslink</action>
+                        </crosslink>
+                        <settings translate="title">
+                            <title>Settings</title>
+                            <sort_order>5</sort_order>
+                            <action>adminhtml/system_config/edit/section/mageworx_seo/</action>
+                        </settings>
+                    </children>
+                </mageworx_seocrosslinks>
+            </children>
+        </catalog>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <catalog translate="title" module="catalog">
+                        <children>
+                            <mageworx_seocrosslinks>
+                                <title>SEO Cross Links</title>
+                                <children>
+                                    <crosslink translate="title">
+                                        <title>Cross Links</title>
+                                        <sort_order>5</sort_order>
+                                    </crosslink>
+                                    <settings translate="title">
+                                        <title>Settings</title>
+                                        <sort_order>30</sort_order>
+                                    </settings>
+                                </children>
+                            </mageworx_seocrosslinks>
+                        </children>
+                    </catalog>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mageworx_seo translate="title" module="mageworx_seocrosslinks">
+                                        <title>MageWorx &gt; SEO Suite</title>
+                                        <sort_order>600</sort_order>
+                                        <children>
+                                            <seocrosslinks>
+                                                <title>SEO Cross Links</title>
+                                                <sort_order>100</sort_order>
+                                            </seocrosslinks>
+                                        </children>
+                                    </mageworx_seo>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoAll Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoAll
+ * @copyright  Copyright (c) 2016 MageWorx (http://www.mageworx.com/)
+ */
+-->
+<config>    
+    <sections>
+        <mageworx_seo translate="label" module="mageworx_seoall">
+            <label>SEO Suite</label>
+            <tab>mageworx</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>600</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <seoall translate="label" module="mageworx_seoall">
+                    <label><![CDATA[SEO Common Settings]]></label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <trailing_slash_home_page>
+                            <label><![CDATA[Crop Trailing Slash For Home Page Canonical, Hreflang And Sitemap URLs<br><br>]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>                           
+                            <show_in_store>1</show_in_store>
+                        </trailing_slash_home_page>
+                        <trailing_slash translate="label">
+                            <label><![CDATA[Trailing Slash For Canonical, Hreflang And Sitemap Urls<br><br>]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seoall/source_trailingSlash</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <comment><![CDATA[Note: the trailing slash can be added to pages without suffix .html or .htm]]></comment>
+                            <show_in_store>1</show_in_store>
+                        </trailing_slash>
+                    </fields>
+                </seoall>
+            </groups>
+        </mageworx_seo>
+    </sections>
+</config>

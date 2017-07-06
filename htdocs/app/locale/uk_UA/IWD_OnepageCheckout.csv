@@ -1,0 +1,140 @@
+Standard,Стандартно
+Minimal,Мінімум
+Optional,Вибірково
+Required,Обов'язково
+Hidden,Сховане
+The one page checkout is disabled.,One page checkout відключений.
+One Page Checkout Section,Секція One Page Checkout
+One Page Checkout,One Page Checkout
+Default Shipping Method,Метод доставки по замовченню
+Default Payment Method,Платіжний метод по замовченню
+Default Country,Країна по замовченню
+GeoIP,GeoIP
+Enable Country Detection,Включити Автовиявлення країни
+<a href='http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz' title='Download GeoIP database'>Download</a> and unzip file under the 'MAGETO_ROOT/lib/MaxMind/GeoIP/data' folder if you don't have it,<a href='http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz' title='Загрузить базу GeoIP'>Загрузить</a> и распаковать файл в папке 'MAGETO_ROOT/lib/MaxMind/GeoIP/data' якщо его там нет
+Enable City Detection,Включити автовизначення міста
+<a href='http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz' title='Download GeoCity database'>Download</a> and unzip file under the 'MAGETO_ROOT/lib/MaxMind/GeoIP/data' folder if you don't have it,<a href='http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz' title='Загрузить базу GeoCity'>Загрузить</a> и распаковать файл в папке 'MAGETO_ROOT/lib/MaxMind/GeoIP/data' якщо его там нет
+Show Shipping Address Form,Показати форму Адреси доставки
+Show Subscribe to Newsletter Checkbox,Показати чекбокс для підписки на новини
+Address Form Fields,Поля Форми Адреси
+"Before changing some of the fields, be sure that your payment/shipping provider does not require them","Перш ніж змінювати поля, переконайтесь, що вони не обов'язкові для Вашого payment/shipping провайдера"
+Output Type,Тип виводу
+Already registered? Click here to login,Вже зареєстровані? Натисніть, щоб увійти
+Show Comment Field,Показати поле для коменту
+New Address,Нова адресуа
+Country,Країна
+Checkout,Замовлення
+Coupon code was canceled.,Код знижки відмінено.
+Cannot apply the coupon code.,Не можливо застосувати код знижки.
+"Coupon code ""%s"" was applied.","Код купона ""%s"" застосовано!"
+"Coupon code ""%s"" is not valid.","Код купона ""%s"" недійсний!"
+Please enter your email.,Будь ласка, введіть ваш e-mail.
+Invalid email address.,Невірний e-mail.
+This email address was not found in our records.,Цей e-mail не знайдено у ваших записах.
+A new password has been sent.,Новий пароль був надісланий.
+Login and password are required.,Логін и пароль необхідні.
+"Email is not confirmed. <a href=""%s"">Resend confirmation email.</a>","E-mail не підтверджено. <a href=""%s"">Надіслати підтверджуючий лист.</a>"
+Please agree to all the terms and conditions.,Будь ласка погодьтесь з правилами та умовами використання.
+There was an error processing your order. Please contact support or try again later.,Сталася помилка при обробці вашого замовлення. Будь ласка звяжіться із службою підтримки або спробуйте ще раз.
+Unable to set Payment Method.,Неможливо встановити платіжний метод.
+"Sorry, subscription for guests is not allowed. Please <a href=""%s"">register</a>.","Вибачте, підписка для гостей не дозволена. Будь ласка <a href=""%s"">зареєструйтесь</a>."
+"Sorry, you are trying to subscribe email assigned to another user.","Вибачте, ви намагаєтесь використати для підписки e-mail, що належить іншому користувачу."
+Please check shipping address information. %s,Будь ласка перевірте адресу доставки. %s
+Please specify a shipping method.,Будь ласка вкажіть метод доставки.
+Please check billing address information. %s,Будь ласка перевірте платіжну адресу. %s
+Please select a valid payment method.,Будь ласка вкажіть вірний платіжний метод.
+This email adress is already registered. Please enter another email to register account or login using this email.,Цей e-mail уже зареєстровано. Будь ласка вкажіть інший e-mail для реєстрації або увійдіть, використовуючи цей e-mail.
+Invalid data.,Невірні дані.
+Invalid shipping method.,Невірний метод доставки.
+Customer Address is not valid.,Адреса покупця Невірна.
+"Invalid email address ""%s""","Невірний e-mail ""%s"""
+Invalid checkout type.,Невірний тип замовлення.
+"Sorry, guest checkout is not allowed, please contact support.","Вибачте, покупки для незареєстрованих користувачів неможливі, Будь ласка звяжіться із службою підтримки."
+Please check shipping address.,Будь ласка перевірте адресу доставки.
+Please check billing address.,Будь ласка перевірте платіжну адресу.
+Please enter the first name.,Будь ласка вкажіть ім'я.
+Please enter the last name.,Будь ласка вкажіть прізвище.
+Please enter the company.,Будь ласка  вкажіть компанію.
+Please enter the state/province.,Будь ласка вкажіть область/район.
+Please enter the street.,Будь ласка вкажіть вулицю.
+Please enter the city.,Будь ласка вкажіть місто.
+Please enter the zip code.,Будь ласка вкажіть поштовий індекс.
+Please enter the phone number.,Будь ласка вкажіть номер телефону.
+Please enter the fax.,Будь ласка вкажіть номер факсу.
+Please choose the country.,Будь ласка вкажіть країну.
+"Account confirmation is required. Please, check your email for confirmation link. <a href=""%s"">Click here</a> to resend confirmation email.","Необхідне підтвердження акаунта. Будь ласка, перевірте вашу поштову скриньку на наявність посилання для підтвердження. <a href=""%s"">Натисніть тут</a> для відправки підтверджуючого листа."
+Forgot Password?,Забули Пароль?
+Please enter your email below and we will send you a new password.,Будь ласка вкажіть Ваш e-mail нижче и ми надішлемо Вам новий пароль.
+Email,E-mail
+Back to Login,Повернутися для Входу
+Submit,Застосувати
+Login to your Account,Увійти в Ваш акаунт
+Email Address,E-mail
+Password,Пароль
+Forgot Your Password?,Забули Ваш Пароль?
+Login,Увійти
+Fill in the fields below to complete your purchase!,Заповніть поля нижче для завершення покупки!
+Comment,Коментар
+Sign up for our newsletter,Підписатися на новини
+"Sorry, no quotes are available for this order at this time.","Вибачте, на даний момент немає можливості здійснити це замовлення."
+Product Name,Назва товару
+Qty,К-ть
+Subtotal,Сума
+Total,Сума
+Grand Total,Всього
+Total incl. tax,Всього, включаючи податок
+Your credit card will be charged for,З вашої кредитної карти буде знято 
+Please enter your full address to obtain a shipping quote.,Будь ласка вкажіть Вашу повну адресу для пошуку способу доставки.
+Incl. Tax,включаючи податок
+Name & Address,Ім'я та Адреса
+Select a billing address from your address book or enter a new address.,оберіть платіжну адресу з Вашої адресної книги або вкажіть нову адресу.
+Company,Компанія
+Address,Адреса
+Street Address,Вулиця (дім, квартира)
+Street Address %s,Вулиця %s
+City,Місто
+State / Province,Область/Район
+Select One,виберіть один
+Zip Code,Поштовий індекс
+Telephone,Телефон
+Fax,Факс
+Create an account for later use,Створити акаунт для подальшого використання
+Confirm Password,Подтвердіть Пароль
+Save in address book,Зберегти в адресній книзі
+Discount Codes,Дисконтні знижки
+Enter your coupon code if you have one.,вкажіть код знижки, якщо він у Вас є.
+Cancel Coupon,Отменить Купон
+Apply Coupon,Застосувати Купон
+Proceed to Checkout,Оформити замовлення
+Payment Method,платіжний Метод
+Close,Закрити
+Card Verification Number Visual Reference,Card Verification Number Visual Reference
+Review Your Order,Інформація про замовлення
+Place Order Now,Зробити замовлення 
+Submitting order information...,Обробка замовлення...
+Shipping Method,Метод Доставки
+Ship to this address,Доставити по цій адресі
+New Shipping Address,Нова Адреса Доставки
+Select a shipping address from your address book or enter a new address.,виберіть адресу доставки з вашої адресної книги або вкажіть нову адресу.
+Date of Birth,Дата народження
+Day,День
+Month,Місяць
+Year,Рік
+DD,ДД
+MM,MM
+YYYY,РРРР
+Gender,Стать
+Prefix,Префікс
+First Name,Ім'я
+M.I.,M.I.
+Last Name,Прізвище
+Suffix,Суфікс
+Tax/VAT number,Індивідуальний податковий номер (ІПН)
+THE SHOPPING CART IS CURRENTLY EMPTY,Кошик пустий!
+Thank you for visiting,Дякуємо за візит!
+"If you are having issues with the shopping cart, <br />please","якщо у вас є проблеми з замовленнями, <br />Будь ласка"
+email support,відправте листа в підтримку
+or call,або зателефонуйте
+CONTINUE SHOPPING,продовжити покупки
+Your order cannot be completed at this time as there is no shipping methods available for it. Please make neccessary changes in your shipping address., Поки ви не вкажете адресу доставки - не буде видно методу доставки. Будь ласка, вкажіть необхідні дані в полях адреси.
+

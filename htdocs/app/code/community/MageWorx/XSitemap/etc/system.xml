@@ -1,0 +1,642 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx XSitemap Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_XSitemap
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+-->
+<config>
+    <tabs>
+        <mageworx module="xsitemap">
+            <label>MageWorx</label>
+            <sort_order>101</sort_order>
+        </mageworx>
+    </tabs>
+    <sections>
+        <mageworx_seo translate="label" module="xsitemap">
+            <label>SEO Suite</label>
+            <tab>mageworx</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <xsitemap translate="label" module="xsitemap">
+                    <label>Extended HTML Sitemap</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <show_stores translate="label">
+                            <label><![CDATA[Show Stores]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_stores>
+                        <show_categories translate="label">
+                            <label><![CDATA[Show Categories ▾]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_categories>
+                        <category_max_level translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Maximum category depth level</label>
+                            <frontend_type>text</frontend_type>                            
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment></comment>
+                            <validate>validate-number validate-greater-than-zero</validate>
+                            <depends>
+                                <show_categories>1</show_categories>
+                            </depends>
+                        </category_max_level>
+                        <show_products translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Show Products ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Keep it disabled if you have a big number of products.]]></comment>
+                            <depends>
+                                <show_categories>1</show_categories>
+                            </depends>
+                        </show_products>
+                        <exclude_out_of_stock translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exclude "Out of Stock"
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Products]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>31</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>         
+                            <depends>          
+                                <show_categories>1</show_categories>                      
+                                <show_products>1</show_products>
+                            </depends>
+                        </exclude_out_of_stock>
+                        <product_url translate="label">
+                            <label><![CDATA[Use Product Url To Target Category If Possible]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>xsitemap/adminhtml_system_config_source_xsitemap_url_product</source_model>
+                            <sort_order>32</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA["Use Canonical URL" setting available only if the<br>                                
+                                    <a target = '_blank' href = 'http://www.mageworx.com/seo-suite-ultimate-magento-extension.html'>
+                                    SEO Suite Ultimate</a> or 
+                                    <a target = '_blank' href = 'http://www.mageworx.com/seo-suite-pro-magento-extension.html'> SEO Suite Pro</a>
+                                    extensions are installed.]]>
+                            </comment>                        
+                        </product_url>
+                        
+                        <sort_order translate="label">
+                            <label><![CDATA[Categories/Products Sort Order]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>xsitemap/adminhtml_system_config_source_xsitemap_sortorder</source_model>
+                            <sort_order>33</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sort_order>
+                        <sitemap_meta_title translate="label">
+                            <label><![CDATA[Meta Title]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Meta Title for Extended Sitemap page.]]></comment>
+                        </sitemap_meta_title>
+                        <sitemap_meta_desc translate="label">
+                            <label><![CDATA[Meta Description]]></label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Meta Description for the Extended Sitemap page.]]>
+                            </comment>
+                        </sitemap_meta_desc>
+                        <sitemap_meta_keywords translate="label">
+                            <label><![CDATA[Meta Keywords]]></label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Meta Keywords for the Extended Sitemap page.]]>
+                            </comment>
+                        </sitemap_meta_keywords>                       
+                        <show_pages translate="label">
+                            <label><![CDATA[Show CMS Pages]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_pages>
+                        <filter_pages translate="label">
+                            <label><![CDATA[Filter CMS Pages]]></label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>xsitemap/adminhtml_system_config_source_cms_pages</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </filter_pages>
+                        <show_links translate="label">
+                            <label><![CDATA[Show Footer and Additional Links]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </show_links>
+                        <add_links translate="label comment">
+                            <label><![CDATA[Additional Links For HTML Sitemap]]></label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[A comma-delimited list of links and link labels to append to the sitemap.<br /><b>Example:</b><br />
+                                    Link without 'http[s]://' as <br /> customer/account/,Customer Account <br /> will be converted to<br /> http[s]://(<i>store_URL_here</i>)/customer/account/<br />
+                                    Link with 'http[s]://' will be added as it is.]]>                            
+                            </comment>
+                        </add_links>
+                    </fields>
+                </xsitemap>
+                <google_sitemap translate="label">
+                    <label>Extended XML Sitemap (Google, Yahoo, Bing)</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>55</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label><![CDATA[Generate Sitemap By Cron ▾]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Regenerated daily, at 1 a.m]]>
+                            </comment>
+                        </enabled>
+                        <error_email translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Error Email Recipient</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </error_email>
+                        <error_email_identity translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Error Email Sender</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_email_identity</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </error_email_identity>
+                        <!--<error_email_template translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Error Email Template</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_email_template</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </error_email_template>-->
+                        <validate_urls translate="label">
+                            <label><![CDATA[Enable Validate URLs]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Disable if you use specific language characters in the URLs.]]></comment>
+                        </validate_urls>
+                        <category_changefreq translate="label">
+                            <label><![CDATA[Category Frequency]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_frequency</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </category_changefreq>
+                        <category_priority translate="label comment">
+                            <label><![CDATA[Category Priority]]></label>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>xsitemap/adminhtml_system_config_backend</backend_model>
+                            <sort_order>65</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Valid values range from 0.0 to 1.0</comment>
+                        </category_priority>
+                        <product_url_length translate="label">
+                            <label><![CDATA[Products URL Length]]></label>
+                            <comment><![CDATA[If <a target = '_blank' href = 'http://www.mageworx.com/seo-suite-ultimate-magento-extension.html'>
+                                    SEO Suite Ultimate</a> or 
+                                    <a target = '_blank' href = 'http://www.mageworx.com/seo-suite-pro-magento-extension.html'> SEO Suite Pro</a>
+                                    extensions are installed and active, canonical urls will be used.]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>xsitemap/adminhtml_system_config_source_xsitemap_sortorder_url</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_url_length>
+                        <product_changefreq translate="label">
+                            <label><![CDATA[Product Frequency]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_frequency</source_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_changefreq>
+                        <product_priority translate="label comment">
+                            <label><![CDATA[Product Priority]]></label>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>xsitemap/adminhtml_system_config_backend</backend_model>
+                            <sort_order>85</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Valid values range from 0.0 to 1.0</comment>
+                        </product_priority>
+                        <exclude_out_of_stock translate="label comment">
+                            <label><![CDATA[Exclude "Out of Stock" Products]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>87</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                            
+                        </exclude_out_of_stock>
+                        <product_images translate="label comment">
+                            <label><![CDATA[Include Product Images]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_images>
+                        <image_from_cache translate="label comment">
+                            <label><![CDATA[Use Images from Cache]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>91</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Developer's feature - it can be removed in the next extension updates.<br>
+                            After you Flush Images Cache, please re-generate XML sitemaps to avoid 404s in images addresses.<br>
+                            Also, we strongly recommend using XML sitemap generation by Cron. <br>While the sitemap generation our extension creates images' cache, which can be time consuming.]]>
+                            </comment>
+                            <depends>
+                                <product_images>1</product_images>
+                            </depends>
+                        </image_from_cache>
+                        <alternate_urls translate="label comment">
+                            <label><![CDATA[Alternate Hreflang URLs]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>92</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[If <a target = '_blank' href = 'http://www.mageworx.com/seo-suite-ultimate-magento-extension.html'>
+                                    SEO Suite Ultimate</a> or 
+                                    <a target = '_blank' href = 'http://www.mageworx.com/seo-suite-pro-magento-extension.html'> SEO Suite Pro</a>
+                                    extensions are installed and active, alternate hreflang URLs will be added. See the detailed settings in the SEO Base section above.]]>
+                            </comment>
+                        </alternate_urls>
+                        <use_css_for_xml translate="label comment">
+                            <label><![CDATA[Enable a user-friendly XML Sitemap Preview]]></label>
+                            <frontend_type>select</frontend_type>   
+                            <source_model>adminhtml/system_config_source_yesno</source_model>                         
+                            <sort_order>93</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>                           
+                        </use_css_for_xml>
+                        <xml_limit>
+                            <label><![CDATA[Number of products to process at a time when generating an XML sitemap.]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>95</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xml_limit>                     
+                        <page_changefreq translate="label">
+                            <label><![CDATA[CMS Page Frequency]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_frequency</source_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </page_changefreq>
+                        <page_priority translate="label comment">
+                            <label><![CDATA[CMS Page Priority]]></label>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>xsitemap/adminhtml_system_config_backend</backend_model>
+                            <sort_order>115</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Valid values range from 0.0 to 1.0</comment>
+                        </page_priority>                                                
+                        <product_tags translate="label comment">
+                            <label><![CDATA[Include Product Tags URLs ▾]]></label>
+                            <comment><![CDATA[If <a target = '_blank' href = 'http://www.mageworx.com/seo-suite-ultimate-magento-extension.html'>
+                                    SEO Suite Ultimate</a> or 
+                                    <a target = '_blank' href = 'http://www.mageworx.com/seo-suite-pro-magento-extension.html'> SEO Suite Pro</a>
+                                    extensions are installed, seo-friendly URLs will be used]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_tags>
+                        <product_tags_changefreq translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Product Tags Frequency</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_frequency</source_model>
+                            <sort_order>155</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <product_tags>1</product_tags>
+                            </depends>
+                        </product_tags_changefreq>
+                        <product_tags_priority translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Product Tags Priority</label>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>xsitemap/adminhtml_system_config_backend</backend_model>
+                            <sort_order>160</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <product_tags>1</product_tags>
+                            </depends>
+                            <comment>Valid values range from 0.0 to 1.0<![CDATA[<br><br>]]></comment>
+                        </product_tags_priority> 
+                        <sitemapfile_links_enable translate="label comment">                           
+                            <label><![CDATA[Include Additional Links ▾]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>170</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sitemapfile_links_enable>                                         
+                        <link_changefreq translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Additional Links Frequency</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_frequency</source_model>
+                            <sort_order>175</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <sitemapfile_links_enable>1</sitemapfile_links_enable>
+                            </depends>
+                        </link_changefreq>
+                        <link_priority translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Additional Links Priority</label>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>xsitemap/adminhtml_system_config_backend</backend_model>
+                            <sort_order>180</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <sitemapfile_links_enable>1</sitemapfile_links_enable>
+                            </depends>
+                            <comment>Valid values range from 0.0 to 1.0</comment>
+                        </link_priority>
+                        <add_links translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Additional Links For<![CDATA[<br>&nbsp;&nbsp;&nbsp;&nbsp;]]>XML Sitemap</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>185</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <sitemapfile_links_enable>1</sitemapfile_links_enable>
+                            </depends>                            
+                            <comment><![CDATA[List of links to append to the XML Sitemap<br />
+                                    <b>Example:</b><br />Link without 'http[s]://' as <b>customer/account/</b><br />will be converted to<br /> http[s]://(<i>store_URL_here</i>)/customer/account/<br />
+                                    Link with 'http[s]://' will be added as is.<br><br>]]>
+                            </comment>
+                        </add_links>
+                        <blog translate="label comment">
+                            <label><![CDATA[Include Blog URLs ▾]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>190</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[AW blog & Fishpig wordpress plugins are supported.]]>
+                            </comment>
+                        </blog>
+                        <blog_changefreq translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Blog Frequency</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_frequency</source_model>
+                            <sort_order>195</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <blog>1</blog>
+                            </depends>
+                        </blog_changefreq>
+                        <blog_priority translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Blog Priority</label>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>xsitemap/adminhtml_system_config_backend</backend_model>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <blog>1</blog>
+                            </depends>
+                            <comment><![CDATA[Valid values range from 0.0 to 1.0.<br><br>]]></comment>
+                        </blog_priority>
+                        <fishpig_attribute_splash translate="label comment">
+                            <label><![CDATA[Include Fishpig Attribute Splash Pages Urls ▾]]></label>
+                            <comment><![CDATA[The settings from the Fishpig extension configuration page will be applied (if possible).]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>205</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fishpig_attribute_splash>
+                        <fishpig_splash_changefreq translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Frequency</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_frequency</source_model>
+                            <sort_order>206</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <fishpig_attribute_splash>1</fishpig_attribute_splash>
+                            </depends>
+                        </fishpig_splash_changefreq>
+                        <fishpig_splash_priority translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Priority</label>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>xsitemap/adminhtml_system_config_backend</backend_model>
+                            <sort_order>207</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <fishpig_attribute_splash>1</fishpig_attribute_splash>
+                            </depends>
+                            <comment><![CDATA[Valid values range from 0.0 to 1.0.<br><br>]]></comment>
+                        </fishpig_splash_priority>
+                        <fishpig_attribute_splash_pro translate="label comment">
+                            <label><![CDATA[Include Fishpig Attribute Splash Pro Pages Urls ▾]]></label>
+                            <comment><![CDATA[The settings from Fishpig extension setting page have the priority.]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>210</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fishpig_attribute_splash_pro>
+                        <fishpig_splash_pro_changefreq translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Frequency</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_frequency</source_model>
+                            <sort_order>212</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <fishpig_attribute_splash_pro>1</fishpig_attribute_splash_pro>
+                            </depends>
+                        </fishpig_splash_pro_changefreq>
+                        <fishpig_splash_pro_priority translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Priority</label>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>xsitemap/adminhtml_system_config_backend</backend_model>
+                            <sort_order>214</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <fishpig_attribute_splash_pro>1</fishpig_attribute_splash_pro>
+                            </depends>
+                            <comment><![CDATA[Valid values range from 0.0 to 1.0.<br><br>]]></comment>
+                        </fishpig_splash_pro_priority>  
+                        <use_index translate="label">
+                            <label><![CDATA[Use Sitemap Index ▾]]></label>
+                            <comment><![CDATA[For stores with 50,000+ links and appended third- party sitemaps.<br/><a href="http://en.wikipedia.org/wiki/Sitemaps" target="blank">What is Sitemap Index?</a>]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>220</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </use_index>
+                        <!--<split_size translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Sitemap Split Size (KB)</label>
+                            <comment>Max 10240</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>230</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <use_index>1</use_index>
+                            </depends>
+                        </split_size>-->
+                        <max_links translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Max Links per Sitemap</label>
+                            <comment>Max 50000</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>240</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <use_index>1</use_index>
+                            </depends>
+                        </max_links>
+                        <sitemapfile_links translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Links For Sitemap Index File</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>245</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store> 
+                            <depends>
+                                <use_index>1</use_index>
+                            </depends>                           
+                            <comment><![CDATA[List of links to custom xml sitemap files will be appended to the XML Sitemap Index File<br />
+                                    <b>Example:</b><br /> http://(<i>store_URL_here</i>)/sitemap/sitemap_blog.xml<br/>]]>                               
+                            </comment>
+                        </sitemapfile_links>
+                    </fields>
+                </google_sitemap>
+            </groups>
+        </mageworx_seo>
+    </sections>
+</config>

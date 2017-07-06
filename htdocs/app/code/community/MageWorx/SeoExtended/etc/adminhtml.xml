@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoExtended Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoExtended
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+
+<config>    
+    <acl>
+        <resources>
+            <admin>
+                <children>                 
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mageworx_seo translate="title" module="seoextended">
+                                        <title>MageWorx &gt; SEO Suite</title>
+                                        <sort_order>600</sort_order>
+                                        <children>                                           
+                                            <seoextended>
+                                                <title>SEO Extended</title>
+                                                <sort_order>120</sort_order>
+                                            </seoextended>                                           
+                                        </children>
+                                    </mageworx_seo>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

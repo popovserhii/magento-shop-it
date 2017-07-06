@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoFriendlyLN Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoFriendlyLN
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+<config>
+    <tabs>
+        <mageworx module="seofriendlyln">
+            <label>MageWorx</label>
+            <sort_order>101</sort_order>
+        </mageworx>
+    </tabs>
+    <sections>
+        <mageworx_seo translate="label" module="seofriendlyln">
+            <label>SEO Suite Ultimate</label>
+            <tab>mageworx</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>600</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <seofriendlyln translate="label" module="seofriendlyln">
+                    <label>SEO Friendly LN URLs</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enable_ln_friendly_urls translate="label comment">
+                            <label><![CDATA[Category Layered Navigation SEO-Friendly URLs ▾ ]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_ln_friendly_urls>
+                        <layered_identifier translate="label comment">                            
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Navigation Identifier</label>                          
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-alpha</validate>
+                            <comment><![CDATA[If empty, " l " is used,<br>E.g. http://example.com/apparel/<b>l</b>/price:100-200]]></comment>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>                               
+                                <enable_ln_friendly_urls>1</enable_ln_friendly_urls>
+                            </depends> 
+                        </layered_identifier>
+                        <layered_hide_attributes translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Hide Attribute Names</label>
+                            <comment><![CDATA[Hide Attribute Names in Layered Navigation URLs when possible.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>                                
+                                <enable_ln_friendly_urls>1</enable_ln_friendly_urls>
+                            </depends> 
+                        </layered_hide_attributes>
+                        <layered_separatort translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Layered Navigation
+                            <![CDATA[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Separator</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>130</sort_order>
+                            <comment><![CDATA[If empty, " : " is used,<br>E.g. http://example.com/computers/l/price<b>:</b>700-800]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <depends>                                
+                                <enable_ln_friendly_urls>1</enable_ln_friendly_urls>
+                            </depends> 
+                        </layered_separatort>
+                        <pager_url_format translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>Pager URL Format
+                            <![CDATA[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>for Categories</label>                            
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[If empty, the original URL format is used:<br/>/mobile-phones.html?p=2
+                                     <br/><b>Examples:</b>
+                                     <br/>-page[page_number] &nbsp;&nbsp; <i>will transform URL into</i>
+                                     <br/>/mobile-phones-page2.html<br/>/p/[page_number] &nbsp;&nbsp; <i>will transform URL into</i>
+                                     <br/>/mobile-phones/p/2.html
+                                     <br/>-[page_number] &nbsp; <b>It is not recommended if categories or layered navigation filters end in "-[0-9]":</b>
+                                     <br/>/laptop-series-3.html, /phones-60.html, etc.</br></br>]]></comment>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>                               
+                                <enable_ln_friendly_urls>1</enable_ln_friendly_urls>
+                            </depends> 
+                        </pager_url_format>   
+                    </fields>                     
+                </seofriendlyln>
+            </groups>
+        </mageworx_seo>
+    </sections>
+</config>

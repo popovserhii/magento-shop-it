@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoFriendlyLN Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoFriendlyLN
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+-->
+<config>
+    <modules>
+        <MageWorx_SeoFriendlyLN>
+            <active>true</active>
+            <codePool>community</codePool>
+            <extension_name>SEO Friendy LN URLs</extension_name>
+            <depends>
+                <MageWorx_SeoAll />
+                <MageWorx_SeoBase />
+            </depends>
+        </MageWorx_SeoFriendlyLN>        
+    </modules>
+</config>

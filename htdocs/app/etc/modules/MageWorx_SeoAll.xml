@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * SeoAll Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoAll
+ * @copyright  Copyright (c) 2016 MageWorx (http://www.mageworx.com/)
+ */
+-->
+<config>
+    <modules>
+        <MageWorx_SeoAll>
+            <active>true</active>
+            <codePool>community</codePool>
+            <extension_name>SEO All</extension_name>
+            <depends>
+                <MageWorx_All />
+            </depends>
+        </MageWorx_SeoAll>
+    </modules>
+</config>

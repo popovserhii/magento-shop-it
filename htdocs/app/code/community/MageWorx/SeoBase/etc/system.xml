@@ -1,0 +1,620 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoBase Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoBase
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+-->
+<config>    
+    <sections>
+        <mageworx_seo translate="label" module="mageworx_seobase">
+            <label>SEO Suite</label>
+            <tab>mageworx</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>600</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <seobase translate="label" module="mageworx_seobase">
+                    <label><![CDATA[SEO Base: Canonical URLs, Meta Robots and Next/Prev Link Rel Settings]]></label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <canonical_url_separator translate="label">
+							<label><![CDATA[URL / Canonical URL Settings]]></label>
+							<frontend_model>mageworx_seobase/adminhtml_system_config_frontend_separator</frontend_model>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</canonical_url_separator>
+                        <product_use_categories>
+                            <label>Use Categories Path for Product URLs</label>
+                            <frontend_type>select</frontend_type>
+                            <frontend_model>mageworx_seobase/adminhtml_system_config_frontend_duplicate</frontend_model>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>18</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>      
+                            <comment><![CDATA[The option duplicates the standard setting in<br><i>System -> Catalog -> SEO</i>.<br>
+                                     Chages of this setting will influence "Product&nbsp;Canonical&nbsp;URL" setting.]]>
+                            </comment>                      
+                        </product_use_categories>
+                        <enabled translate="label">
+                            <label><![CDATA[Add Canonical URL<br>Meta Header ▾]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <comment><![CDATA[If the "Allow All Products per Page" setting is disabled,<br>
+                                     it's recommended to have the same allowed values for <br>
+                                     "Product per Page on Grid/List Mode" settings in<br>
+                                     <i>System -> Configuration -> Catalog -> Frontend</i>.]]>
+                            </comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <product_canonical_url translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Product Canonical URL</label>
+                            <comment><![CDATA[The options depend on the "Use Categories Path for Product URLs" setting.]]></comment>
+                            <frontend_type>select</frontend_type>                            
+                            <source_model>mageworx_seobase/system_config_source_product_canonical</source_model>                            
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                            
+                            <depends>
+                                <enabled>1</enabled>
+                                <product_use_categories>1</product_use_categories>
+                            </depends>
+                        </product_canonical_url>
+                        <product_canonical_url_root translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Product Canonical URL</label>
+                            <comment><![CDATA[The options depend on the "Use Categories Path for Product URLs" setting. Currently, only the "Use Root" option is available.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seobase/system_config_source_product_canonicalRoot</source_model>                            
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>                                
+                                <enabled>1</enabled>                                
+                                <product_use_categories>0</product_use_categories>
+                            </depends>                            
+                        </product_canonical_url_root>
+                        <canonical_associated_product translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Canonical Tag for Associated 
+                                   <![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Products ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>42</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>                                
+                            </depends>
+                        </canonical_associated_product>
+                        <canonical_configurable translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>For Configurable Products</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seobase/system_config_source_associated</source_model>
+                            <sort_order>44</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>       
+                                <canonical_associated_product>1</canonical_associated_product>                                                     
+                            </depends>
+                        </canonical_configurable> 
+                        <canonical_bundle translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>For Bundle Products</label>                            
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seobase/system_config_source_associated</source_model>
+                            <sort_order>46</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>              
+                                <canonical_associated_product>1</canonical_associated_product>                                    
+                            </depends>
+                        </canonical_bundle>
+                        <canonical_grouped translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]>For Grouped Products</label>                            
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seobase/system_config_source_associated</source_model>
+                            <sort_order>48</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>        
+                                <canonical_associated_product>1</canonical_associated_product>                                                 
+                            </depends>
+                        </canonical_grouped>
+                        <canonical_noroute>
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Use Canonical Tag for 404</label>                            
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>49</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[If enabled, the canonical tag will point to the 404 page]]></comment>
+                            <depends>
+                                <enabled>1</enabled>        
+                            </depends>
+                        </canonical_noroute>                        
+                        <use_limit_all translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Use '?limit=all' Parameter<![CDATA[<br>&nbsp;&nbsp;&nbsp;&nbsp;]]>in Canonical URL ▾</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                            <comment>
+                                <![CDATA[The parameter "?limit=all” will be added to the canonical URL of category pages if “Allow All Products per Page” is enabled.]]>
+                            </comment>
+                        </use_limit_all>
+                        <use_pager translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;]]>Use Pager Parameter<![CDATA[<br>&nbsp;&nbsp;&nbsp;&nbsp;]]>in Canonical URL</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>51</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </use_pager>
+                        <enable_canonical_tag_for_layered_navigation translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Canonical Tag for <![CDATA[<br>&nbsp;&nbsp;&nbsp;&nbsp;]]>Category Layered Navigation</label>
+                            <frontend_type>select</frontend_type>      
+                            <source_model>mageworx_seobase/system_config_source_layer_canonicalCommon</source_model>
+                            <sort_order>52</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                <![CDATA[Don't use the "Current Category" value if the<br>"Allow All Products per Page" setting<br>(<i>System -> Configuration -> Catalog -> Frontend</i>) is disabled. 
+                                  <br>Please note that you can overwrite this setting for each product attribute separately using "Canonical Tag for Pages Filtered by Layered Navigation Leads to" setting (<i>Attribute -> Frontend properties</i>).]]>
+                            </comment>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </enable_canonical_tag_for_layered_navigation>
+                        <use_product_canonical_for_review>
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Use Product Canonical Tag<![CDATA[<br>&nbsp;&nbsp;&nbsp;&nbsp;]]>for Reviews Pages</label>
+                            <frontend_type>select</frontend_type>      
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>55</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </use_product_canonical_for_review>
+                        <use_root_cms_for_canonical>
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>CMS Page Canonical URL</label>
+                            <frontend_type>select</frontend_type>      
+                            <source_model>mageworx_seobase/system_config_source_cms_canonical</source_model>
+                            <sort_order>58</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </use_root_cms_for_canonical>
+                        <ignore_pages translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Ignore Pages</label>
+                            <comment><![CDATA[Canonical URL Meta Header will not be added for these pages.<br>                                    
+                                    &nbsp;&nbsp;&nbsp;&nbsp;For category: 'catalog_category_view'<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;For product:  'catalog_product_view'<br>
+                                    Use <i>"Tools for SEO Suite extension" -> "Show Action Name of Page"</i>
+                                    to find the values for other pages.]]>
+                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </ignore_pages>      
+                        <cross_domain translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Cross Domain Canonical URL</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seobase/system_config_source_crossdomain</source_model>
+                            <sort_order>65</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </cross_domain>
+                        <add_canonical_url_port>
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Add Canonical URL Port<![CDATA[<br><br>]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </add_canonical_url_port> 
+                        <nextprev_separator translate="label">
+							<label><![CDATA[Next/Prev Link Rel Settings]]></label>
+							<frontend_model>mageworx_seobase/adminhtml_system_config_frontend_separator</frontend_model>
+							<sort_order>150</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</nextprev_separator>                        
+                        <enable_link_rel translate="label comment">
+                            <label><![CDATA[Add Link Rel="next/prev"]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seobase/system_config_source_nextPrev</source_model>
+                            <sort_order>160</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                           
+                        </enable_link_rel>
+                        <robots_separator translate="label">
+							<label><![CDATA[Meta Robots Settings]]></label>
+							<frontend_model>mageworx_seobase/adminhtml_system_config_frontend_separator</frontend_model>
+							<sort_order>165</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</robots_separator>                        
+                        <https_robots translate="label">
+                            <label><![CDATA[Robots Meta Header for HTTPS]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seobase/system_config_source_robots</source_model>
+                            <sort_order>170</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </https_robots>
+                        <count_filters_for_noindex>
+                            <label><![CDATA[Min Count of Filters to Set<br>NOINDEX, FOLLOW for LN]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>174</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[If empty - the feature is disabled, if '0' - the setting is applied to any number of filters]]></comment>
+                            <validate>validate-number</validate>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </count_filters_for_noindex>
+                        <attribute_settings translate="label comment">
+                            <label><![CDATA[For Attributes Combinations]]></label>
+                            <comment><![CDATA[Meta Robots settings for attribute or attributes combinations in layered navigation. All existing meta robots values are available.
+                                    <br/><b>Examples</b>:
+                                    <br/>index,follow:color - it sets the INDEX,FOLLOW meta robot tag when ‘color’ attribute is selected;
+                                    <br/>index,follow: color,brand - it sets the INDEX,FOLLOW meta robot tag when ‘color’ or ‘brand’ attributes are selected;
+                                    <br/>noindex,follow:color+brand - it sets the NOINDEX,FOLLOW meta robot tag when both ‘color’ and ‘brand’ attributes are selected at the same time.]]>                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>176</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </attribute_settings>
+                        <noindex_by_limit translate="label">
+                            <label><![CDATA[Adaptive Meta Robots by '?limit=' Parameter]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>178</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </noindex_by_limit>
+                        <noindex_pages translate="label">
+                            <label><![CDATA[NOINDEX, FOLLOW Robots Meta Header For Pages Without Content]]></label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>mageworx_seobase/system_config_source_noindex</source_model>
+                            <sort_order>180</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </noindex_pages>
+                        <noindex_pages_user translate="label comment">
+                            <label><![CDATA[NOINDEX, FOLLOW Robots Meta Header For Additional Pages]]></label>
+                            <comment><![CDATA[Can be either a full action name or a request path. Wildcard allowed<br/>
+                                    <b>Examples</b>:<br/>&nbsp;&nbsp;&nbsp;&nbsp;review_product_*<br/>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;review/product/*<br/>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;rss_*<br/>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;rss/*<br>
+                                    The values for other pages you can find out using "Tools for SEO Suite extension" -><br>
+                                    "Show Action Name of Page".]]>
+                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>190</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </noindex_pages_user>
+                        <noindex_nofollow_pages_user translate="label comment">
+                            <label><![CDATA[NOINDEX, NOFOLLOW Robots Meta Header For Additional Pages]]></label>
+                            <comment><![CDATA[Can be either a full action name or a request path. Wildcard allowed<br/><b>Examples</b>:<br/>review_product_*<br/>review/product/*<br/>rss_*<br/>rss/*]]></comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <comment><![CDATA[Higher priority than "NOINDEX, FOLLOW" setting.]]></comment>
+                        </noindex_nofollow_pages_user>                       
+                        <robots_editor translate="label comment">
+                            <label><![CDATA[Robots.txt Editor]]></label>            
+                            <frontend_type>textarea</frontend_type>
+                            <backend_model>mageworx_seobase/system_config_backend_robots</backend_model>
+                            <sort_order>205</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <comment><![CDATA[Robots.txt file should be granted 666 permissions.]]></comment>
+                        </robots_editor>
+                        <other_separator translate="label">
+							<label><![CDATA[Other Settings]]></label>
+							<frontend_model>mageworx_seobase/adminhtml_system_config_frontend_separator</frontend_model>
+							<sort_order>220</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</other_separator> 
+                        <reviews_friendly_urls translate="label">
+                            <label>Product Reviews Friendly URLs</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>230</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </reviews_friendly_urls>
+                    </fields>
+                </seobase>
+                <alternate_url translate="label" module="mageworx_seobase">
+                    <label>SEO Base: Alternate Hreflang URLs</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>7</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <scope translate="label">
+                            <label><![CDATA[Hreflang URLs Scope]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seobase/system_config_source_scope</source_model>
+                            <sort_order>5</sort_order>
+                            <comment><![CDATA[If set to "Website", the Hreflang URLs work within one website only.<br>
+                                    If set to "Global", the Hreflang URLs work between websites.]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </scope>
+                        <enabled translate="label">
+                            <label><![CDATA[Alternate Hreflang ▾]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <comment><![CDATA[]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <enabled_category translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Enabled for Category]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>12</sort_order>
+                            <comment><![CDATA[]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </enabled_category>
+                        <enabled_product translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Enabled for Product]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>14</sort_order>
+                            <comment><![CDATA[]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </enabled_product>
+                        <enabled_cms translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Enabled for CMS pages]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>16</sort_order>
+                            <comment><![CDATA[]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </enabled_cms>
+                        <use_isset_lang_code translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Use Language Code<br>&nbsp;&nbsp;&nbsp;&nbsp;from Default Locale ▾]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <comment><![CDATA[]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </use_isset_lang_code>
+                        <lang_code translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select Language Code]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seobase/system_config_source_locale</source_model>
+                            <sort_order>33</sort_order>
+                            <comment><![CDATA[]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                                <use_isset_lang_code>0</use_isset_lang_code>
+                            </depends>
+                        </lang_code>
+                        <country_code_enable>
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;Add Country Code ▾]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>35</sort_order>
+                            <comment><![CDATA[]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </country_code_enable>
+                        <use_isset_country_code>
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use Country Code
+                                                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from Default Country ▾]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>38</sort_order>
+                            <comment><![CDATA[]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                                <country_code_enable>1</country_code_enable>
+                            </depends>
+                        </use_isset_country_code>
+                        <country_code translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select Country Code]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seobase/system_config_source_country</source_model>
+                            <sort_order>40</sort_order>
+                            <comment><![CDATA[]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                                <country_code_enable>1</country_code_enable>
+                                <use_isset_country_code>0</use_isset_country_code>
+                            </depends>
+                        </country_code>
+                        <x_default_website translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;X-default]]></label>
+                            <frontend_type>multiselect</frontend_type>
+                            <frontend_model>mageworx_seobase/adminhtml_system_config_frontend_hreflang_select</frontend_model>
+                            <source_model>mageworx_seobase/system_config_source_store</source_model>
+                            <sort_order>70</sort_order>
+                            <comment><![CDATA[Please, choose not more than 1 store per each website.]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website></show_in_website>
+                            <show_in_store></show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                                <scope>1</scope>
+                            </depends>
+                        </x_default_website>
+                        <x_default_global translate="label">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;X-default]]></label>
+                            <frontend_type>select</frontend_type>
+                            <frontend_model>mageworx_seobase/adminhtml_system_config_frontend_hreflang_select</frontend_model>
+                            <source_model>mageworx_seobase/system_config_source_store_global</source_model>
+                            <sort_order>70</sort_order>
+                            <comment><![CDATA[Global]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website></show_in_website>
+                            <show_in_store></show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                                <scope>0</scope>
+                            </depends>
+                        </x_default_global>
+                        <cms_relation_way translate="label">
+                            <label>Multi-stores CMS pages relation</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mageworx_seobase/system_config_source_cms_RelationWay</source_model>
+                            <sort_order>75</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[How to identify the same CMS page for different views.<br>
+                                    "By Hreflang Key" option should be manually specified for each CMS page (except for the home page).]]>
+                            </comment>
+                        </cms_relation_way>
+                        <selftest translate="label">
+                            <label>Overview of Alternate Hreflang Settings</label>
+                            <frontend_type>select</frontend_type>
+                            <frontend_model>mageworx_seobase/adminhtml_system_config_frontend_hreflang_selftest</frontend_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Save the changed configuration to refresh the table.]]></comment>
+                        </selftest>
+                    </fields>
+                </alternate_url>
+                <tools translate="label" module="mageworx_seobase">
+                    <label><![CDATA[Tools for SEO Suite extension]]></label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>35</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <show_action_name translate="label">
+                            <label><![CDATA[Show Action Name of Page]]></label>
+                            <frontend_type>select</frontend_type>
+                            <comment><![CDATA[Show the "full action name" for the current page (see 'ACTION NAME IS' in source code). This value can be used for  "Ignore Pages", "NOINDEX, FOLLOW" settings.]]>
+                            </comment>
+                            <source_model>mageworx_seobase/system_config_source_ActionName</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </show_action_name>
+                    </fields>
+                </tools>
+            </groups>
+        </mageworx_seo>
+    </sections>
+</config>

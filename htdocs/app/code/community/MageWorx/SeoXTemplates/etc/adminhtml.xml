@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoXTemplates Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoXTemplates
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+
+<config>
+    <menu>
+        <catalog translate="title" module="catalog">
+            <children>
+                <mageworx_seoxtemplates translate="title" module="mageworx_seoxtemplates">
+                    <title>SEO Extended Templates</title>                    
+                    <sort_order>100</sort_order>
+                    <children>
+                        <product translate="title">
+                            <title>For Product</title>
+                            <sort_order>1</sort_order>
+                            <action>adminhtml/mageworx_seoxtemplates_template_product</action>
+                        </product>
+                        <category translate="title">
+                            <title>For Category</title>
+                            <sort_order>2</sort_order>                            
+                            <action>adminhtml/mageworx_seoxtemplates_template_category</action>
+                        </category>
+                        <blog translate="title">
+                            <title>For AW Blog Post</title>
+                            <sort_order>3</sort_order>
+                            <action>adminhtml/mageworx_seoxtemplates_template_blog</action>
+                        </blog>
+                        <settings translate="title">
+                            <title>Settings</title>
+                            <sort_order>5</sort_order>
+                            <action>adminhtml/system_config/edit/section/mageworx_seo/</action>
+                        </settings>
+                    </children>
+                </mageworx_seoxtemplates>
+            </children>
+        </catalog>        
+    </menu>    
+    <acl>
+        <resources>
+            <admin>
+                <children>                    
+                    <catalog translate="title" module="catalog">
+                        <children>
+                            <mageworx_seoxtemplates>
+                                <title>SEO Templates (Extended)</title>
+                                <children>
+                                    <product translate="title">
+                                        <title>For Product</title>
+                                        <sort_order>5</sort_order>
+                                    </product>
+                                    <category translate="title">
+                                        <title>For Category</title>    
+                                        <sort_order>10</sort_order>                            
+                                    </category>
+                                     <blog translate="title">
+                                        <title>For AW Blog</title>
+                                        <sort_order>15</sort_order>
+                                    </blog>
+                                    <settings translate="title">
+                                        <title>Settings</title>
+                                        <sort_order>30</sort_order>
+                                    </settings>
+                                </children>
+                            </mageworx_seoxtemplates>                            
+                        </children>
+                    </catalog>                   
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mageworx_seo translate="title" module="mageworx_seoxtemplates">
+                                        <title>MageWorx &gt; SEO Suite</title>
+                                        <sort_order>600</sort_order>
+                                        <children>                                         
+                                            <seoxtemplates>
+                                                <title>SEO XTemplates</title>
+                                                <sort_order>100</sort_order>
+                                            </seoxtemplates>
+                                        </children>
+                                    </mageworx_seo>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * SeoAll Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoAll
+ * @copyright  Copyright (c) 2016 MageWorx (http://www.mageworx.com/)
+ */-->
+
+<config>
+    <modules>
+        <MageWorx_SeoAll>
+            <version>1.1.0</version>
+        </MageWorx_SeoAll>
+    </modules>
+    <adminhtml>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <add_store_url_message>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoAll_Model_Observer_IdenticalStoreUrlMessageCreator</class>
+                        <method>sendMessage</method>
+                    </add_store_url_message>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+    </adminhtml>
+    <global>
+        <models>
+            <mageworx_seoall>
+                <class>MageWorx_SeoAll_Model</class>
+                <resourceModel>mageworx_seoall_resource</resourceModel>
+            </mageworx_seoall>
+            <mageworx_seoall_resource>
+                <class>MageWorx_SeoAll_Model_Resource</class>
+            </mageworx_seoall_resource>
+        </models>
+        <resources>
+            <mageworx_seoall_setup>
+                <setup>
+                    <module>MageWorx_SeoAll</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+            </mageworx_seoall_setup>
+        </resources>      
+        <blocks>
+            <mageworx_seoall>
+                <class>MageWorx_SeoAll_Block</class>
+            </mageworx_seoall>
+        </blocks>
+        <helpers>
+            <mageworx_seoall>
+                <class>MageWorx_SeoAll_Helper</class>
+            </mageworx_seoall>
+        </helpers>
+        <translate>
+            <modules>
+                <MageWorx_SeoAll>
+                    <files>
+                        <default>MageWorx_SeoAll.csv</default>
+                    </files>
+                </MageWorx_SeoAll>
+            </modules>
+        </translate>
+    </global>
+    <default>
+        <mageworx_seo>
+            <seoall>
+                <trailing_slash>default</trailing_slash>
+                <trailing_slash_home_page>0</trailing_slash_home_page>
+            </seoall>
+        </mageworx_seo>
+    </default>
+</config>

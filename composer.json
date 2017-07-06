@@ -11,7 +11,8 @@
     "aydin-hassan/magento-core-composer-installer" : "~1.0",
     "firegento/magento" : "1.9.3.2",
     "popov/magento-deleter": "dev-master",
-    "popov/magento-magmi-import": "dev-master"
+    "popov/magento-magmi-import": "dev-master",
+    "rossmc/rsqs": "dev-master"
   },
   "require-dev": {
     "ecomdev/mage-ci": "dev-master"
@@ -28,6 +29,10 @@
     {
       "type": "git",
       "url": "https://github.com/popovsergiy/magento-magmi-import.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/popovsergiy/RemoveStoreQueryString.git"
     }
   ],
   "extra": {

@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+<!--
+/**
+* MageWorx
+* MageWorx SeoBase Extension
+* 
+* @category   MageWorx
+* @package    MageWorx_SeoBase
+* @copyright  Copyright (c) 2016 MageWorx (http://www.mageworx.com/)
+*/
+-->
+<config>
+    <modules>
+        <MageWorx_SeoBase>
+            <version>3.21.0</version>
+        </MageWorx_SeoBase>
+    </modules>
+    <frontend>
+        <translate>
+            <modules>
+                <MageWorx_SeoBase>
+                    <files>
+                        <default>MageWorx_SeoBase.csv</default>
+                    </files>
+                </MageWorx_SeoBase>
+            </modules>
+        </translate>        
+        <events>
+            <controller_action_layout_generate_blocks_after>
+                <observers>
+                    <mageworx_seobase_modify_meta>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_MetaTitle</class>
+                        <method>addMetaTitle</method>
+                    </mageworx_seobase_modify_meta>
+                </observers>
+            </controller_action_layout_generate_blocks_after>
+            <core_block_abstract_to_html_after>
+                <observers>                    
+                    <mageworx_seobase_add_next_prev>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_NextPrev</class>                        
+                        <method>addNextPrev</method>
+                    </mageworx_seobase_add_next_prev>
+                </observers>
+            </core_block_abstract_to_html_after>
+            
+            <core_block_abstract_to_html_after>
+                <observers>                    
+                    <mageworx_seobase_replace_category_rss_link>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_Rss</class>                        
+                        <method>replaceCategoryRssLink</method>
+                    </mageworx_seobase_replace_category_rss_link>
+                </observers>
+            </core_block_abstract_to_html_after>
+            
+            <core_block_abstract_to_html_after>
+                <observers>
+                    <mageworx_seobase_replace_category_rss_link>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_FriendlyReview</class>
+                        <method>replaceReviewPagerUrl</method>
+                    </mageworx_seobase_replace_category_rss_link>
+                </observers>
+            </core_block_abstract_to_html_after>
+            
+            <core_block_abstract_to_html_after>
+                <observers>                    
+                    <mageworx_seobase_show_action_name>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_ActionShower</class>
+                        <method>showFullActionNameInSourceCode</method>
+                    </mageworx_seobase_show_action_name>
+                </observers>
+            </core_block_abstract_to_html_after>
+            
+            <controller_action_layout_generate_blocks_after>
+                <observers>
+                    <mageworx_seobase_set_robots>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_Robots</class>
+                        <method>setRobots</method>
+                    </mageworx_seobase_set_robots>
+                </observers>
+            </controller_action_layout_generate_blocks_after>
+            
+            <controller_action_layout_generate_blocks_after>
+                <observers>
+                    <mageworx_seobase_set_canonical_url>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_Canonical</class>
+                        <method>setCanonicalUrl</method>
+                    </mageworx_seobase_set_canonical_url>
+                </observers>
+            </controller_action_layout_generate_blocks_after>
+            
+            <controller_action_layout_generate_blocks_after>
+                <observers>
+                    <mageworx_seobase_set_hreflang_urls>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_Hreflang</class>
+                        <method>setHreflangUrls</method>
+                    </mageworx_seobase_set_hreflang_urls>
+                </observers>
+            </controller_action_layout_generate_blocks_after>
+            
+            <core_block_abstract_to_html_after>
+                <observers>                    
+                    <mageworx_seobase_add_hreflang>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_Hreflang</class>                        
+                        <method>restoreHreflangUrls</method>
+                    </mageworx_seobase_add_hreflang>
+                </observers>
+            </core_block_abstract_to_html_after>
+            
+            <controller_front_init_before>
+                <observers>
+                    <mageworx_seobase_redirect_homepage>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_Redirector</class>
+                        <method>redirectHomePage</method>
+                    </mageworx_seobase_redirect_homepage>
+                </observers>
+            </controller_front_init_before>            
+        </events>        
+    </frontend>
+    <global>
+        <models>
+            <mageworx_seobase>
+                <class>MageWorx_SeoBase_Model</class>
+                <resourceModel>mageworx_seobase_mysql4</resourceModel>
+            </mageworx_seobase>
+            <mageworx_seobase_mysql4>
+                <class>MageWorx_SeoBase_Model_Mysql4</class>
+            </mageworx_seobase_mysql4>
+            <tag>
+                <rewrite>
+                    <tag>MageWorx_SeoBase_Model_Rewrite_Tag</tag>
+                </rewrite>
+            </tag>
+            <enterprise_cms>
+                <rewrite>
+                    <config>MageWorx_SeoBase_Model_Rewrite_Enterprise_CmsConfig</config>
+                </rewrite>
+            </enterprise_cms>
+        </models>  
+        <resources>
+            <mageworx_seobase_setup>
+                <setup>
+                    <module>MageWorx_SeoBase</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+            </mageworx_seobase_setup>
+        </resources>      
+        <blocks>
+            <mageworx_seobase>
+                <class>MageWorx_SeoBase_Block</class>
+            </mageworx_seobase>
+            <rss>
+                <rewrite>
+                    <list>MageWorx_SeoBase_Block_Rss_List</list>
+                    <catalog_category>MageWorx_SeoBase_Block_Rss_Catalog_Category</catalog_category>
+                    <catalog_new>MageWorx_SeoBase_Block_Rss_Catalog_New</catalog_new>
+                    <catalog_special>MageWorx_SeoBase_Block_Rss_Catalog_Special</catalog_special>
+                    <catalog_salesrule>MageWorx_SeoBase_Block_Rss_Catalog_Salesrule</catalog_salesrule>
+                </rewrite>
+            </rss>
+            <review>
+                <rewrite>
+                    <helper>MageWorx_SeoBase_Block_Review_Helper</helper>
+                    <product_view_list>MageWorx_SeoBase_Block_Review_Product_View_List</product_view_list>
+                    <view>MageWorx_SeoBase_Block_Review_View</view>
+                </rewrite>
+            </review>
+        </blocks>
+        <helpers>
+            <mageworx_seobase>
+                <class>MageWorx_SeoBase_Helper</class>
+            </mageworx_seobase>
+        </helpers>
+        <events>
+            <controller_front_init_routers>
+                <observers>
+                    <mageworx_seobase_init_controller_router>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Controller_Router</class>
+                        <method>initControllerRouters</method>
+                    </mageworx_seobase_init_controller_router>
+                </observers>
+            </controller_front_init_routers>            
+        </events>
+    </global>
+    <adminhtml>
+        <translate>
+            <modules>
+                <MageWorx_SeoBase>
+                    <files>
+                        <default>MageWorx_SeoBase.csv</default>
+                    </files>
+                </MageWorx_SeoBase>
+            </modules>
+        </translate>
+        <events>
+            <load_revision_controlled_attributes>
+                <observers>
+                    <mageworx_seobase_add_cms_page_attribute_in_revision>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_PageConfig</class>
+                        <method>addAttributeToRevision</method>
+                    </mageworx_seobase_add_cms_page_attribute_in_revision>
+                </observers>
+            </load_revision_controlled_attributes>
+            
+            <catalog_product_save_before>
+                <observers>
+                    <mageworx_seobase_product_prepare_canonical_url>
+                        <class>MageWorx_SeoBase_Model_Observer_Product</class>
+                        <method>prepareCanonicalUrl</method>
+                    </mageworx_seobase_product_prepare_canonical_url>
+                </observers>
+            </catalog_product_save_before>
+            
+            <adminhtml_catalog_product_edit_prepare_form>
+                <observers>
+                    <mageworx_seobase_modify_product_cross_domain_form_field>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_PrepareForm_Catalog_CrossDomainStore</class>
+                        <method>modifyFormField</method>
+                    </mageworx_seobase_modify_product_cross_domain_form_field>
+                </observers>
+            </adminhtml_catalog_product_edit_prepare_form>
+            
+            <adminhtml_catalog_product_edit_prepare_form>
+                <observers>
+                    <mageworx_seobase_modify_product_robots_form_field>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_PrepareForm_Catalog_Robots</class>
+                        <method>modifyFormField</method>
+                    </mageworx_seobase_modify_product_robots_form_field>
+                </observers>
+            </adminhtml_catalog_product_edit_prepare_form>
+            
+            <adminhtml_catalog_category_edit_prepare_form>
+                <observers>
+                    <mageworx_seobase_modify_category_robots_domain_form_field>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_PrepareForm_Catalog_Robots</class>
+                        <method>modifyFormField</method>
+                    </mageworx_seobase_modify_category_robots_domain_form_field>
+                </observers>
+            </adminhtml_catalog_category_edit_prepare_form>
+            
+            <adminhtml_catalog_product_edit_prepare_form>
+                <observers>
+                    <mageworx_seobase_modify_product_canonical_url_form_field>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_PrepareForm_Catalog_Product_CanonicalUrl</class>
+                        <method>modifyFormField</method>
+                    </mageworx_seobase_modify_product_canonical_url_form_field>
+                </observers>
+            </adminhtml_catalog_product_edit_prepare_form>
+                            
+            <adminhtml_catalog_product_attribute_edit_prepare_form>
+                <observers>
+                    <mageworx_seobase_observer_attribute_prepare_form_layered_navigation_canonical>
+                        <class>MageWorx_SeoBase_Model_Observer_PrepareForm_Attribute_LayeredNavigationCanonical</class>
+                        <method>modifyFormField</method>
+                    </mageworx_seobase_observer_attribute_prepare_form_layered_navigation_canonical>
+                </observers>
+            </adminhtml_catalog_product_attribute_edit_prepare_form>
+            
+            <adminhtml_cms_page_edit_tab_meta_prepare_form>
+                <observers>
+                    <mageworx_seobase_add_meta_title_form_field_for_cms_page>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_PrepareForm_Page_MetaTitle</class>
+                        <method>addMetaTitleFormField</method>
+                    </mageworx_seobase_add_meta_title_form_field_for_cms_page>
+                </observers>
+            </adminhtml_cms_page_edit_tab_meta_prepare_form>
+            
+            <adminhtml_cms_page_edit_tab_meta_prepare_form>
+                <observers>
+                    <mageworx_seobase_add_meta_robots_form_field_for_cms_page>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_PrepareForm_Page_Robots</class>
+                        <method>addRobotsFormField</method>
+                    </mageworx_seobase_add_meta_robots_form_field_for_cms_page>
+                </observers>
+            </adminhtml_cms_page_edit_tab_meta_prepare_form>
+            
+            <adminhtml_cms_page_edit_tab_meta_prepare_form>
+                <observers>
+                    <mageworx_seobase_add_hreflang_key_form_field_for_cms_page>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_PrepareForm_Page_HreflangKey</class>
+                        <method>addHreflangKeyFormField</method>
+                    </mageworx_seobase_add_hreflang_key_form_field_for_cms_page>
+                </observers>
+            </adminhtml_cms_page_edit_tab_meta_prepare_form>
+            
+            <core_config_data_save_before>
+                <observers>
+                    <mageworx_seobase_duplicate_config_settings>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_Config_SettingDuplicator</class>
+                        <method>duplicateConfigSettings</method>                        
+                    </mageworx_seobase_duplicate_config_settings>
+                </observers>
+            </core_config_data_save_before>
+            
+            <adminhtml_catalog_product_form_prepare_excluded_field_list>
+                <observers>
+                    <mageworx_seobase_modify_product_attributes_in_massaction>
+                        <type>singleton</type>
+                        <class>MageWorx_SeoBase_Model_Observer_PrepareForm_Catalog_Product_Massaction</class>
+                        <method>modifyAttributes</method>                        
+                    </mageworx_seobase_modify_product_attributes_in_massaction>
+                </observers>
+            </adminhtml_catalog_product_form_prepare_excluded_field_list>
+        </events>        
+    </adminhtml>
+    <default>
+        <mageworx_seo>
+            <seobase>
+                <enabled>1</enabled>
+                <ignore_pages>
+<![CDATA[catalogsearch_result_index
+catalogsearch_advanced_index
+catalogsearch_advanced_result
+checkout_cart_index
+checkout_onepage_index]]>
+                </ignore_pages>                
+                <noindex_pages_user>
+<![CDATA[dir=*
+order=*
+mode=*]]>
+                </noindex_pages_user>                
+                <noindex_pages><![CDATA[^catalogsearch_.+,^customer_.+,^checkout_.+,^contacts_.+,^wishlist_.+,^catalog_product_compare_.+,.*?_product_send$,^tag_.+,^rss_.+]]></noindex_pages>
+                <noindex_by_limit>0</noindex_by_limit>
+                <product_canonical_url>3</product_canonical_url>
+                <reviews_friendly_urls>1</reviews_friendly_urls>
+                <enable_link_rel>1</enable_link_rel>
+                <enable_canonical_tag_for_layered_navigation>1</enable_canonical_tag_for_layered_navigation>
+                <use_product_canonical_for_review>0</use_product_canonical_for_review>
+                <add_canonical_url_port>0</add_canonical_url_port>
+                <canonical_associated_product>0</canonical_associated_product>
+                <canonical_configurable>default</canonical_configurable>
+                <canonical_bundle>default</canonical_bundle>
+                <canonical_grouped>default</canonical_grouped>
+                <canonical_noroute>0</canonical_noroute>
+                <product_use_categories>1</product_use_categories>
+                <count_filters_for_noindex></count_filters_for_noindex>
+                <use_limit_all>0</use_limit_all>
+                <use_pager>1</use_pager>
+            </seobase>
+            <alternate_url>
+                <enabled>0</enabled>
+                <enabled_category>1</enabled_category>
+                <enabled_product>1</enabled_product>
+                <enabled_cms>0</enabled_cms>
+            </alternate_url>                
+            <tools>
+                <show_action_name>no</show_action_name>
+            </tools>
+        </mageworx_seo>
+    </default>
+</config>

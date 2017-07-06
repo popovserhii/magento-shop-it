@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+* NOTICE OF LICENSE
+*
+* You may not give, sell, distribute, sub-license, rent, lease or lend
+* any portion of the Software or Documentation to anyone.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade to newer
+* versions in the future.
+*
+* @category   ET
+* @package    ET_HideEmptyAttributes
+* @copyright  Copyright (c) 2012 ET Web Solutions (http://etwebsolutions.com)
+* @contacts   support@etwebsolutions.com
+* @license    http://shop.etwebsolutions.com/etws-license-commercial-v1/   ETWS Commercial License (ECL1)
+*/
+-->
+
+<config>
+    <tabs>
+        <etall translate="label">
+            <label>ET Extensions</label>
+            <sort_order>400</sort_order>
+        </etall>
+    </tabs>
+    <sections>
+        <ethideemptyattributes tranalste="label">
+            <label>Hide Empty Attributes</label>
+            <tab>etall</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>60</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <hint>
+                    <frontend_model>ethideemptyattributes/adminhtml_system_config_fieldset_conflictNotification</frontend_model>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </hint>
+                <info translate="label">
+                    <label>Hide Empty Attributes information</label>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <support_information>
+                            <frontend_model>ethideemptyattributes/adminhtml_support</frontend_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </support_information>
+                    </fields>
+                </info>
+                <general tranalste="label">
+                    <label>Hide Empty Attributes Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <poweroptions translate="label">
+                            <label>Hide empty attributes?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </poweroptions>
+                        <booleanattr translate="label comment">
+                            <label>Hide No value</label>
+                            <comment><![CDATA[Hide boolean attributes (available values Yes / No) with No value.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <poweroptions>1</poweroptions>
+                            </depends>
+                        </booleanattr>
+                        <emptyattrtext translate="label comment">
+                            <label>Empty attribute text</label>
+                            <comment><![CDATA[This text will be shown instead of default "N/A" and "No" for empty values in compare window.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <poweroptions>1</poweroptions>
+                            </depends>
+                        </emptyattrtext>
+                    </fields>
+                </general>
+            </groups>
+        </ethideemptyattributes>
+    </sections>
+</config>

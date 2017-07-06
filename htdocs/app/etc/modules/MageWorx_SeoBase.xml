@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoBase Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoBase
+ * @copyright  Copyright (c) 2016 MageWorx (http://www.mageworx.com/)
+ */
+-->
+<config>
+    <modules>
+        <MageWorx_SeoBase>
+            <active>true</active>
+            <codePool>community</codePool>
+            <extension_name>SEO Base</extension_name>
+            <depends>
+                <MageWorx_SeoAll />
+            </depends>
+        </MageWorx_SeoBase>        
+    </modules>
+</config>

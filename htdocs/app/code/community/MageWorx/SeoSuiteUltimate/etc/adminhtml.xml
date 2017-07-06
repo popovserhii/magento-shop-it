@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoSuite Ultimate Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoSuiteUltimate
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+
+<config>    
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mageworx_seo translate="title" module="mageworx_seoult">
+                                        <title>MageWorx &gt; SEO</title>
+                                        <sort_order>600</sort_order>
+                                        <children>
+                                            <seoult>
+                                                <title>SEO Suite Ultimate - About Extension Pack</title>
+                                                <sort_order>100</sort_order>
+                                            </seoult>
+                                        </children>
+                                    </mageworx_seo>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

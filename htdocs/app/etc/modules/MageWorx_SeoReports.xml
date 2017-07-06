@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoReports Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoReports
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+-->
+<config>
+    <modules>
+        <MageWorx_SeoReports>
+            <active>true</active>
+            <codePool>community</codePool>            
+            <extension_name>SEO Reports</extension_name>      
+            <depends>
+                <MageWorx_SeoAll />
+            </depends>
+        </MageWorx_SeoReports>        
+    </modules>
+</config>

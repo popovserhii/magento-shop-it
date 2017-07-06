@@ -1,0 +1,27 @@
+<?php
+/**
+ * MageWorx
+ * MageWorx XSitemap Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_XSitemap
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+?>
+<?php $_items = $this->getCategories(); ?>
+<?php if(count($_items)): ?>
+<h3><?php echo $this->__('Catalog') ?></h3>
+<ul class="categories">
+<?php $_level = 0 ?>
+<?php foreach ($_items as $_item): ?>
+<?php if ($_level < $this->getLevel($_item)): ?><ul class="categories"><?php endif ?>
+<?php if ($_level > $this->getLevel($_item)): echo '</li>' . str_repeat('</ul></li>', $_level - $this->getLevel($_item)); endif ?>
+<?php if ($_level && $_level == $this->getLevel($_item)): ?></li><?php endif ?>
+<li class="level-<?php echo $this->getLevel($_item) ?> category"><a href="<?php echo $this->getItemUrl($_item) ?>"><?php echo $_item->name ?></a>
+<?php if ($this->showProducts($_item)): ?>
+<?php echo $this->getChild('category_products')->setCategory($_item)->toHtml() ?>
+<?php endif ?>
+<?php $_level = $this->getLevel($_item) ?>
+<?php endforeach; ?>
+<?php echo str_repeat('</li></ul>', $_level + 1) ?>
+<?php endif ?>

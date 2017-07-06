@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoSuite Ultimate Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoSuiteUltimate
+ * @copyright  Copyright (c) 2016 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+<config>
+    <modules>
+        <MageWorx_SeoSuiteUltimate>
+            <version>7.3.0</version>
+        </MageWorx_SeoSuiteUltimate>
+    </modules>
+    <global>       
+        <blocks>
+            <mageworx_seoult>
+                <class>MageWorx_SeoSuiteUltimate_Block</class>
+            </mageworx_seoult>
+        </blocks>
+        <helpers>
+            <mageworx_seoult>
+                <class>MageWorx_SeoSuiteUltimate_Helper</class>
+            </mageworx_seoult>
+        </helpers>       
+    </global>
+    <adminhtml>
+        <translate>
+            <modules>
+                <MageWorx_SeoSuiteUltimate>
+                    <files>
+                        <default>MageWorx_SeoSuiteUltimate.csv</default>
+                    </files>
+                </MageWorx_SeoSuiteUltimate>
+            </modules>
+        </translate>
+    </adminhtml>    
+</config>

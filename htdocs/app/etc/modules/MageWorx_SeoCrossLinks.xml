@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoXTemplates Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoXTemplates
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+-->
+<config>
+    <modules>
+        <MageWorx_SeoCrossLinks>
+            <active>true</active>
+            <codePool>community</codePool>
+            <extension_name>SEO Cross Linking</extension_name>
+            <url>http://www.mageworx.com/magento-cross-linking-extension.html</url>
+            <url_m2>http://www.mageworx.com/magento2-cross-linking-extension.html</url_m2>
+            <depends>
+                <MageWorx_SeoAll />
+            </depends>
+        </MageWorx_SeoCrossLinks>        
+    </modules>
+</config>

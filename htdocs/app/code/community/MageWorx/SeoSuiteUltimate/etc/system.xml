@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoSuite Ultimate Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoSuiteUltimate
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+<config>
+    <tabs>
+        <mageworx module="mageworx_seoult">
+            <label>MageWorx</label>
+            <sort_order>101</sort_order>
+        </mageworx>
+    </tabs>
+    <sections>
+        <mageworx_seo translate="label" module="mageworx_seoult">
+            <label>SEO Suite</label>
+            <tab>mageworx</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>600</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <head>
+                    <frontend_model>mageworx_seoult/adminhtml_system_config_fieldset_head</frontend_model>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </head>
+                <about>
+                    <frontend_model>mageworx_seoult/adminhtml_system_config_fieldset_about</frontend_model>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </about>                
+                <seoult translate="label" module="mageworx_seoult">
+                    <label>SEO Suite Ultimate</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>                       
+                    </fields>
+                </seoult>                        
+            </groups>
+        </mageworx_seo>
+    </sections>
+</config>

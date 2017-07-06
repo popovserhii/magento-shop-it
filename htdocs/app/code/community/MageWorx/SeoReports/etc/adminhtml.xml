@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoReports Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoReports
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+
+<config>
+    <menu>        
+        <report>
+            <children>                                                
+                <seoreports translate="title" module="seoreports">
+                    <title>SEO Reports</title>                    
+                    <sort_order>600</sort_order>
+                    <children>
+                        <product translate="title" module="seoreports">
+                            <title>Products</title>
+                            <action>adminhtml/mageworx_seoreports_product/index</action>
+                            <sort_order>10</sort_order>
+                        </product>
+                        <category translate="title" module="seoreports">
+                            <title>Categories</title>
+                            <action>adminhtml/mageworx_seoreports_category/index</action>
+                            <sort_order>20</sort_order>
+                        </category>
+                        <cms translate="title" module="seoreports">
+                            <title>CMS</title>
+                            <action>adminhtml/mageworx_seoreports_cms/index</action>
+                            <sort_order>30</sort_order>
+                        </cms>
+                    </children>    
+                </seoreports>                
+            </children>
+        </report>    
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <catalog translate="title" module="catalog">
+                                        <title>Catalog Section</title>
+                                    </catalog>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <report>
+                        <children>
+                            <seoreports translate="title" module="seoreports">
+                                <title>SEO Suite</title>
+                                <children>
+                                    <product translate="title" module="seoreports">
+                                        <title>Products</title>                                            
+                                        <sort_order>10</sort_order>
+                                    </product>
+
+                                    <category translate="title" module="seoreports">
+                                        <title>Categories</title>
+                                        <sort_order>20</sort_order>
+                                    </category>
+                                                                        
+                                    <cms translate="title" module="seoreports">
+                                        <title>CMS</title>
+                                        <sort_order>30</sort_order>
+                                    </cms>
+                                </children>
+                            </seoreports>
+                        </children>
+                    </report>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mageworx_seo translate="title" module="seoreports">
+                                        <title>SEO Suite</title>
+                                        <sort_order>100</sort_order>
+                                        <children>                                         
+                                            <seoreports>
+                                                <title>SEO Reports</title>
+                                                <sort_order>100</sort_order>
+                                            </seoreports>                                            
+                                        </children>
+                                    </mageworx_seo>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

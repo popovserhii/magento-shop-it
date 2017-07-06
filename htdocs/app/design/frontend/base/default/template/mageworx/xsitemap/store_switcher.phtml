@@ -1,0 +1,19 @@
+<?php
+/**
+ * MageWorx
+ * MageWorx XSitemap Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_XSitemap
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+?>
+<?php $stores = $this->getStores();?>
+<?php if (count($stores)): ?>
+<h3><?php echo $this->__('Stores') ?></h3>
+<ul class="stores">
+<?php foreach ($stores as $group): foreach ($group as $store): ?>
+<li class="store"><?php if ($this->getStoreId() == $store->getId()): ?><?php echo $store->getName() ?><?php else: ?><a href="<?php echo $store->getCurrentUrl(false) ?>"><?php echo $store->getName() ?></a><?php endif ?></li>
+<?php endforeach; endforeach ?>
+</ul>
+<?php endif ?>

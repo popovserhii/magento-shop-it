@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoExtended Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoExtended
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+-->
+<config>
+    <modules>
+        <MageWorx_SeoExtended>
+            <active>true</active>
+            <codePool>community</codePool>
+            <extension_name>SEO Extended</extension_name>
+            <depends>
+                <MageWorx_All />
+                <MageWorx_SeoAll />
+                <MageWorx_SeoBase />
+            </depends>
+        </MageWorx_SeoExtended>        
+    </modules>
+</config>

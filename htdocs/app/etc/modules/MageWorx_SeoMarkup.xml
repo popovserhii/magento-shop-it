@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoMarkup Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoMarkup
+ * @copyright  Copyright (c) 2016 MageWorx (http://www.mageworx.com/)
+ */
+-->
+<config>
+    <modules>
+        <MageWorx_SeoMarkup>
+            <active>true</active>
+            <codePool>community</codePool>
+            <extension_name>SEO Markup</extension_name>
+            <url>http://www.mageworx.com/magento-rich-snippets.html</url>
+            <url_m2>http://www.mageworx.com/magento2-extended-rich-snippets.html</url_m2>
+            <depends>
+                <MageWorx_SeoAll />
+            </depends>
+        </MageWorx_SeoMarkup>        
+    </modules>
+</config>

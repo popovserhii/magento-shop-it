@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoExtended Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoExtended
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+<config>
+    <tabs>
+        <mageworx module="seoextended">
+            <label>MageWorx</label>
+            <sort_order>101</sort_order>
+        </mageworx>
+    </tabs>
+    <sections>
+        <mageworx_seo translate="label" module="seoextended">
+            <label>SEO Suite</label>
+            <tab>mageworx</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>600</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <seoextended translate="label" module="seoextended">
+                    <label>SEO Extended</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <optimized_urls translate="label">
+                            <label><![CDATA[Optimized URLs For Product And Category Enabled]]></label>
+                            <frontend_type>select</frontend_type>
+                            <frontend_model>seoextended/adminhtml_system_config_frontend_optimizedurls</frontend_model>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>                            
+                            <sort_order>10</sort_order>
+                            <comment>
+                            <![CDATA[<b>Reindex Catalog URL Rewrites after changing this setting.</b></br>                                    
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<b>Examples:</b><br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<b>Original URLs:</b><br />  
+                                    Category:&nbsp;http://ex.com/apparel/shoes/<br />
+                                    Product:&nbsp;&nbsp;&nbsp;http://ex.com/apparel/shoes/clogs.html<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<b>Optimized URLs:</b><br />
+                                    Category:&nbsp;http://ex.com/shoes/<br />
+                                    Product:&nbsp;&nbsp;&nbsp;http://ex.com/shoes/clogs.html
+                            ]]>
+                            </comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                                
+                        </optimized_urls>
+                        <status_pager_num_for_title translate="label comment">
+                            <label><![CDATA[Add Pager Number to<br>Meta Title]]>
+                            </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>seoextended/system_config_source_meta_pageNum</source_model>
+                            <comment><![CDATA[E.g. 'Apparel <b>| Page 3</b>']]></comment>
+                            <sort_order>210</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </status_pager_num_for_title>
+                        <status_pager_num_for_description translate="label comment">
+                            <label><![CDATA[Add Pager Number to<br>Meta Description]]>
+                            </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>seoextended/system_config_source_meta_pageNum</source_model>
+                            <comment><![CDATA[E.g. 'Description of apparel<b> | Page 2</b>']]></comment>
+                            <sort_order>212</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </status_pager_num_for_description>
+                        <cut_title_prefix_and_suffix translate="label comment">
+                            <label><![CDATA[Remove Default Title Prefix/Suffix<br>for Product and Category Pages<br>]]>
+                            </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>214</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cut_title_prefix_and_suffix>
+                        <extended_category_layered_navigation_meta_title translate="label">
+                            <label><![CDATA[Enable Extended Meta Title On Category Layered Navigation Pages]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>252</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[E.g. 'Phones, <b>Price $300.00 and above, Color Silver</b>'</i>]]></comment>
+                        </extended_category_layered_navigation_meta_title>
+                        <extended_category_layered_navigation_meta_description translate="label">
+                            <label><![CDATA[Enable Extended Meta Description On Category Layered Navigation Pages]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>254</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </extended_category_layered_navigation_meta_description>
+                        <crop_meta_keywords translate="label">         
+                            <label><![CDATA[Disable Meta Keywords Tag]]></label>                   
+                            <frontend_type>select</frontend_type>
+                            <source_model>seoextended/system_config_source_meta_CropKeywords</source_model>
+                            <sort_order>260</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </crop_meta_keywords>
+                        <ignore_pages_crop_meta_keywords translate="label comment">
+                            <label><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;]]>Ignore Pages</label>
+                            <comment><![CDATA[Meta Keywords Tag will not be cropped for these pages.<br>                                    
+                                    &nbsp;&nbsp;&nbsp;&nbsp;For category: 'catalog_category_view'<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;For product:  'catalog_product_view'<br>
+                                    Use <i>"Tools for SEO Suite extension" -> "Show Action Name of Page"</i>
+                                    to find the values for other pages.]]>
+                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>270</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <crop_meta_keywords>yes</crop_meta_keywords>                                
+                            </depends>                        
+                        </ignore_pages_crop_meta_keywords>
+                    </fields>
+                </seoextended>                                
+            </groups>
+        </mageworx_seo>
+    </sections>
+</config>

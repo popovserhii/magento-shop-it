@@ -1,0 +1,19 @@
+<?php
+/**
+ * MageWorx
+ * MageWorx XSitemap Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_XSitemap
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+?>
+<?php
+$_links = $this->getLinks(); ?>
+<?php if (count($_links)): ?>
+<ul class="mageworx-pages">
+<?php foreach ($_links as $_link): ?>
+<li class="page-url"><a href="<?php echo $_link->getUrl() ?>"><?php echo $_link->getLabel() ?></a></li>
+<?php endforeach; ?>
+</ul>
+<?php endif ?>

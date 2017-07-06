@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoBase Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoBase
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+ -->
+
+<config>    
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mageworx_seo translate="title" module="mageworx_seobase">
+                                        <title>MageWorx &gt; SEO Suite</title>
+                                        <sort_order>600</sort_order>
+                                        <children>                                         
+                                            <seobase>
+                                                <title>SEO Suite</title>
+                                                <sort_order>100</sort_order>
+                                            </seobase>
+                                            <alternate_url>
+                                                <title>SEO Alternate URLs</title>
+                                                <sort_order>120</sort_order>
+                                            </alternate_url>
+                                            <tools>
+                                                <title>Tools for SEO Suite extension</title>
+                                                <sort_order>140</sort_order>
+                                            </tools>
+                                        </children>
+                                    </mageworx_seo>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

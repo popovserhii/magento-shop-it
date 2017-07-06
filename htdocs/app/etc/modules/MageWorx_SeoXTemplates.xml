@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoXTemplates Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoXTemplates
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+-->
+<config>
+    <modules>
+        <MageWorx_SeoXTemplates>
+            <active>true</active>
+            <codePool>community</codePool>
+            <extension_name>SEO Extended Templates</extension_name>
+            <url>http://www.mageworx.com/magento-seo-meta-templates-extension.html</url>
+            <url_m2>http://www.mageworx.com/magento2-meta-seo-templates.html</url_m2>
+            <depends>
+                <MageWorx_All />
+                <MageWorx_SeoAll/>
+            </depends>            
+        </MageWorx_SeoXTemplates>        
+        <MageWorx_SeoTemplates>
+            <active>false</active>
+        </MageWorx_SeoTemplates>
+    </modules>
+</config>
