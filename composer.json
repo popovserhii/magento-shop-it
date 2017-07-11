@@ -12,6 +12,7 @@
     "firegento/magento" : "1.9.3.2",
     "popov/magento-deleter": "dev-master",
     "popov/magento-magmi-import": "dev-master",
+    "mage-eag/mage-enhanced-admin-grids": "dev-1.0.0-wip",
     "rossmc/rsqs": "dev-master"
   },
   "require-dev": {
@@ -33,6 +34,10 @@
     {
       "type": "git",
       "url": "https://github.com/popovsergiy/RemoveStoreQueryString.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/mage-eag/mage-enhanced-admin-grids.git"
     }
   ],
   "extra": {
