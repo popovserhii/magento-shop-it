@@ -12,7 +12,7 @@
     "firegento/magento" : "1.9.3.2",
     "popov/magento-deleter": "dev-master",
     "popov/magento-magmi-import": "dev-master",
-    "mage-eag/mage-enhanced-admin-grids": "dev-1.0.0-wip",
+    "mage-eag/mage-enhanced-admin-grids": "0.8.*",
     "rossmc/rsqs": "dev-master"
   },
   "require-dev": {
