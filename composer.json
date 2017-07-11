@@ -9,10 +9,10 @@
   "require": {
     "magento-hackathon/magento-composer-installer": "*",
     "aydin-hassan/magento-core-composer-installer" : "~1.0",
-    "firegento/magento" : "1.9.3.2",
+    "firegento/magento" : "1.9.3.3",
     "popov/magento-deleter": "dev-master",
     "popov/magento-magmi-import": "dev-master",
-    "mage-eag/mage-enhanced-admin-grids": "0.8.9.x-dev",
+    "mage-eag/mage-enhanced-admin-grids": "0.9.*",
     "rossmc/rsqs": "dev-master"
   },
   "require-dev": {
@@ -37,7 +37,7 @@
     },
     {
       "type": "git",
-      "url": "https://github.com/popovsergiy/mage-enhanced-admin-grids.git"
+      "url": "https://github.com/mage-eag/mage-enhanced-admin-grids.git"
     }
   ],
   "extra": {

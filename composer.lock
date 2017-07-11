@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c669ad480d834257b581281425b70051",
+    "content-hash": "0dcacab8a4540b6bf6630f0f070426b0",
     "packages": [
         {
             "name": "aydin-hassan/magento-core-composer-installer",
@@ -156,16 +156,16 @@
         },
         {
             "name": "firegento/magento",
-            "version": "v1.9.3.2",
+            "version": "v1.9.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/firegento/magento.git",
-                "reference": "b6d5eb96a8ca3675db1b7ae8403294440bc9d56b"
+                "reference": "e375159bfbb7afb205490a57431ac0519ff47e2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firegento/magento/zipball/b6d5eb96a8ca3675db1b7ae8403294440bc9d56b",
-                "reference": "b6d5eb96a8ca3675db1b7ae8403294440bc9d56b",
+                "url": "https://api.github.com/repos/firegento/magento/zipball/e375159bfbb7afb205490a57431ac0519ff47e2e",
+                "reference": "e375159bfbb7afb205490a57431ac0519ff47e2e",
                 "shasum": ""
             },
             "type": "magento-core",
@@ -175,10 +175,10 @@
             ],
             "description": "Magento CE",
             "support": {
-                "source": "https://github.com/firegento/magento/tree/v1.9.3.2",
+                "source": "https://github.com/firegento/magento/tree/v1.9.3.3",
                 "issues": "https://github.com/firegento/magento/issues"
             },
-            "time": "2017-02-08T10:51:10+00:00"
+            "time": "2017-06-07T17:23:28+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -248,18 +248,32 @@
         },
         {
             "name": "mage-eag/mage-enhanced-admin-grids",
-            "version": "0.8.9.x-dev",
+            "version": "0.9.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mage-eag/mage-enhanced-admin-grids.git",
-                "reference": "3ebf84c14686cf3756d347f9f3b6a63ea9d3b33a"
+                "reference": "c2a041e550b2054bbe218eb30baff4f136532ff8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mage-eag/mage-enhanced-admin-grids/zipball/c2a041e550b2054bbe218eb30baff4f136532ff8",
+                "reference": "c2a041e550b2054bbe218eb30baff4f136532ff8",
+                "shasum": ""
             },
             "require": {
                 "magento-hackathon/magento-composer-installer": "*"
             },
             "type": "magento-module",
+            "license": [
+                "OSL-3.0"
+            ],
             "description": "Enhanced Admin Grids Extension for Magento",
-            "time": "2015-07-09 10:52:50"
+            "homepage": "https://github.com/mage-eag/mage-enhanced-admin-grids",
+            "support": {
+                "source": "https://github.com/mage-eag/mage-enhanced-admin-grids/tree/0.9.0.1",
+                "issues": "https://github.com/mage-eag/mage-enhanced-admin-grids/issues"
+            },
+            "time": "2015-10-23T12:10:37+00:00"
         },
         {
             "name": "magento-hackathon/magento-composer-installer",
@@ -744,7 +758,6 @@
     "stability-flags": {
         "popov/magento-deleter": 20,
         "popov/magento-magmi-import": 20,
-        "mage-eag/mage-enhanced-admin-grids": 20,
         "rossmc/rsqs": 20,
         "ecomdev/mage-ci": 20
     },
