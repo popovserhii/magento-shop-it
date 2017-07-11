@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "eb348a850902925489e3331521b72342",
+    "content-hash": "c669ad480d834257b581281425b70051",
     "packages": [
         {
             "name": "aydin-hassan/magento-core-composer-installer",
@@ -247,6 +247,21 @@
             "time": "2016-12-22T16:43:46+00:00"
         },
         {
+            "name": "mage-eag/mage-enhanced-admin-grids",
+            "version": "0.8.9.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mage-eag/mage-enhanced-admin-grids.git",
+                "reference": "3ebf84c14686cf3756d347f9f3b6a63ea9d3b33a"
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "*"
+            },
+            "type": "magento-module",
+            "description": "Enhanced Admin Grids Extension for Magento",
+            "time": "2015-07-09 10:52:50"
+        },
+        {
             "name": "magento-hackathon/magento-composer-installer",
             "version": "3.1.2",
             "source": {
@@ -378,7 +393,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/popovsergiy/magento-magmi-import.git",
-                "reference": "0a3a964013e55601c3415496963b8610c6667e8d"
+                "reference": "d73eaa2cf45dec9ebddb99f394d2df5c438c705f"
             },
             "type": "magento-module",
             "extra": {
@@ -427,7 +442,7 @@
                 }
             ],
             "description": "Import products and images based on Magmi",
-            "time": "2017-06-05 14:21:01"
+            "time": "2017-07-06 20:25:44"
         },
         {
             "name": "psr/log",
@@ -482,7 +497,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/popovsergiy/RemoveStoreQueryString.git",
-                "reference": "6f212aea6d165dfb09d91f0942a7ecf3fbad7e10"
+                "reference": "55b29cb92e59313d8298d3ec879874aa5dcbad75"
             },
             "type": "magento-module",
             "extra": {
@@ -500,14 +515,8 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "authors": [
-                {
-                    "name": "Serhii Popov",
-                    "email": "popow.sergiy@gmail.com"
-                }
-            ],
             "description": "Remove store query string",
-            "time": "2017-07-05 19:42:27"
+            "time": "2017-07-09 11:16:07"
         },
         {
             "name": "symfony/console",
@@ -735,6 +744,7 @@
     "stability-flags": {
         "popov/magento-deleter": 20,
         "popov/magento-magmi-import": 20,
+        "mage-eag/mage-enhanced-admin-grids": 20,
         "rossmc/rsqs": 20,
         "ecomdev/mage-ci": 20
     },
