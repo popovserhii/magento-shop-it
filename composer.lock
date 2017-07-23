@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0dcacab8a4540b6bf6630f0f070426b0",
+    "content-hash": "35b7c157052cc975179a561ad958c4fe",
     "packages": [
         {
             "name": "aydin-hassan/magento-core-composer-installer",
@@ -51,6 +51,40 @@
             ],
             "description": "A composer plugin for managing Magento Core",
             "time": "2016-12-21T09:57:51+00:00"
+        },
+        {
+            "name": "dweeves/magmi",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dweeves/magmi-git.git",
+                "reference": "5b7d0019ee370c25ebac6ba4262f6d96a4e7621a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dweeves/magmi-git/zipball/5b7d0019ee370c25ebac6ba4262f6d96a4e7621a",
+                "reference": "5b7d0019ee370c25ebac6ba4262f6d96a4e7621a",
+                "shasum": ""
+            },
+            "bin": [
+                "magmi/cli/magmi.cli.php"
+            ],
+            "type": "library",
+            "license": [
+                "MIT License"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastien Bracquemont"
+                }
+            ],
+            "description": "Magento Mass Importer",
+            "homepage": "http://sourceforge.net/projects/magmi/",
+            "support": {
+                "source": "https://github.com/dweeves/magmi-git/tree/master",
+                "issues": "https://github.com/dweeves/magmi-git/issues"
+            },
+            "time": "2017-06-09 12:46:16"
         },
         {
             "name": "eloquent/composer-config-reader",
@@ -534,7 +568,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -603,7 +637,7 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v3.3.4",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
@@ -756,6 +790,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "dweeves/magmi": 20,
         "popov/magento-deleter": 20,
         "popov/magento-magmi-import": 20,
         "rossmc/rsqs": 20,
