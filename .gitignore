@@ -12847,6 +12847,7 @@ htdocs/app/etc/modules/Amasty_Optimization.xml
 htdocs/app/etc/modules/Rugento_Novaposhta.xml
 htdocs/app/etc/modules/Rugento_Smsnotice.xml
 htdocs/app/etc/modules/Rugento_Ymlpro.xml
+htdocs/app/etc/modules/BL_CustomGrid.xml
 
 htdocs/app/etc/modules/Mirasvit_AsyncIndex.xml
 htdocs/app/etc/modules/Mirasvit_MstCore.xml
