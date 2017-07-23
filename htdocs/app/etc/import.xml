@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <popov_magmi>
+        <general_import>
+            <!-- path to magmi console script -->
+            <magmi_cli_pathname>../vendor/dweeves/magmi/magmi/cli/magmi.cli.php</magmi_cli_pathname>
+        </general_import>
+        <image_import>
+            <simple_import>
+                <source_path>media/import/images</source_path>
+                <!--
+                If type is "dir" then images should be put in this directory
+                if type is "file" then images should be sought in current directory
+                -->
+                <type>file</type><!-- file | dir -->
+                <product_type>simple</product_type><!-- simple | configurable -->
+                <name>
+                    <!--<pattern><![CDATA[(?P<supplier_sku>[\d]+_.*).[a-z]{3,4}]]></pattern>-->
+                    <to_attribute>sku</to_attribute><!-- filename to attribute name -->
+                </name>
+                <images>
+                    <image>{{var product.sku}}.{jpg,png}</image>
+                    <!--<small_image />-->
+                    <!--<thumbnail />-->
+                    <!--<media_gallery />-->
+                </images>
+                <options>
+                    <backup_images>1</backup_images>
+                </options>
+            </simple_import>
+        </image_import>
+    </popov_magmi>
+</config>
