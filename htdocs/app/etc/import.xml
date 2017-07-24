@@ -19,7 +19,8 @@
                     <to_attribute>sku</to_attribute><!-- filename to attribute name -->
                 </name>
                 <images>
-                    <image>{{var product.sku}}.{jpg,png}</image>
+                    <image>{{var product.sku}}.{jpg,jpeg,JPG,png,gif}</image>
+
                     <!--<small_image />-->
                     <!--<thumbnail />-->
                     <!--<media_gallery />-->

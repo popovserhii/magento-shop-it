@@ -12858,4 +12858,9 @@ htdocs/app/etc/modules/Mirasvit_SeoSitemap.xml
 
 htdocs/js/bl/
 htdocs/app/code/community/BL/
+htdocs/app/code/community/Rossmc/Rsqs
+htdocs/app/etc/modules/Rossmc_Rsqs.xml
+htdocs/app/locale/*/BL_CustomGrid.csv
+htdocs/shell/deleter.php
+
 htdocs/app/code/local/Mirasvit/
