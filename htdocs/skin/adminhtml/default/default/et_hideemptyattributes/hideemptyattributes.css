@@ -1,0 +1,11 @@
+.hideemptyattributes-conflicts-notification{
+    background: #EAF0EE;
+    border: 1px solid #CCCCCC;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-weight:bold;
+}
+
+.hideemptyattributes-conflicts-notification .conflict-class{
+    color: #EA7601;
+}

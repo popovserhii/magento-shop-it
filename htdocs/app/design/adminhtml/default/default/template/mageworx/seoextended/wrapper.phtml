@@ -1,0 +1,23 @@
+<?php
+/**
+ * MageWorx
+ * MageWorx SeoExtended Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoExtended
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+
+?>
+<script type="text/javascript">
+//<![CDATA[
+    SeoSuite.init({
+        enteredLabel: '<?php echo Mage::helper('seoextended')->__('You’ve entered <span style="font-weight:bold">0</span> character(s).') ?>',
+        titleSearchUse: '<?php echo Mage::helper('seoextended')->__('<br>Most search engines use up to <strong>70</strong>.') ?>',
+        descriptionSearchUse: '<?php echo Mage::helper('seoextended')->__('<br>Most search engines use up to <strong>150</strong>.') ?>'
+    });
+    document.observe('dom:loaded', function() {
+        SeoSuite.updateForm()
+    });
+//]]>
+</script>

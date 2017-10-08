@@ -1,0 +1,87 @@
+<?php
+/**
+ * MageWorx
+ * MageWorx SeoSuite Ultimate Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoSuiteUltimate
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+?>
+
+<?php
+$userGuideLink                 = 'http://www.mageworx.com/downloads/dl/file/id/7/seo_suite_ultimate.pdf';
+$videoGuide                    = 'https://www.youtube.com/watch?v=LZQEnyBxoKM&feature=youtu.be';
+$supportLink                   = 'http://support.mageworx.com/';
+$seoConfigurationLink          = 'http://www.mageworx.com/advanced-magento-seo-configuration';
+$seoHowDisableLink             = 'http://support.mageworx.com/index.php?/Knowledgebase/Article/View/14/0/how-to-disable-the-seo-suite-ultimate-extension';
+$structuredDataTestingToolLink = 'https://developers.google.com/structured-data/testing-tool/';
+$facebookTestingToolLink       = 'https://developers.facebook.com/tools/debug/';
+$schemaOrgLink                 = 'http://schema.org/';
+$canonicalGuideLink            = 'https://support.google.com/webmasters/answer/139066?hl=en';
+$alternateHreflangUrl          = 'https://support.google.com/webmasters/answer/189077?hl=en';
+$logoSrc                       = $this->getSkinUrl('images/mageworx/seoult/seo_ult_logo.png');
+?>
+
+<div style="border:1px solid #ccc; margin-bottom:10px; ">
+
+    <div style="padding:10px 5px 5px 15px;">
+        <table>
+            <tr>
+                <td>
+                    <img height="210px" width="210px" alt="SEO Suite Logo" src="<?php echo $logoSrc; ?>"></img>
+                </td>
+                <td class="main_description">
+                    <div style="padding:0px 5px 5px 20px;">
+                        <p style="margin-top: 2px;"> <a href="<?php echo $userGuideLink ?>" target="_blank">
+                                <?php echo $this->__('User guide') ?></a> -
+                            <?php echo $this->__('read a detailed description of the extension’s functionality') ?>
+                        </p>
+                        <p style="margin-top: 2px;"> <a href="<?php echo $videoGuide ?>" target="_blank">
+                                <?php echo $this->__('Video Guide') ?></a> -
+                            <?php echo $this->__('explore the potential of the extension in this video tutorial.') ?>
+                        </p>
+                        <p style="margin-top: 2px;"> <a href="<?php echo $seoConfigurationLink ?>" target="_blank">
+                                <?php echo $this->__('Advanced Configuration') ?></a> -
+                            <?php echo $this->__('let us audit your site and set up SEO extension the best way possible for your business (for just $199).') ?>
+                        </p>
+                        <p>
+                            <strong>FAQ</strong> – <a href="<?php echo $seoHowDisableLink ?>" target="_blank">
+                                <?php echo $this->__('How to disable the SEO Suite Ultimate') ?></a>
+                        </p>
+                        <h4>Tools:</h4>
+                        <p style="margin-top: 2px;">
+                            <a href="<?php echo $structuredDataTestingToolLink ?>" target="_blank">
+                                <?php echo $this->__('Structured Data Testing Tool') ?></a><br>
+
+                            <a href="<?php echo $facebookTestingToolLink ?>" target="_blank">
+                                <?php echo $this->__('Facebook Testing Tool') ?></a><br>
+
+                            <a href="<?php echo $schemaOrgLink ?>" target="_blank">
+                                <?php echo $this->__('Schema.org') ?></a><br>
+
+                            <a href="<?php echo $canonicalGuideLink ?>" target="_blank">
+                                <?php echo $this->__('Canonical ULRs Guide') ?></a><br>
+
+                            <a href="<?php echo $alternateHreflangUrl ?>" target="_blank">
+                                <?php echo $this->__('Alternate Hreflang Guide') ?></a><br>
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p style="margin-top: 2px;"><?php echo $this->__('SEO Suite Ultimate is a powerful tool that allows you to configure a wide range of Magento SEO aspects.') ?><p />
+                    <p style="margin-top: 2px;"><?php echo $this->__('All functional parts of the extension take into account the others, creating a holistic SEO Machine.') ?><p />
+                    <p style="margin-top: 2px;"><?php echo $this->__('Well-thought, well-designed, well-researched. You won’t have to think about compatibility of functional modules, as they are all built-in.') ?></p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p style="margin-top: 2px;"><strong><?php echo $this->__('Have a new feature idea? Feel free to email us at') ?>
+                            <a href="<?php echo $supportLink ?>" target="_blank"><?php echo $this->__('support@mageworx.com') ?></a></strong></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

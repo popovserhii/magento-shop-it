@@ -1,0 +1,20 @@
+<?php
+/**
+ * MageWorx
+ * MageWorx SeoReports Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoReports
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+?>
+<div class="content-header">
+    <table cellspacing="0">
+        <tr>
+            <td style="width:50%;"><h3 class="icon-head head-products"><?php echo Mage::helper('seoreports')->__('SEO Reports') . ' - ' . Mage::helper('seoreports')->__('Categories Report') . ' - ' . Mage::helper('seoreports')->__('View Duplicates'); ?></h3></td>
+            <td class="a-right"><?php echo $this->getButtonsHtml() ?></td>
+        </tr>
+    </table>
+</div>
+<?php if (!Mage::app()->isSingleStoreMode()) echo $this->getChildHtml('store_switcher'); ?>
+<div><?php echo $this->getGridHtml() ?></div>

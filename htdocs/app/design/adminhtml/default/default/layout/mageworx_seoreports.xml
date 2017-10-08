@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoReports Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_SeoReports
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+-->
+<layout>    
+    <adminhtml_mageworx_seoreports_product_index>
+        <reference name="content">
+            <block type="seoreports/adminhtml_product" name="seoreports.product" template="mageworx/seoreports/product.phtml">
+                <block type="adminhtml/store_switcher" name="store_switcher" as="store_switcher">
+                    <action method="setUseConfirm">
+                        <params>0</params>
+                    </action>
+                    <action method="hasDefaultOption">
+                        <params>0</params>
+                    </action>
+                </block>
+            </block>
+        </reference>
+    </adminhtml_mageworx_seoreports_product_index>
+    <adminhtml_mageworx_seoreports_product_grid>
+        <update handle="formkey"/>
+        <block type="seoreports/adminhtml_product_grid" name="seoreports.product.grid" output="toHtml"></block>
+    </adminhtml_mageworx_seoreports_product_grid>
+    <adminhtml_mageworx_seoreports_product_generate>
+        <remove name="root"/>
+        <block type="adminhtml/page" name="convert_root" output="toHtml" template="page.phtml">
+            <block type="adminhtml/page_head" name="convert_root_head" as="head" template="page/head.phtml">
+                <action method="addJs">
+                    <script>prototype/prototype.js</script>
+                </action>
+                <action method="addJs">
+                    <script>prototype/validation.js</script>
+                </action>
+                <action method="addJs">
+                    <script>varien/js.js</script>
+                </action>
+                <action method="addJs">
+                    <script>mage/translate.js</script>
+                </action>
+                <action method="addJs">
+                    <script>mage/adminhtml/tools.js</script>
+                </action>
+            </block>
+            <block type="adminhtml/template" name="generate" template="mageworx/seoreports/generate.phtml" output="toHtml"/>
+        </block>
+    </adminhtml_mageworx_seoreports_product_generate>
+       
+    <adminhtml_mageworx_seoreports_product_duplicateview>
+        <reference name="content">
+            <block type="seoreports/adminhtml_product_duplicate_view" name="seoreports.product.duplicate.view" template="mageworx/seoreports/product/duplicate-view.phtml">
+                <block type="adminhtml/store_switcher" name="store_switcher" as="store_switcher">
+                    <action method="setUseConfirm">
+                        <params>0</params>
+                    </action>
+                </block>            
+            </block>
+        </reference>
+    </adminhtml_mageworx_seoreports_product_duplicateview>
+    
+    <adminhtml_mageworx_seoreports_product_duplicateviewgrid>
+        <update handle="formkey"/>
+        <block type="seoreports/adminhtml_product_duplicate_view_grid" name="seoreports.product.duplicate.view.grid" output="toHtml"></block>
+    </adminhtml_mageworx_seoreports_product_duplicateviewgrid>
+    
+    <adminhtml_mageworx_seoreports_category_index>
+        <reference name="content">
+            <block type="seoreports/adminhtml_category" name="seoreports.category" template="mageworx/seoreports/category.phtml">
+                <!-- <block type="adminhtml/store_switcher" name="store_switcher" as="store_switcher">
+                    <action method="setUseConfirm"><params>0</params></action>
+                </block> -->            
+            </block>
+        </reference>
+    </adminhtml_mageworx_seoreports_category_index>
+    
+    <adminhtml_mageworx_seoreports_category_grid>
+        <update handle="formkey"/>
+        <block type="seoreports/adminhtml_category_grid" name="seoreports.category.grid" output="toHtml"></block>
+    </adminhtml_mageworx_seoreports_category_grid>
+    
+    <adminhtml_mageworx_seoreports_category_generate>
+        <remove name="root"/>
+        <block type="adminhtml/page" name="convert_root" output="toHtml" template="page.phtml">
+            <block type="adminhtml/page_head" name="convert_root_head" as="head" template="page/head.phtml">
+                <action method="addJs">
+                    <script>prototype/prototype.js</script>
+                </action>
+                <action method="addJs">
+                    <script>prototype/validation.js</script>
+                </action>
+                <action method="addJs">
+                    <script>varien/js.js</script>
+                </action>
+                <action method="addJs">
+                    <script>mage/translate.js</script>
+                </action>
+                <action method="addJs">
+                    <script>mage/adminhtml/tools.js</script>
+                </action>
+            </block>
+            <block type="adminhtml/template" name="generate" template="mageworx/seoreports/generate.phtml" output="toHtml"/>
+        </block>
+    </adminhtml_mageworx_seoreports_category_generate>
+    
+    <adminhtml_mageworx_seoreports_category_duplicateview>
+        <reference name="content">
+            <block type="seoreports/adminhtml_category_duplicate_view" name="seoreports.category.duplicate.view" template="mageworx/seoreports/category/duplicate-view.phtml">
+                <block type="adminhtml/store_switcher" name="store_switcher" as="store_switcher">
+                    <action method="setUseConfirm">
+                        <params>0</params>
+                    </action>
+                </block>            
+            </block>
+        </reference>
+    </adminhtml_mageworx_seoreports_category_duplicateview>
+    
+    <adminhtml_mageworx_seoreports_category_duplicateviewgrid>
+        <update handle="formkey"/>
+        <block type="seoreports/adminhtml_category_duplicate_view_grid" name="seoreports.category.duplicate.view.grid" output="toHtml"></block>
+    </adminhtml_mageworx_seoreports_category_duplicateviewgrid>
+    
+    <adminhtml_mageworx_seoreports_cms_index>
+        <reference name="content">
+            <block type="seoreports/adminhtml_cms" name="seoreports.cms" template="mageworx/seoreports/cms.phtml">
+                <block type="adminhtml/store_switcher" name="store_switcher" as="store_switcher">
+                    <action method="setUseConfirm">
+                        <params>0</params>
+                    </action>
+                    <action method="hasDefaultOption">
+                        <params>0</params>
+                    </action>
+                </block>            
+            </block>
+        </reference>
+    </adminhtml_mageworx_seoreports_cms_index>
+    
+    <adminhtml_mageworx_seoreports_cms_grid>
+        <update handle="formkey"/>
+        <block type="seoreports/adminhtml_cms_grid" name="seoreports.cms.grid" output="toHtml"></block>
+    </adminhtml_mageworx_seoreports_cms_grid>
+    
+    <adminhtml_mageworx_seoreports_cms_generate>
+        <remove name="root"/>
+        <block type="adminhtml/page" name="convert_root" output="toHtml" template="page.phtml">
+            <block type="adminhtml/page_head" name="convert_root_head" as="head" template="page/head.phtml">
+                <action method="addJs">
+                    <script>prototype/prototype.js</script>
+                </action>
+                <action method="addJs">
+                    <script>prototype/validation.js</script>
+                </action>
+                <action method="addJs">
+                    <script>varien/js.js</script>
+                </action>
+                <action method="addJs">
+                    <script>mage/translate.js</script>
+                </action>
+                <action method="addJs">
+                    <script>mage/adminhtml/tools.js</script>
+                </action>
+            </block>
+            <block type="adminhtml/template" name="generate" template="mageworx/seoreports/generate.phtml" output="toHtml"/>
+        </block>
+    </adminhtml_mageworx_seoreports_cms_generate>
+    
+    <adminhtml_mageworx_seoreports_cms_duplicateview>
+        <reference name="content">
+            <block type="seoreports/adminhtml_cms_duplicate_view" name="seoreports.cms.duplicate.view" template="mageworx/seoreports/cms/duplicate-view.phtml">
+                <block type="adminhtml/store_switcher" name="store_switcher" as="store_switcher">
+                    <action method="setUseConfirm">
+                        <params>0</params>
+                    </action>
+                </block>            
+            </block>
+        </reference>
+    </adminhtml_mageworx_seoreports_cms_duplicateview>
+    
+    <adminhtml_mageworx_seoreports_cms_duplicateviewgrid>
+        <update handle="formkey"/>
+        <block type="seoreports/adminhtml_cms_duplicate_view_grid" name="seoreports.cms.duplicate.view.grid" output="toHtml"></block>
+    </adminhtml_mageworx_seoreports_cms_duplicateviewgrid>
+</layout>

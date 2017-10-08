@@ -1,0 +1,88 @@
+<?php
+/**
+ * MageWorx
+ * MageWorx SeoXTemplates Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoXTemplates
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+?>
+
+<?php
+$_helper = Mage::helper('mageworx_seoxtemplates');
+?>
+
+<div class="note">
+    <p><?php echo Mage::helper('mageworx_seoxtemplates/factory')->getHelper()->getNoteForGridTemplate(); ?></p>
+</div>
+<div id="<?php echo $this->getHtmlId() ?>">
+<table cellspacing="0" cellpadding="0" class="massaction">
+<tr>
+    <td><a href="#" onclick="return <?php echo $this->getJsObjectName() ?>.selectAll()"><?php echo $_helper->__('Select All') ?></a>
+        <span class="separator">|</span>
+        <a href="#" onclick="return <?php echo $this->getJsObjectName() ?>.unselectAll()"><?php echo $_helper->__('Unselect All') ?></a>
+        <span class="separator">|</span>
+        <a href="#" onclick="return <?php echo $this->getJsObjectName() ?>.selectVisible()"><?php echo $_helper->__('Select Visible') ?></a>
+        <span class="separator">|</span>
+        <a href="#" onclick="return <?php echo $this->getJsObjectName() ?>.unselectVisible()"><?php echo $_helper->__('Unselect Visible') ?></a>
+        <span class="separator">|</span>
+        <strong id="<?php echo $this->getHtmlId() ?>-count">0</strong> <?php echo $_helper->__('items selected') ?>
+    </td>
+    <td>
+        <div class="right">
+            <div id="selected-products"></div>
+            <div class="entry-edit" style="display: none;">
+                <form action="" id="<?php echo $this->getHtmlId() ?>-form" method="post">
+                    <?php echo $this->getBlockHtml('formkey')?>
+                    <fieldset>
+                        <span class="field-row">
+                            <label><?php echo $_helper->__('Actions') ?></label>
+                            <select id="<?php echo $this->getHtmlId() ?>-select" class="select absolute-advice">
+                                <option value=""></option>
+                                <?php foreach($this->getItems() as $_item): ?>
+                                    <option value="<?php echo $_item->getId() ?>"<?php echo ($_item->getSelected() ? ' selected="selected"' : '')?>><?php echo $_item->getLabel() ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </span>
+                        <span class="outer-span" id="<?php echo $this->getHtmlId() ?>-form-hiddens"></span>
+                        <span class="outer-span" id="<?php echo $this->getHtmlId() ?>-form-additional"></span>
+                        <span class="field-row">
+                            <?php echo $this->getApplyButtonHtml() ?>
+                        </span>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="no-display">
+            <?php foreach($this->getItems() as $_item): ?>
+                <div id="<?php echo $this->getHtmlId() ?>-item-<?php echo $_item->getId() ?>-block">
+                    <?php echo $_item->getAdditionalActionBlockHtml() ?>
+                </div>
+            <?php endforeach; ?>
+            </div>
+        </div>
+    </td>
+</tr>
+</table>
+
+<script type="text/javascript">
+//<![CDATA[
+	function applySelectedProducts(type) {
+        var ids = <?php echo $this->getJsObjectName() ?>.checkedString;
+	    var process = $('selected-products').update('<input type="hidden" name="post_individual_items" value="'+ ids +'" />');
+
+	    if (process) {
+	        if (type == 'save') {
+	            editForm.submit();
+	        } else if ('saveandcontinue') {
+	            editForm.submit($('edit_form').action +'back/edit/');
+	        }
+	    }
+	}
+<?php if(!$this->getParentBlock()->canDisplayContainer()): ?>
+    <?php echo $this->getJsObjectName() ?>.setGridIds('<?php echo $this->getGridIdsJson() ?>');
+<?php endif; ?>
+//]]>
+</script>
+</div>

@@ -1,0 +1,66 @@
+/**
+ * MageWorx
+ * MageWorx XSitemap Extension
+ * 
+ * @category   MageWorx
+ * @package    MageWorx_XSitemap
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+
+/**
+ *  Don't move this file to the directory of the current package/theme, it is used only in the base/default directory
+ */
+
+url {
+	background-color: lightsteelblue;
+	display: block;
+	padding: 10px;
+	font-family: sans-serif;
+    margin: 10px;
+}
+
+loc:before {content: "URL: "}
+loc {
+	display: block;
+	margin-bottom: 10px;
+    font-weight: bold;
+}
+
+link:before {content: "Hreflang: " attr(hreflang) " - " attr(href) }
+link {	
+    margin-left: 40px;
+	display: block;
+    font-style: italic;	
+	margin-bottom: 10px;        
+}
+
+
+lastmod:before {content: "lastmod: "}
+lastmod {
+    display: block;
+	margin-left: 20px;
+	margin-bottom: 10px;        
+}
+
+changefreq:before {content: "changefreq: "}
+changefreq {	
+    display: block;
+	margin-left: 20px;
+	margin-bottom: 10px;    
+}
+
+priority:before {content: "priority: "}
+priority {
+	display: block;
+    margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+image loc:before {content: "IMG: "}
+image loc {
+    display: block;
+    font-style: italic;	
+    margin-left: 40px;
+	margin-bottom: 10px;
+    font-weight: normal;
+}

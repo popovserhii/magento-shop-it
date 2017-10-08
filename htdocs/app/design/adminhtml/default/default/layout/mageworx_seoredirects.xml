@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<layout>
+    <adminhtml_mageworx_seoredirects_redirect_product_index>
+        <reference name="head">        
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/mageworx/seoredirects/grid.css</name>                    
+            </action>
+        </reference>
+        
+        <reference name="content">
+            <block type="adminhtml/store_switcher" name="store_switcher" as="store_switcher">
+                <action method="setUseConfirm">
+                    <params>0</params>
+                </action>
+                <action method="hasDefaultOption">
+                    <params>0</params>
+                </action>
+            </block>
+            <block type="mageworx_seoredirects/adminhtml_redirect_product" name="adminhtml_redirect_product" template="mageworx/seoredirects/redirect/product.phtml"></block>
+        </reference>
+    </adminhtml_mageworx_seoredirects_redirect_product_index>    
+</layout>

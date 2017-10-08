@@ -1,0 +1,35 @@
+<!--
+/**
+* NOTICE OF LICENSE
+*
+* You may not give, sell, distribute, sub-license, rent, lease or lend
+* any portion of the Software or Documentation to anyone.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade to newer
+* versions in the future.
+*
+* @category   ET
+* @package    ET_HideEmptyAttributes
+* @copyright  Copyright (c) 2015 ET Web Solutions (http://etwebsolutions.com)
+* @contacts   support@etwebsolutions.com
+* @license    http://shop.etwebsolutions.com/etws-license-commercial-v1/   ETWS Commercial License (ECL1)
+*/
+-->
+<?php
+/** @var $this ET_HideEmptyAttributes_Block_Adminhtml_System_Config_Fieldset_ConflictNotification */
+$conflicts = $this->getConflicts();
+
+/** @var $helper ET_HideEmptyAttributes_Helper_Data*/
+$helper = Mage::helper('ethideemptyattributes');
+?>
+<?php if($conflicts):?>
+<div class="hideemptyattributes-conflicts-notification">
+        <p><?php echo $helper->__('Some of the features of ET Hide Empty Attributes extension most likely does not work because some of the Magento classes that were rewritten by it, are also being overridden by another extension.');?></p>
+        <?php foreach ($conflicts as $conflict) :?>
+            <p><?php echo $helper->__('Class <span class="conflict-class">%s</span> is rewritten by <span class="conflict-class">%s</span>', $conflict['magento_class'], $conflict['other_module_class']);?></p>
+        <?php endforeach; ?>
+        <p><?php echo $helper->__('Solve the conflict(s) to make the extension work as it was intended to.');?></p>
+</div>
+<?php endif;?>

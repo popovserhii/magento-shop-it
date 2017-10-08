@@ -1,0 +1,59 @@
+<?php
+/**
+ * MageWorx
+ * MageWorx SeoXTemplates Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoXTemplates
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+
+$modelId = $this->getParams('template')->getId();
+$nextIds  = $this->getParams('next_ids');
+$test = $this->getParams('test');
+
+$goBackUrl = $this->getUrl('*/*/index/', array('_secure' => true));
+
+?>
+
+<ul id="processRows"></ul>
+
+<script type="text/javascript">
+    tplRowSuccess = new Template('<li class="row_success"><img src="<?php echo $this->getSkinUrl('images/fam_bullet_success.gif'); ?>" class="v-middle" /> #{text}</li>');
+    tplRowWait = '<li class="wait"><img src="<?php echo $this->getSkinUrl('images/rule-ajax-loader.gif'); ?>" class="v-middle" /></li>';
+    tplRowDone = '<li class="wait"><img src="<?php echo $this->getSkinUrl('images/note_msg_icon.gif'); ?>" class="v-middle" /><?php echo $this->__('Done') ?>.  <a href = "<?php echo $goBackUrl ?>"><?php echo $this->__('Go back to the template list') ?></a></li>';
+
+    function runProcess(data) {
+        $$('.wait').each(function(el) {
+            el.remove();
+        });
+
+        Element.insert($("processRows"), tplRowSuccess.evaluate(data));
+
+        if (data.stop) {
+            Element.insert($("processRows"), tplRowDone);
+            window.scrollTo(0, 90000);
+            return true;
+        }
+
+        Element.insert($("processRows"), tplRowWait);
+        window.scrollTo(0, 9000);
+
+        new Ajax.Request(data.url, {
+            method: "get",
+            onSuccess: function(transport) {
+                if (transport.responseText.isJSON()) {
+                    runProcess(transport.responseText.evalJSON());
+                }
+                else {
+                    Element.insert($("processRows"), tplRowDone);
+                    window.scrollTo(0, 90000);
+                    window.location = transport.responseText;
+                }
+            }
+        }
+        );
+    }
+    runProcess({'text': '<?php echo $this->__('The proccess has been started". <span style="color:red">Please do not close this window.</span>')
+?>', 'url': '<?php echo $this->getUrl('*/*/runApply/', array('current'  => 0, 'template_id' => $modelId, 'next_ids' => $nextIds, 'test' => $test)) ?>'});
+</script>

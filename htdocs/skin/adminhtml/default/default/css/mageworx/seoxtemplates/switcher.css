@@ -1,0 +1,26 @@
+/**
+ * MageWorx
+ * MageWorx SeoXTemplates Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoXTemplates
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+
+.switcher {
+    
+}
+
+.switcher label{
+    margin-left:20px;
+}
+
+.note p {
+    font-style: italic;
+    padding-left: 20px;
+}
+
+.switcher_title{
+    font-size: larger;
+    font-weight: bolder;
+}

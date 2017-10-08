@@ -1,0 +1,32 @@
+/**
+ * MageWorx
+ * MageWorx SeoXTemplates Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoXTemplates
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+
+
+ul { 
+    list-style-type:none;
+    padding:0;
+    margin:0; 
+}
+
+li {
+    margin-left:0;
+    border:1px solid #ccc;
+    margin:2px;
+    padding:2px 2px 2px 2px;
+    font:normal 12px sans-serif;
+}
+
+img { 
+    margin-right:5px;
+}
+
+.row_success {
+    background-color:#DDF;
+}
+

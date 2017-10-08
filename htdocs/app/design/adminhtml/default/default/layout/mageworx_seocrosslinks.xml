@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageWorx
+ * MageWorx SeoCrossLinks Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoCrossLinks
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+-->
+<layout>
+    <adminhtml_mageworx_seocrosslinks_crosslink_index>
+        <reference name="content">
+            <block type="mageworx_seocrosslinks/adminhtml_crosslink" name="adminhtml_crosslink" template="mageworx/seocrosslinks/crosslink.phtml"></block>
+        </reference>
+    </adminhtml_mageworx_seocrosslinks_crosslink_index>    
+</layout>

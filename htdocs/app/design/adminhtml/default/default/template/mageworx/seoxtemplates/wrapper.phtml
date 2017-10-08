@@ -1,0 +1,22 @@
+<?php
+/**
+ * MageWorx
+ * MageWorx SeoTemplates Extension
+ *
+ * @category   MageWorx
+ * @package    MageWorx_SeoXTemplates
+ * @copyright  Copyright (c) 2015 MageWorx (http://www.mageworx.com/)
+ */
+?>
+<script type="text/javascript">
+//<![CDATA[
+    SeoSuite.init({
+        enteredLabel: '<?php echo Mage::helper('seosuite')->__('You’ve entered <span>0</span> character(s).') ?>',
+        titleSearchUse: '<?php echo Mage::helper('seosuite')->__('Most search engines use up to 70.') ?>',
+        descriptionSearchUse: '<?php echo Mage::helper('seosuite')->__('Most search engines use up to 150.') ?>'
+    });
+    document.observe('dom:loaded', function() {
+        SeoSuite.updateForm()
+    });
+//]]>
+</script>

@@ -1,0 +1,102 @@
+Enable Using Markup,Enable Using Markup
+Website Info:,Website Info:
+&nbsp;&nbsp;&nbsp;&nbsp;Enable In Open Graph,&nbsp;&nbsp;&nbsp;&nbsp;Enable In Open Graph
+&nbsp;&nbsp;&nbsp;&nbsp;Enable In Twitter Cards,&nbsp;&nbsp;&nbsp;&nbsp;Enable In Twitter Cards
+&nbsp;&nbsp;&nbsp;&nbsp;Enable In Twitter Cards ▾,&nbsp;&nbsp;&nbsp;&nbsp;Enable In Twitter Cards ▾
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter Username,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter Username
+&nbsp;&nbsp;&nbsp;&nbsp;Enable In Rich Snippets,&nbsp;&nbsp;&nbsp;&nbsp;Enable In Rich Snippets
+&nbsp;&nbsp;&nbsp;&nbsp;Enable In Rich Snippets ▾,&nbsp;&nbsp;&nbsp;&nbsp;Enable In Rich Snippets ▾
+Website Info will be added by Schema.org: JSON-LD,Website Info will be added by Schema.org: JSON-LD
+&nbsp;&nbsp;&nbsp;&nbsp;Website Name,&nbsp;&nbsp;&nbsp;&nbsp;Website Name
+"If empty, the default store name will be used.","If empty, the default store name will be used."
+&nbsp;&nbsp;&nbsp;&nbsp;About,&nbsp;&nbsp;&nbsp;&nbsp;About
+&nbsp;&nbsp;&nbsp;&nbsp;Add Search Action,&nbsp;&nbsp;&nbsp;&nbsp;Add Search Action
+Merchant (Seller) Info:,Merchant (Seller) Info:
+Seller's Info will be added by Schema.org: JSON-LD,Seller's Info will be added by Schema.org: JSON-LD
+&nbsp;&nbsp;&nbsp;&nbsp;Seller Type (by Schema.org),&nbsp;&nbsp;&nbsp;&nbsp;Seller Type (by Schema.org)
+Social Links,Social Links
+The list of social media links <br /><b>Example:</b><br />https://twitter.com/mageworxteam<br />https://www.facebook.com/mageworx,The list of social media links <br /><b>Example:</b><br />https://twitter.com/mageworxteam<br />https://www.facebook.com/mageworx
+&nbsp;&nbsp;&nbsp;&nbsp;Phone,&nbsp;&nbsp;&nbsp;&nbsp;Phone
+&nbsp;&nbsp;&nbsp;&nbsp;Fax,&nbsp;&nbsp;&nbsp;&nbsp;Fax
+&nbsp;&nbsp;&nbsp;&nbsp;Email,&nbsp;&nbsp;&nbsp;&nbsp;Email
+&nbsp;&nbsp;&nbsp;&nbsp;Location,&nbsp;&nbsp;&nbsp;&nbsp;Location
+<b>Example:</b> Seattle,<b>Example:</b> Seattle
+&nbsp;&nbsp;&nbsp;&nbsp;State/Region,&nbsp;&nbsp;&nbsp;&nbsp;State/Region
+<b>Example:</b> WA,<b>Example:</b> WA
+&nbsp;&nbsp;&nbsp;&nbsp;Street,&nbsp;&nbsp;&nbsp;&nbsp;Street
+<b>Example:</b><br>20341 Whitworth Institute<br>405 N. Whitworth,<b>Example:</b><br>20341 Whitworth Institute<br>405 N. Whitworth
+&nbsp;&nbsp;&nbsp;&nbsp;Zip Code,&nbsp;&nbsp;&nbsp;&nbsp;Zip Code
+Breadcrumbs Settings:,Breadcrumbs Settings:
+&nbsp;&nbsp;&nbsp;&nbsp;Enable in Breadcrumbs,&nbsp;&nbsp;&nbsp;&nbsp;Enable in Breadcrumbs
+&nbsp;&nbsp;&nbsp;&nbsp;Markup Method,&nbsp;&nbsp;&nbsp;&nbsp;Markup Method
+CMS Page Info:,CMS Page Info:
+Product Page Info:,Product Page Info:
+&nbsp;&nbsp;&nbsp;&nbsp;Markup Method,&nbsp;&nbsp;&nbsp;&nbsp;Markup Method
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Best Rating,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Best Rating
+Works with JSON-LD method.,Works with JSON-LD method.
+&nbsp;&nbsp;&nbsp;&nbsp;Description Attribute Code,&nbsp;&nbsp;&nbsp;&nbsp;Description Attribute Code
+&nbsp;&nbsp;&nbsp;&nbsp;Add SKU,&nbsp;&nbsp;&nbsp;&nbsp;Add SKU
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SKU Attribute Code,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SKU Attribute Code
+"If empty, use the default 'sku'.","If empty, use the default 'sku'."
+&nbsp;&nbsp;&nbsp;&nbsp;Add Payment Methods ▾,&nbsp;&nbsp;&nbsp;&nbsp;Add Payment Methods ▾
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Payment Methods,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Payment Methods
+"If empty, the payment method(-s) will be detected automatically.","If empty, the payment method(-s) will be detected automatically."
+&nbsp;&nbsp;&nbsp;&nbsp;Add Delivery Methods,&nbsp;&nbsp;&nbsp;&nbsp;Add Delivery Methods
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Delivery Methods,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Delivery Methods
+"If empty, the delivery method(-s) will be detected automatically.","If empty, the delivery method(-s) will be detected automatically."
+&nbsp;&nbsp;&nbsp;&nbsp;Add Category ▾,&nbsp;&nbsp;&nbsp;&nbsp;Add Category ▾
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use Deepest Category,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use Deepest Category
+"Set 'Yes', if products are assifned to multiple categories and sub-categories in the same chain.","Set 'Yes', if products are assifned to multiple categories and sub-categories in the same chain."
+&nbsp;&nbsp;&nbsp;&nbsp;Add Color ▾,&nbsp;&nbsp;&nbsp;&nbsp;Add Color ▾
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Color Attribute Code,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Color Attribute Code
+&nbsp;&nbsp;&nbsp;&nbsp;Add Manufacturer ▾,&nbsp;&nbsp;&nbsp;&nbsp;Add Manufacturer ▾
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Manufacturer Attribute Code,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Manufacturer Attribute Code
+&nbsp;&nbsp;&nbsp;&nbsp;Add Brand ▾,&nbsp;&nbsp;&nbsp;&nbsp;Add Brand ▾
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Brand Attribute Code,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Brand Attribute Code
+&nbsp;&nbsp;&nbsp;&nbsp;Add Model ▾,&nbsp;&nbsp;&nbsp;&nbsp;Add Model ▾
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Model Attribute Code,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Model Attribute Code
+&nbsp;&nbsp;&nbsp;&nbsp;Add Gtin ▾,&nbsp;&nbsp;&nbsp;&nbsp;Add Gtin ▾
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gtin Attribute Code,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gtin Attribute Code
+&nbsp;&nbsp;&nbsp;&nbsp;Add Weight ▾,&nbsp;&nbsp;&nbsp;&nbsp;Add Weight ▾
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Weight Unit,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Weight Unit
+&nbsp;&nbsp;&nbsp;&nbsp;Add Dimensions ▾,&nbsp;&nbsp;&nbsp;&nbsp;Add Dimensions ▾
+"The recommended format is<br> '[Number] {Length unit of measure}'. E.g., '7 ft', '10'.","The recommended format is<br> '[Number] {Length unit of measure}'. E.g., '7 ft', '10'."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dimensions Unit,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dimensions Unit
+"If dimensions are digital, enter dimensionality unit<br> (E.g. <i>mm</i>, <i>inch</i>), in other case leave a field empty.","If dimensions are digital, enter dimensionality unit<br> (E.g. <i>mm</i>, <i>inch</i>), in other case leave a field empty."
+&nbsp;&nbsp;&nbsp;&nbsp;Add Height ▾,&nbsp;&nbsp;&nbsp;&nbsp;Add Height ▾
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height Attribute Code,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height Attribute Code
+&nbsp;&nbsp;&nbsp;&nbsp;Add Width ▾,&nbsp;&nbsp;&nbsp;&nbsp;Add Width ▾
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width Attribute Code,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width Attribute Code
+&nbsp;&nbsp;&nbsp;&nbsp;Add Depth ▾,&nbsp;&nbsp;&nbsp;&nbsp;Add Depth ▾
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Depth Attribute Code,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Depth Attribute Code
+&nbsp;&nbsp;&nbsp;&nbsp;Add Condition ▾,&nbsp;&nbsp;&nbsp;&nbsp;Add Condition ▾
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Condition Attribute Code,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Condition Attribute Code
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Condition Value For New,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Condition Value For New
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attribute Value For Used,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attribute Value For Used
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attribute Value For Damaged,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attribute Value For Damaged
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attribute Value<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For Refurbished,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attribute Value<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For Refurbished
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default Value For Condition,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default Value For Condition
+"Used if the attribute isn't found.","Used if the attribute isn't found."
+&nbsp;&nbsp;&nbsp;&nbsp;Add Custom Properties ▾,&nbsp;&nbsp;&nbsp;&nbsp;Add Custom Properties ▾
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom Properties,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom Properties
+Even Info,Even Info
+&nbsp;&nbsp;&nbsp;&nbsp;Enable Event ▾,&nbsp;&nbsp;&nbsp;&nbsp;Enable Event ▾
+"For events like a food fest, music concert, sports contest and <a href="https://schema.org/Event">others</a>. Implemented with the JSON-LD Markup method.","For <a href='https://schema.org/Event'>events</a> like a food fest, music concert, sports contest and others. Implemented with the JSON-LD Markup method."
+&nbsp;&nbsp;&nbsp;&nbsp;Event Attribute Set,&nbsp;&nbsp;&nbsp;&nbsp;Event Attribute Set
+"'Event' is an entity, set by default.","'Event' is an entity, set by default."
+&nbsp;&nbsp;&nbsp;&nbsp;Event Type (by Schema.org),&nbsp;&nbsp;&nbsp;&nbsp;Event Type (by Schema.org)
+&nbsp;&nbsp;&nbsp;&nbsp;Location Name Attribute Code,&nbsp;&nbsp;&nbsp;&nbsp;Location Name Attribute Code
+&nbsp;&nbsp;&nbsp;&nbsp;Address Locality Attribute Code,&nbsp;&nbsp;&nbsp;&nbsp;Address Locality Attribute Code
+&nbsp;&nbsp;&nbsp;&nbsp;Street Address Attribute Code,&nbsp;&nbsp;&nbsp;&nbsp;Street Address Attribute Code
+&nbsp;&nbsp;&nbsp;&nbsp;Start Date Attribute Code,&nbsp;&nbsp;&nbsp;&nbsp;Start Date Attribute Code
+HTML Injection (Microdata),HTML Injection (Microdata)
+Javascript (JSON-LD),Javascript (JSON-LD)
+Category Page Info,Category Page Info
+&nbsp;&nbsp;&nbsp;&nbsp;Disable for NOINDEX Robots,&nbsp;&nbsp;&nbsp;&nbsp;Disable for NOINDEX Robots
+&nbsp;&nbsp;&nbsp;&nbsp;Show Product Offers,&nbsp;&nbsp;&nbsp;&nbsp;Show Product Offers
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fix Price Format,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fix Price Format
+Price will be added in the meta tag,Price will be added in the meta tag
+&nbsp;&nbsp;&nbsp;&nbsp;Add Rating ▾,&nbsp;&nbsp;&nbsp;&nbsp;Add Rating ▾
+
+
+
