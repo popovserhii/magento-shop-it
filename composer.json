@@ -9,7 +9,7 @@
   "require": {
     "magento-hackathon/magento-composer-installer": "*",
     "aydin-hassan/magento-core-composer-installer" : "~1.0",
-    "firegento/magento" : "1.9.3.3",
+    "magento/core": "1.9.3.6",
     "dweeves/magmi": "dev-master",
     "popov/magento-deleter": "dev-master",
     "popov/magento-magmi-import": "dev-master",
@@ -26,15 +26,15 @@
     },
     {
       "type": "git",
-      "url": "https://github.com/popovsergiy/magento-deleter.git"
+      "url": "https://github.com/popovserhii/magento-deleter.git"
     },
     {
       "type": "git",
-      "url": "https://github.com/popovsergiy/magento-magmi-import.git"
+      "url": "https://github.com/popovserhii/magento-magmi-import.git"
     },
     {
       "type": "git",
-      "url": "https://github.com/popovsergiy/RemoveStoreQueryString.git"
+      "url": "https://github.com/popovserhii/RemoveStoreQueryString.git"
     },
     {
       "type": "git",
@@ -44,6 +44,7 @@
   "extra": {
     "magento-root-dir": "htdocs/",
     "magento-deploystrategy": "symlink",
+    "auto-append-gitignore": true,
 
     "magento-force": true
   }
