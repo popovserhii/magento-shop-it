@@ -331,16 +331,10 @@
     <?php if (!$this->canShip() || $alwaysusesameasbilling == true): ?>
         <input type="hidden" name="billing[use_for_shipping]" value="1"/>
     <?php endif; ?>
-
 </fieldset>
 
 <script type="text/javascript">
-</script>
-
-<script type="text/javascript" src="http://shop-it.com.ua/js/jquery/jquery.maskedinput.js"></script>
-<script type="text/javascript">
     //<![CDATA[
-	
    jQuery('#billing\\:telephone').mask('+38 (099) 999-99-99');
    var billing = new Billing();
 
