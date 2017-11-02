@@ -13,6 +13,7 @@
     "dweeves/magmi": "dev-master",
     "popov/magento-deleter": "dev-master",
     "popov/magento-magmi-import": "dev-master",
+    "agere/magento-mirasvit-advanced-product-feeds": "dev-master",
     "mage-eag/mage-enhanced-admin-grids": "0.9.*",
     "rossmc/rsqs": "dev-master"
   },
@@ -23,6 +24,10 @@
     {
       "type":"composer",
       "url":"https://packages.firegento.com"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/agereteam/magento-mirasvit-advanced-product-feeds.git"
     },
     {
       "type": "git",
