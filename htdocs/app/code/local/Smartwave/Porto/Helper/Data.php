@@ -2,10 +2,10 @@
 
 class Smartwave_Porto_Helper_Data extends Mage_Core_Helper_Abstract
 {
-
+    
     protected $_texturePath;
     private $_checkedPurchaseCode;
-
+    
     public function __construct()
     {
         $this->_texturePath = 'wysiwyg/porto/texture/default/';
@@ -15,7 +15,7 @@ class Smartwave_Porto_Helper_Data extends Mage_Core_Helper_Abstract
             return "localhost";
         }
         if(!$this->_checkedPurchaseCode){
-
+            
             $code = Mage::getStoreConfig('porto_license/general/purchase_code');
             $code_confirm = Mage::getStoreConfig('porto_license/general/purchase_code_confirm');
             if($save) {
@@ -41,7 +41,7 @@ class Smartwave_Porto_Helper_Data extends Mage_Core_Helper_Abstract
                         $code_confirm = "";
                         Mage::getSingleton('core/session')->getMessages(true);
                         Mage::getSingleton('core/session')->addWarning($this->__($result['message']));
-                    }
+                    }                    
                 } else {
                     $code_confirm = "";
                     $this->_checkedPurchaseCode = "";
@@ -60,12 +60,12 @@ class Smartwave_Porto_Helper_Data extends Mage_Core_Helper_Abstract
         $ch = curl_init();
 
         // Set cURL options
-        curl_setopt($ch, CURLOPT_URL, "");
+        curl_setopt($ch, CURLOPT_URL, "http://www.newsmartwave.net/envato/verify_purchase_new.php?item=9725864&version=m1&code=$code&domain=$domain&act=$act");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_USERAGENT, 'PORTO-PURCHASE-VERIFY');
 
         // Decode returned JSON
-        $result = json_decode('{"result":1,"message":"Smartwave Porto Theme is activated!"}', true);
+        $result = json_decode( curl_exec($ch) , true );
         return $result;
     }
     public function isLocalhost() {
@@ -73,7 +73,7 @@ class Smartwave_Porto_Helper_Data extends Mage_Core_Helper_Abstract
             '127.0.0.1',
             '::1'
         );
-
+        
         return in_array($_SERVER['REMOTE_ADDR'], $whitelist);
     }
     public function isAdmin()
@@ -97,7 +97,7 @@ class Smartwave_Porto_Helper_Data extends Mage_Core_Helper_Abstract
         else
             return Mage::getStoreConfig('porto/' . $group);
     }
-
+    
     public function getCfgSectionDesign($storeId = NULL)
     {
         if ($storeId)
@@ -113,7 +113,7 @@ class Smartwave_Porto_Helper_Data extends Mage_Core_Helper_Abstract
         else
             return Mage::getStoreConfig('porto_settings');
     }
-
+    
     public function getTexturePath()
     {
         return $this->_texturePath;
@@ -123,8 +123,8 @@ class Smartwave_Porto_Helper_Data extends Mage_Core_Helper_Abstract
     {
         return Mage::getStoreConfig('porto_settings/' . $optionString);
     }
-
-    public function getImage($product, $imgWidth, $imgHeight, $imgVersion='small_image', $file=NULL)
+    
+    public function getImage($product, $imgWidth, $imgHeight, $imgVersion='small_image', $file=NULL) 
     {
         $url = '';
         if ($imgHeight <= 0)
@@ -145,9 +145,9 @@ class Smartwave_Porto_Helper_Data extends Mage_Core_Helper_Abstract
         }
         return $url;
     }
-
+    
     // get hover image for product
-    public function getHoverImageHtml($product, $imgWidth, $imgHeight, $imgVersion='small_image')
+    public function getHoverImageHtml($product, $imgWidth, $imgHeight, $imgVersion='small_image') 
     {
         $product->load('media_gallery');
         $order = $this->getConfig('category/image_order');
@@ -174,7 +174,7 @@ class Smartwave_Porto_Helper_Data extends Mage_Core_Helper_Abstract
                 return '<img class="hover-image" src="' . $url . '" alt="' . $product->getName() . '" />';
             }
         }
-
+        
         return '';
     }
     public function getHomeUrl() {
@@ -217,10 +217,10 @@ class Smartwave_Porto_Helper_Data extends Mage_Core_Helper_Abstract
         } else {
             return false;
         }
-
+ 
     }
-
-
+ 
+ 
     public function getNextProduct()
     {
         $_next_prod = NULL;
@@ -375,14 +375,14 @@ class Smartwave_Porto_Helper_Data extends Mage_Core_Helper_Abstract
                 $content = $product->getResource()->getAttribute($config_id)->getFrontend()->getValue($product);
 				$proc_helper = Mage::helper('cms');
                 $processor = $proc_helper->getPageTemplateProcessor();
-                $content = $processor->filter($content);
+                $content = $processor->filter($content);    
                 break;
             case "static_block":
                 $block = Mage::getModel("cms/block")->setStoreId(Mage::app()->getStore()->getId())->load($config_id);
-                $content = $block->getContent();
+                $content = $block->getContent(); 
                 $proc_helper = Mage::helper('cms');
                 $processor = $proc_helper->getPageTemplateProcessor();
-                $content = $processor->filter($content);
+                $content = $processor->filter($content);           
                 break;
         }
         return $content;

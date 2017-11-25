@@ -1,8 +1,8 @@
 /**
  * WARNING: Do not change this file. Your changes will be lost.
- * 2017-06-28 21:38:39 */
+ * 2017-11-20 21:51:55 */
 
-a,a:hover,input.qty,.form-wrap h2,#form-validate h2,.col-main .page-title h2,.sub-title,.data-table .product-name a,.cart-table .link-wishlist,.cart-table .link-wishlist:hover,.btn-remove,.btn-remove:hover,.header-container .links,.mini-cart .qty-price,.mini-cart .totals,.header-container.type4 .mybag-link i,.header-container.type5 .mybag-link i,.header-container.type6 .mybag-link i,.header-container.type6 .menu-icon,.header-container.type7 .mybag-link i,.header-container.type13 .mybag-link i,.header-container.type9 .top-links a,.header-container.type9 .mybag-link i,.header-container.type10 .top-links a,.fixed-header ul.menu >li >a,.main-nav ul.menu >li >a,.fixed-header .mybag-link i,.menu.side-menu>li.menu-static-width>a:after,.menu.side-menu>li.menu-item-has-children>a:after,.menu.side-menu>li.menu-full-width>a:after,.mini-products-list li .product-name a:hover,.block-category-nav .category-list a.plus,.col-main.filter-products li.item:hover .price-box .price,.review-area .review-by b,.add-to-cart .qty,.product-tabs>ul li a,.product-view .product-shop .price-box .regular-price .price,.product-view .product-shop .price-box .special-price .price,.cart-table td.td-total .cart-price,.sp-methods .price,.opc .step-title .number,.opc .step-title h2,#opc-review tr td.last .cart-price .price,#wishlist-table .product-name a,#totop,.block.block-related .owl-theme .owl-controls .owl-buttons div,.order-products-table .price,.block-account ul li strong,.block-account ul li a:hover,.block.block-blog-categories a:hover,p .alternative-font,.entry-content h3,.history h4,.block.block-blog-recent ul li a,.postWrapper .post-date .day,.postDetails >span a:hover,.postBookmarks a:hover,.post-share h3,.postComments .postTitle h2,#postComment h4.legend,.cms-index-index .tp-caption.very_large_text,.cms-index-index .tp-caption.large_thin,.cms-index-index .tp-caption.title1,.cms-index-index .tp-caption a.btn-white,.cms-index-index .tp-caption a.btn-white:hover,.slide .product .price,h3.filter-title,.filterproducts-tab .filter-title ul li.active a,.feature-box.secundary .feature-box-icon,.owl-top-narrow .owl-controls .owl-buttons div,.owl-bottom-narrow .owl-controls .owl-buttons div,.recent-posts .post-date .day,.true-color,ul.list.icons li i.icon,.owl-middle-narrow .owl-controls .owl-buttons div,.featured-post h4,.post-a-day,.post-a-year,.owl-theme.banner-carousel .owl-controls .owl-buttons div,.product-options .product-swatches-container .has-swatches a.active,.col-main .page-title h1,.col-main .page-title h2,.product-view .product-options .swatch-attr .select-label,.availability-only strong,.product-image-area .actions a.addtocart,.opc-wrapper-opc a:hover,.opc-wrapper-opc .opc-review-actions .view-agreement:hover,.header-container.type9 .main-nav ul.menu>li.act>a, .header-container.type9 .main-nav ul.menu>li:hover>a,.header-container.type10 .main-nav ul.menu>li.act>a, .header-container.type10 .main-nav ul.menu>li:hover>a,.price-excluding-tax .price,.price-including-tax .price,.checkout-progress li.active,.header-container.type1.sticky-header .menu-wrapper .mybag-link .cart-qty,.header-container.sticky-header .menu-wrapper .mybag-link i,.multiple-checkout .place-order .grand-total .price,.panel-title>a.collapsed,.panel-title>a.collapsed:hover,.panel-title>a.collapsed:after,.header-container.type14 .mybag-link .cart-info,.header-container.type14 .mybag-link i,.header-container.type14 .menu-icon,.owl-item.loading:before,.filter-products .products .owl-item.loading .product-image:before
+a,a:hover,input.qty,.form-wrap h2,#form-validate h2,.col-main .page-title h2,.sub-title,.data-table .product-name a,.cart-table .link-wishlist,.cart-table .link-wishlist:hover,.btn-remove,.btn-remove:hover,.header-container .links,.mini-cart .qty-price,.mini-cart .totals,.header-container.type4 .mybag-link i,.header-container.type21 .mybag-link i,.header-container.type5 .mybag-link i,.header-container.type6 .mybag-link i,.header-container.type6 .menu-icon,.header-container.type22 .mybag-link i,.header-container.type22 .menu-icon,.header-container.type7 .mybag-link i,.header-container.type13 .mybag-link i,.header-container.type26 .mybag-link i,.header-container.type9 .top-links a,.header-container.type9 .mybag-link i,.header-container.type10 .top-links a,.fixed-header ul.menu >li >a,.main-nav ul.menu >li >a,.fixed-header .mybag-link i,.menu.side-menu>li.menu-static-width>a:after,.menu.side-menu>li.menu-item-has-children>a:after,.menu.side-menu>li.menu-full-width>a:after,.mini-products-list li .product-name a:hover,.block-category-nav .category-list a.plus,.col-main.filter-products li.item:hover .price-box .price,.review-area .review-by b,.add-to-cart .qty,.product-tabs>ul li a,.product-view .product-shop .price-box .regular-price .price,.product-view .product-shop .price-box .special-price .price,.cart-table td.td-total .cart-price,.sp-methods .price,.opc .step-title .number,.opc .step-title h2,#opc-review tr td.last .cart-price .price,#wishlist-table .product-name a,#totop,.block.block-related .owl-theme .owl-controls .owl-buttons div,.order-products-table .price,.block-account ul li strong,.block-account ul li a:hover,.block.block-blog-categories a:hover,p .alternative-font,.entry-content h3,.history h4,.block.block-blog-recent ul li a,.postWrapper .post-date .day,.postDetails >span a:hover,.postBookmarks a:hover,.post-share h3,.postComments .postTitle h2,#postComment h4.legend,.cms-index-index .tp-caption.very_large_text,.cms-index-index .tp-caption.large_thin,.cms-index-index .tp-caption.title1,.cms-index-index .tp-caption a.btn-white,.cms-index-index .tp-caption a.btn-white:hover,.slide .product .price,h3.filter-title,.filterproducts-tab .filter-title ul li.active a,.feature-box.secundary .feature-box-icon,.owl-top-narrow .owl-controls .owl-buttons div,.owl-bottom-narrow .owl-controls .owl-buttons div,.recent-posts .post-date .day,.true-color,ul.list.icons li i.icon,.owl-middle-narrow .owl-controls .owl-buttons div,.featured-post h4,.post-a-day,.post-a-year,.owl-theme.banner-carousel .owl-controls .owl-buttons div,.product-options .product-swatches-container .has-swatches a.active,.col-main .page-title h1,.col-main .page-title h2,.product-view .product-options .swatch-attr .select-label,.availability-only strong,.product-image-area .actions a.addtocart,.opc-wrapper-opc a:hover,.opc-wrapper-opc .opc-review-actions .view-agreement:hover,.header-container.type9 .main-nav ul.menu>li.act>a, .header-container.type9 .main-nav ul.menu>li:hover>a,.header-container.type10 .main-nav ul.menu>li.act>a, .header-container.type10 .main-nav ul.menu>li:hover>a,.price-excluding-tax .price,.price-including-tax .price,.checkout-progress li.active,.header-container.type1.sticky-header .menu-wrapper .mybag-link .cart-qty,.header-container.sticky-header .menu-wrapper .mybag-link i,.multiple-checkout .place-order .grand-total .price,.panel-title>a.collapsed,.panel-title>a.collapsed:hover,.panel-title>a.collapsed:after,.header-container.type14 .mybag-link .cart-info,.header-container.type14 .mybag-link i,.header-container.type14 .menu-icon,.owl-item.loading:before,.filter-products .products .owl-item.loading .product-image:before
     {color:#ee2d43}
 @-moz-keyframes f_fadeG{0%{background-color:#ee2d43}100%{background-color:#FFFFFF}}
 @-webkit-keyframes f_fadeG{0%{background-color:#ee2d43}100%{background-color:#FFFFFF}}
@@ -14,7 +14,7 @@ a,a:hover,input.qty,.form-wrap h2,#form-validate h2,.col-main .page-title h2,.su
 .theme-bg-color{background-color:#ee2d43!important}
 .theme-border-color{border-color:#ee2d43!important}
 .theme-hover-bg-color:hover{background-color:#ee2d43}
-button.button span,.pager li >a:hover,.pager li >a:focus,.pager .pages .current,.sorter .view-mode strong i,.sorter .view-mode a:hover i,.data-table button.button:hover > span,.link-cart:hover,.header-container.type2 .mybag-link ,.header-container.type5 .top-links-container,.header-container.type6 .top-links-container,.header-container.type7 .top-links-container,.header-container.type13 .top-links-container,.header-container.type8 .top-links-container,.fixed-header ul.menu >li:hover,.main-nav ul.menu >li:hover,.fixed-header ul.menu >li.act,.main-nav ul.menu >li.act,.menu.side-menu>li:hover,.menu.side-menu>li.menu-item-has-children .nav-sublist-dropdown,.menu.side-menu>li.menu-item-has-children .nav-sublist-dropdown .container ul .menu-item-has-children .nav-sublist,.block-layered-nav dt:hover:before,.block-category-nav .block-title:hover:before,.price-filter-slider .text-box input.go,.item:hover .details-area .actions a.addtocart,.col-main .category-products .products-list li.item .details-area .actions a.addtocart,.cart .crosssell button.button:hover > span,.cart .discount h2:hover:before,.cart .shipping h2:hover:before,.block.block-facebook-like .block-title a.btn-like,.btn-primary,.contacts-index-index .col-main .contact-info i,.block.block-blog-tags ul li a:hover,.postWrapper .post-date .month,.feature-box .feature-box-icon,.full-screen-slider .item > div.content .sale-bar a .icon-angle-down,.recent-posts .post-date .month,.post-a-month,.owl-theme .owl-controls .owl-page.active span,.footer-ribbon,.owl-theme .owl-controls.clickable .owl-page:hover span,.btn-default,.btn-default:hover,a.quickview-icon,.product-options .product-swatches-container .has-swatches a.active.selected,.cms-index-index blockquote.testimonial,.expand_plus,.review-menu-block a.review-total,.image-link span.category-title,.panel-title>a,.category-products .products-grid.flex-grid .item .details-area .actions a.addtocart,.header-container.type14 .top-links-container
+button.button span,.pager li >a:hover,.pager li >a:focus,.pager .pages .current,.sorter .view-mode strong i,.sorter .view-mode a:hover i,.data-table button.button:hover > span,.link-cart:hover,.header-container.type2 .mybag-link ,.header-container.type5 .top-links-container,.header-container.type6 .top-links-container,.header-container.type22 .top-links-container,.header-container.type7 .top-links-container,.header-container.type13 .top-links-container,.header-container.type26 .top-links-container,.header-container.type8 .top-links-container,.fixed-header ul.menu >li:hover,.main-nav ul.menu >li:hover,.fixed-header ul.menu >li.act,.main-nav ul.menu >li.act,.menu.side-menu>li:hover,.menu.side-menu>li.menu-item-has-children .nav-sublist-dropdown,.menu.side-menu>li.menu-item-has-children .nav-sublist-dropdown .container ul .menu-item-has-children .nav-sublist,.block-layered-nav dt:hover:before,.block-category-nav .block-title:hover:before,.price-filter-slider .text-box input.go,.item:hover .details-area .actions a.addtocart,.col-main .category-products .products-list li.item .details-area .actions a.addtocart,.cart .crosssell button.button:hover > span,.cart .discount h2:hover:before,.cart .shipping h2:hover:before,.block.block-facebook-like .block-title a.btn-like,.btn-primary,.contacts-index-index .col-main .contact-info i,.block.block-blog-tags ul li a:hover,.postWrapper .post-date .month,.feature-box .feature-box-icon,.full-screen-slider .item > div.content .sale-bar a .icon-angle-down,.recent-posts .post-date .month,.post-a-month,.owl-theme .owl-controls .owl-page.active span,.footer-ribbon,.owl-theme .owl-controls.clickable .owl-page:hover span,.btn-default,.btn-default:hover,a.quickview-icon,.product-options .product-swatches-container .has-swatches a.active.selected,.cms-index-index blockquote.testimonial,.expand_plus,.review-menu-block a.review-total,.image-link span.category-title,.panel-title>a,.category-products .products-grid.flex-grid .item .details-area .actions a.addtocart,.header-container.type14 .top-links-container
 {background-color:#ee2d43}
 .pager li >a:hover,.pager li >a:focus,.pager .pages .current,.sorter .view-mode strong i,.sorter .view-mode a:hover i,.data-table button.button:hover > span,.link-cart:hover,.item:hover .details-area .actions a.addtocart,.col-main .category-products .products-list li.item .details-area .actions a.addtocart,.cart .crosssell button.button:hover > span,.cart .discount h2:hover:before,.cart .shipping h2:hover:before,.btn-primary,i.ajax-loader,#narrow-by-list dd .swatch-link:hover .swatch-label,.configurable-swatch-list .hover .swatch-link,.configurable-swatch-list .selected .swatch-link,.swatch-link:hover,.block-layered-nav #narrow-by-list ol.swatches li a:hover .layered-navigation-swatch,.product-image-area .actions a.addtocart,.opc-wrapper-opc #opc-review-block,#newsletter_popup
 {border-color:#ee2d43}
@@ -41,14 +41,40 @@ button.button span,.pager li >a:hover,.pager li >a:focus,.pager .pages .current,
 @media (max-width: 767px){
     .owl-banner-carousel .content.type2 h2{border-top-color:#ee2d43}
 }
+html,body{color:#767f84}
+.data-table button.button:hover > span,
+button.button span{
+}
+button.button:hover span{
+}
+.data-table button.button:hover > span {border-color:}
+span.new-product-icon{
+}
+span.sale-product-icon{
+}
+.fixed-header .menu > li > a > span.cat-label.cat-label-label1, .main-nav .menu > li > a > span.cat-label.cat-label-label1,.fixed-header .menu > li .nav-sublist-dropdown ul li a > span > span.cat-label.cat-label-label1, .main-nav .menu > li .nav-sublist-dropdown ul li a > span > span.cat-label.cat-label-label1,div.mobile-nav .sw-mobile-menu li>a span.cat-label.cat-label-label1,.menu.side-menu li>a span.cat-label.cat-label-label1{
+}
+.fixed-header .menu > li > a > span.cat-label.cat-label-label2, .main-nav .menu > li > a > span.cat-label.cat-label-label2,.fixed-header .menu > li .nav-sublist-dropdown ul li a > span > span.cat-label.cat-label-label2, .main-nav .menu > li .nav-sublist-dropdown ul li a > span > span.cat-label.cat-label-label2,div.mobile-nav .sw-mobile-menu li>a span.cat-label.cat-label-label2,.menu.side-menu li>a span.cat-label.cat-label-label2{
+}
+.top-container >.breadcrumbs{background-color:#ffffff}
+.top-container >.breadcrumbs{color:#000000}
+.breadcrumbs li a{color:#000000}
+.breadcrumbs li a:hover{color:#000000}
 .header-container.type2 .top-links-container,
 .header-container.type3 .top-links-container,
+.header-container.type19 .top-links-container,
+.header-container.type20 .top-links-container,
 .header-container.type4 .top-links-container,
+.header-container.type21 .top-links-container,
 .header-container.type5 .top-links-container,
 .header-container.type6 .top-links-container,
+.header-container.type22 .top-links-container,
 .header-container.type14 .top-links-container,
+.header-container.type27 .top-links-container,
 .header-container.type7 .top-links-container,
 .header-container.type13 .top-links-container,
+.header-container.type26 .top-links-container,
+.header-container.type28 .top-links-container,
 .header-container.type9 .top-links-container,
 .header-container.type10 .top-links-container{
     background-color:#ffffff;
@@ -56,150 +82,237 @@ button.button span,.pager li >a:hover,.pager li >a:focus,.pager .pages .current,
 .header-container.type1 ul.links a,.header-container.type1 .search-area>a,.header-container.type1 .selectbox .select,.header-container.type1 .welcome-msg,.header-container.type1 .top-links-icon,.header-container.type1 .top-links-icon a,.header-container.type1 .menu-icon a,
 .header-container.type2 .selectbox .select,.header-container.type2 .welcome-msg,.header-container.type2 .top-links ul.links a,.header-container.type2 .top-links-icon,
 .header-container.type3 .selectbox .select,.header-container.type3 .welcome-msg,.header-container.type3 .top-links ul.links a,.header-container.type3 .top-links-icon,.header-container.type3 .top-links-icon a,
+.header-container.type19 .selectbox .select,.header-container.type19 .welcome-msg,.header-container.type19 .top-links ul.links a,.header-container.type19 .top-links-icon,.header-container.type19 .top-links-icon a,
+.header-container.type20 .selectbox .select,.header-container.type20 .welcome-msg,.header-container.type20 .top-links ul.links a,.header-container.type20 .top-links-icon,.header-container.type20 .top-links-icon a,
 .header-container.type4 .selectbox .select,.header-container.type4 .welcome-msg,.header-container.type4 .top-links ul.links a,.header-container.type4 .top-links-icon,
+.header-container.type21 .selectbox .select,.header-container.type21 .welcome-msg,.header-container.type21 .top-links ul.links a,.header-container.type21 .top-links-icon,
 .header-container.type5 .welcome-msg,.header-container.type5 .selectbox .select,
 .header-container.type6 .selectbox .select,.header-container.type6 .welcome-msg,.header-container.type6 .top-links ul.links a,.header-container.type6 .top-links-icon,.header-container.type6 .top-links-icon a,
+.header-container.type22 .selectbox .select,.header-container.type22 .welcome-msg,.header-container.type22 .top-links ul.links a,.header-container.type22 .top-links-icon,.header-container.type22 .top-links-icon a,
 .header-container.type14 .selectbox .select,.header-container.type14 .welcome-msg,.header-container.type14 .top-links ul.links a,.header-container.type14 .top-links-icon,.header-container.type14 .top-links-icon a,
+.header-container.type27.header-newskin .selectbox .select,.header-container.type27 .welcome-msg,.header-container.type27 .top-links ul.links a,.header-container.type27 .top-links-icon,.header-container.type27 .top-links-icon a,
 .header-container.type7 .selectbox .select,.header-container.type7 .welcome-msg,.header-container.type7 .top-links ul.links a,.header-container.type7 .top-links-icon,.header-container.type7 .top-links-icon a,
 .header-container.type13 .selectbox .select,.header-container.type13 .welcome-msg,.header-container.type13 .top-links ul.links a,.header-container.type13 .top-links-icon,.header-container.type13 .top-links-icon a,
+.header-container.type26 .selectbox .select,.header-container.type26 .welcome-msg,.header-container.type26 .top-links ul.links a,.header-container.type26 .top-links-icon,.header-container.type26 .top-links-icon a,
 .header-container.type9 .selectbox .select,.header-container.type9 .welcome-msg,.header-container.type9 .top-links ul.links a,.header-container.type9 .top-links-icon,.header-container.type9 .top-links-icon a,
 .header-container.type10 .selectbox .select,.header-container.type10 .welcome-msg,.header-container.type10 .top-links ul.links a,.header-container.type10 .top-links-icon,.header-container.type10 .top-links-icon a,
-.header-container.type8 .selectbox .select,.header-container.type8 .welcome-msg,.header-container.type8 .top-links-area ul.links a,.header-container.type8 .header .search-area>a.search-icon,.header-container.type8 .top-links-icon,.header-container.type8 .top-links-icon a,.header-container.type8 .header .search-area a.search-icon,header-container.type8 .menu-icon a,.header-container.type2 .compare-link>a,.header-container.type3 .compare-link>a,.header-container.type4 .compare-link>a,.header-container.type5 .compare-link>a,.header-container.type6 .compare-link>a,.header-container.type14 .compare-link>a,.header-container.type7 .compare-link>a,.header-container.type13 .compare-link>a,.header-container.type8 .compare-link>a,.header-container.type9 .compare-link>a,.header-container.type10 .compare-link>a,
-.header-container.type12 ul.links a,.header-container.type12 .search-area>a,.header-container.type12 .selectbox .select,.header-container.type12 .top-links-icon,.header-container.type12 .top-links-icon a,.header-container.type12 .menu-icon a,.header-container.type13 .top-links a{
+.header-container.type28 .selectbox .select,.header-container.type28 .welcome-msg,.header-container.type28 .top-links ul.links a,.header-container.type28 .top-links-icon,.header-container.type28 .top-links-icon a,
+.header-container.type8 .selectbox .select,.header-container.type8 .welcome-msg,.header-container.type8 .top-links-area ul.links a,.header-container.type8 .header .search-area>a.search-icon,.header-container.type8 .top-links-icon,.header-container.type8 .top-links-icon a,.header-container.type8 .header .search-area a.search-icon,.header-container.type8 .menu-icon a,.header-container.type2 .compare-link>a,.header-container.type3 .compare-link>a,.header-container.type4 .compare-link>a,.header-container.type5 .compare-link>a,.header-container.type6 .compare-link>a, .header-container.type22 .compare-link>a,.header-container.type14 .compare-link>a,.header-container.type7 .compare-link>a,.header-container.type13 .compare-link>a,.header-container.type26 .compare-link>a,.header-container.type8 .compare-link>a,.header-container.type9 .compare-link>a,.header-container.type10 .compare-link>a,.header-container.type19 .compare-link>a,.header-container.type20 .compare-link>a,.header-container.type21 .compare-link>a
+.header-container.type12 ul.links a,.header-container.type12 .search-area>a,.header-container.type12 .selectbox .select,.header-container.type12 .top-links-icon,.header-container.type12 .top-links-icon a,.header-container.type12 .menu-icon a,.header-container.type13 .top-links a,.header-container.type26 .top-links a{
     color:#999999;
 }
 .header-container.type1,
 .header-container.type2,
 .header-container.type3,
+.header-container.type19,
+.header-container.type20,
+.header-container.type21,
 .header-container.type4,
 .header-container.type5,
 .header-container.type6,
+.header-container.type22,
 .header-container.type14,
 .header-container.type7,
 .header-container.type13,
+.header-container.type26,
 .header-container.type8,
 .header-container.type9,
 .header-container.type10,
 .header-container.type11,
+.header-container.type23,
+.header-container.type24,
+.header-container.header-newskin,
 .header-container.type12,
 .header-container.type1.sticky-header .header-wrapper,
 .header-container.type2.sticky-header .header-wrapper,
 .header-container.type4.sticky-header .header-wrapper,
 .header-container.type5.sticky-header .header-wrapper,
 .header-container.type6.sticky-header .header-wrapper,
+.header-container.type22.sticky-header .header-wrapper,
 .header-container.type14.sticky-header .header-wrapper,
 .header-container.type7.sticky-header .header-wrapper,
 .header-container.type13.sticky-header .header-wrapper,
+.header-container.type26.sticky-header .header-wrapper,
 .header-container.type8.sticky-header .header-wrapper,
 .header-container.type9.sticky-header .header-wrapper,
 .header-container.type11.sticky-header .header-wrapper,
+.header-container.type23.sticky-header .header-wrapper,
+.header-container.type24.sticky-header .header-wrapper,
+.header-container.type29,
 .header-container.type12.sticky-header .header-wrapper{
     background-color:#ffffff;
 }
-.header-container.type2 .main-nav .menu-wrapper,
+.header-container.type2,
+.header-container.type4,.header-container.type20{
+    border-top-color:#282d3b;
+}
+        .header{
+        color:#999999;
+        }
+            .header a, .header-container.type8 .menu-icon a{
+        color:#999999;
+        }
+    .header-container.type2 .main-nav .menu-wrapper,
 .header-container.type3 .main-nav,
+.header-container.type19 .main-nav,
+.header-container.type20 .main-nav,
+.header-container.type21 .main-nav .menu-wrapper,
 .header-container.type4 .main-nav .menu-wrapper,
 .header-container.type9 .main-nav .menu-wrapper,
 .header-container.type10 .header-wrapper,
+.header-container.type28 .header-wrapper,
 .header-container.type3.sticky-header .header-wrapper,
+.header-container.type20.sticky-header .header-wrapper,
+.header-container.type21.sticky-header .header-wrapper,
 .header-container.type4.sticky-header .header-wrapper,
 .header-container.type10.sticky-header .header-wrapper{
-    background-color:#393f4f;
+    background-color:#282d3b;
 }
 .header-container.type1 .main-nav ul.menu>li>a,
 .header-container.type2 .main-nav ul.menu>li>a,
 .header-container.type3 .main-nav ul.menu>li>a,
+.header-container.type19 .main-nav ul.menu>li>a,
+.header-container.type20 .main-nav ul.menu>li>a,
+.header-container.type21 .main-nav ul.menu>li>a,
 .header-container.type4 .main-nav ul.menu>li>a,
 .header-container.type5 .main-nav ul.menu>li>a,
 .header-container.type6 .main-nav ul.menu>li>a,
+.header-container.type22 .main-nav ul.menu>li>a,
 .header-container.type14 .main-nav ul.menu>li>a,
 .header-container.type7 .main-nav ul.menu>li>a,
 .header-container.type13 .main-nav ul.menu>li>a,
+.header-container.type26 .main-nav ul.menu>li>a,
 .header-container.type8 .main-nav ul.menu>li>a,
 .header-container.type9 .main-nav ul.menu>li>a,
 .header-container.type10 .main-nav ul.menu>li>a,
+.header-container.type28 .main-nav ul.menu>li>a,
 .header-container.type11 .main-nav ul.menu>li>a,
-.header-container.type12 .menu.side-menu>li>a{
+.header-container.type23 .main-nav ul.menu>li>a,
+.header-container.type24 .main-nav ul.menu>li>a,
+.header-container.type12 .menu.side-menu>li>a,
+.header-container.header-newskin .menu.side-menu>li>a{
     color:#ffffff;
 }
 .header-container.type1 .main-nav ul.menu>li:hover,.header-container.type1 .main-nav ul.menu>li.act,
 .header-container.type2 .main-nav ul.menu>li:hover,.header-container.type2 .main-nav ul.menu>li.act,
 .header-container.type3 .main-nav ul.menu>li:hover,.header-container.type3 .main-nav ul.menu>li.act,
+.header-container.type19 .main-nav ul.menu>li:hover,.header-container.type19 .main-nav ul.menu>li.act,
+.header-container.type20 .main-nav ul.menu>li:hover,.header-container.type20 .main-nav ul.menu>li.act,
+.header-container.type21 .main-nav ul.menu>li:hover,.header-container.type21 .main-nav ul.menu>li.act,
 .header-container.type4 .main-nav ul.menu>li:hover,.header-container.type4 .main-nav ul.menu>li.act,
 .header-container.type5 .main-nav ul.menu>li:hover,.header-container.type5 .main-nav ul.menu>li.act,
 .header-container.type6 .main-nav ul.menu>li:hover,.header-container.type6 .main-nav ul.menu>li.act,
+.header-container.type22 .main-nav ul.menu>li:hover,.header-container.type22 .main-nav ul.menu>li.act,
 .header-container.type14 .main-nav ul.menu>li:hover,.header-container.type14 .main-nav ul.menu>li.act,
 .header-container.type7 .main-nav ul.menu>li:hover,.header-container.type7 .main-nav ul.menu>li.act,
 .header-container.type13 .main-nav ul.menu>li:hover,.header-container.type13 .main-nav ul.menu>li.act,
+.header-container.type26 .main-nav ul.menu>li:hover,.header-container.type26 .main-nav ul.menu>li.act,
 .header-container.type8 .main-nav ul.menu>li:hover,.header-container.type8 .main-nav ul.menu>li.act,
 .header-container.type9 .main-nav ul.menu>li:hover,.header-container.type9 .main-nav ul.menu>li.act,
 .header-container.type10 .main-nav ul.menu>li:hover,.header-container.type10 .main-nav ul.menu>li.act,
 .header-container.type11 .main-nav ul.menu>li:hover,.header-container.type11 .main-nav ul.menu>li.act,
+.header-container.type23 .main-nav ul.menu>li:hover,.header-container.type23 .main-nav ul.menu>li.act,
+.header-container.type24 .main-nav ul.menu>li:hover,.header-container.type24 .main-nav ul.menu>li.act,
+.header-container.header-newskin .main-nav ul.menu>li:hover,.header-container.header-newskin .main-nav ul.menu>li.act,
+.header-container.header-newskin .menu.side-menu>li:hover,.header-container.header-newskin .menu.side-menu>li.act,
 .header-container.type12 .menu.side-menu>li:hover,.header-container.type12 .menu.side-menu>li.act{
     background-color:transparent;
 }
 .header-container.type1 .main-nav ul.menu>li:hover>a,.header-container.type1 .main-nav ul.menu>li.act>a,
 .header-container.type2 .main-nav ul.menu>li:hover>a,.header-container.type2 .main-nav ul.menu>li.act>a,
 .header-container.type3 .main-nav ul.menu>li:hover>a,.header-container.type3 .main-nav ul.menu>li.act>a,
+.header-container.type19 .main-nav ul.menu>li:hover>a,.header-container.type19 .main-nav ul.menu>li.act>a,
+.header-container.type20 .main-nav ul.menu>li:hover>a,.header-container.type20 .main-nav ul.menu>li.act>a,
+.header-container.type21 .main-nav ul.menu>li:hover>a,.header-container.type21 .main-nav ul.menu>li.act>a,
 .header-container.type4 .main-nav ul.menu>li:hover>a,.header-container.type4 .main-nav ul.menu>li.act>a,
 .header-container.type5 .main-nav ul.menu>li:hover>a,.header-container.type5 .main-nav ul.menu>li.act>a,
 .header-container.type6 .main-nav ul.menu>li:hover>a,.header-container.type6 .main-nav ul.menu>li.act>a,
+.header-container.type22 .main-nav ul.menu>li:hover>a,.header-container.type22 .main-nav ul.menu>li.act>a,
 .header-container.type14 .main-nav ul.menu>li:hover>a,.header-container.type14 .main-nav ul.menu>li.act>a,
 .header-container.type7 .main-nav ul.menu>li:hover>a,.header-container.type7 .main-nav ul.menu>li.act>a,
 .header-container.type13 .main-nav ul.menu>li:hover>a,.header-container.type13 .main-nav ul.menu>li.act>a,
+.header-container.type26 .main-nav ul.menu>li:hover>a,.header-container.type26 .main-nav ul.menu>li.act>a,
 .header-container.type8 .main-nav ul.menu>li:hover>a,.header-container.type8 .main-nav ul.menu>li.act>a,
 .header-container.type9 .main-nav ul.menu>li:hover>a,.header-container.type9 .main-nav ul.menu>li.act>a,
 .header-container.type10 .main-nav ul.menu>li:hover>a,.header-container.type10 .main-nav ul.menu>li.act>a,
 .header-container.type11 .main-nav ul.menu>li:hover>a,.header-container.type11 .main-nav ul.menu>li.act>a,
+.header-container.type23 .main-nav ul.menu>li:hover>a,.header-container.type23 .main-nav ul.menu>li.act>a,
+.header-container.type24 .main-nav ul.menu>li:hover>a,.header-container.type24 .main-nav ul.menu>li.act>a,
+.header-container.header-newskin .main-nav ul.menu>li:hover>a,.header-container.header-newskin .main-nav ul.menu>li.act>a,
+.header-container.header-newskin .menu.side-menu>li:hover>a,.header-container.header-newskin .menu.side-menu>li.act>a,
 .header-container.type12 .menu.side-menu>li:hover>a,.header-container.type12 .menu.side-menu>li.act>a{
     color:#ee3d43;
 }
 .header-container.type1 .header .form-search,
 .header-container.type2 .header .form-search,
 .header-container.type3 .header .form-search,
+.header-container.type19 .header .form-search,
+.header-container.type19 .selectbox .select,
+.header-container.type20 .header .form-search,
+.header-container.type21 .header .form-search,
 .header-container.type4 .header .form-search,
 .header-container.type5 .header .form-search,
 .header-container.type6 .header .form-search,
+.header-container.type22 .header .form-search,
 .header-container.type15 .header .form-search,
 .header-container.type14 .header .form-search,
 .header-container.type7 .header .form-search,
 .header-container.type13 .header .form-search,
+.header-container.type26 .header .form-search,
 .header-container.type8 .header .form-search,
 .header-container.type9 .header .form-search,
 .header-container.type10 .header .form-search,
+.header-container.type28 .header .form-search,
 .header-container.type11 .header .form-search,
+.header-container.type23 .header .form-search,
+.header-container.type24 .header .form-search,
 .header-container.type12 .header .form-search{
     background-color:#eeeeee;
 }
 .header-container.type1 .header .form-search #cat,
 .header-container.type2 .header .form-search #cat,
 .header-container.type3 .header .form-search #cat,
+.header-container.type19 .header .form-search #cat,
+.header-container.type19 .header .form-search,
+.header-container.type20 .header .form-search #cat,
+.header-container.type21 .header .form-search #cat,
 .header-container.type4 .header .form-search #cat,
 .header-container.type5 .header .form-search #cat,
 .header-container.type6 .header .form-search #cat,
+.header-container.type22 .header .form-search #cat,
 .header-container.type14 .header .form-search #cat,
 .header-container.type7 .header .form-search #cat,
 .header-container.type13 .header .form-search #cat,
+.header-container.type26 .header .form-search #cat,
 .header-container.type8 .header .form-search #cat,
 .header-container.type9 .header .form-search #cat,
 .header-container.type10 .header .form-search #cat,
+.header-container.type28 .header .form-search #cat,
 .header-container.type11 .header .form-search #cat,
+.header-container.type23 .header .form-search #cat,
+.header-container.type24 .header .form-search #cat,
 .header-container.type12 .header .form-search #cat,
 .header-container.type15 .header .form-search #cat,
 .header-container.type1 .header .form-search,
 .header-container.type2 .header .form-search,
 .header-container.type3 .header .form-search,
 .header-container.type4 .header .form-search,
+.header-container.type20 .header .form-search,
+.header-container.type21 .header .form-search,
 .header-container.type5 .header .form-search,
 .header-container.type6 .header .form-search,
+.header-container.type22 .header .form-search,
 .header-container.type14 .header .form-search,
 .header-container.type15 .header .form-search,
 .header-container.type7 .header .form-search,
 .header-container.type13 .header .form-search,
+.header-container.type26 .header .form-search,
 .header-container.type8 .header .form-search,
 .header-container.type9 .header .form-search,
 .header-container.type10 .header .form-search,
 .header-container.type11 .header .form-search,
+.header-container.type23 .header .form-search,
+.header-container.type24 .header .form-search,
 .header-container.type12 .header .form-search{
     border-color:#ffffff;
 }
@@ -207,33 +320,49 @@ button.button span,.pager li >a:hover,.pager li >a:focus,.pager .pages .current,
 .header-container.type1 .header .form-search:before,
 .header-container.type2 .header .form-search:before,
 .header-container.type3 .header .form-search:before,
+.header-container.type19 .header .form-search:before,
+.header-container.type20 .header .form-search:before,
+.header-container.type21 .header .form-search:before,
 .header-container.type4 .header .form-search:before,
 .header-container.type5 .header .form-search:before,
 .header-container.type6 .header .form-search:before,
+.header-container.type22 .header .form-search:before,
 .header-container.type14 .header .form-search:before,
 .header-container.type7 .header .form-search:before,
 .header-container.type13 .header .form-search:before,
+.header-container.type26 .header .form-search:before,
 .header-container.type8 .header .form-search:before,
 .header-container.type15 .header .form-search:before,
 .header-container.type9 .header .form-search:before,
 .header-container.type11 .header .form-search:before,
+.header-container.type23 .header .form-search:before,
+.header-container.type24 .header .form-search:before,
 .header-container.type12 .header .form-search:before,
+.header-container.type28 .header .form-search:before,
 .header-container.type10 .header .form-search:before{
     border-bottom-color:#ffffff;
 }
 .header-container.type1 .header .form-search #cat,.header-container.type1 .header .form-search button.button,
 .header-container.type2 .header .form-search #cat,.header-container.type2 .header .form-search button.button,
 .header-container.type3 .header .form-search #cat,.header-container.type3 .header .form-search button.button,.header-container.type3 .header .search-icon,.header-container.type3 .menu-icon > a,
+.header-container.type19 .header .form-search #cat,.header-container.type19 .header .form-search button.button,.header-container.type19 .header .search-icon,.header-container.type19 .menu-icon > a,.header-container.type19 .selectbox .select,
+.header-container.type20 .header .form-search #cat,.header-container.type20 .header .form-search button.button,.header-container.type20 .header .search-icon,.header-container.type20 .menu-icon > a,
+.header-container.type21 .header .form-search #cat,.header-container.type21 .header .form-search button.button,
 .header-container.type4 .header .form-search #cat,.header-container.type4 .header .form-search button.button,
 .header-container.type5 .header .form-search #cat,.header-container.type5 .header .form-search button.button,
 .header-container.type6 .header .form-search #cat,.header-container.type6 .header .form-search button.button,
+.header-container.type22 .header .form-search #cat,.header-container.type22 .header .form-search button.button,
 .header-container.type14 .header .form-search #cat,.header-container.type14 .header .form-search button.button,
 .header-container.type7 .header .form-search #cat,.header-container.type7 .header .form-search button.button,
 .header-container.type13 .header .form-search #cat,.header-container.type13 .header .form-search button.button,
+.header-container.type26 .header .form-search #cat,.header-container.type26 .header .form-search button.button,
 .header-container.type8 .header .form-search #cat,.header-container.type8 .header .form-search button.button,
 .header-container.type9 .header .form-search #cat,.header-container.type9 .header .form-search button.button,.header-container.type9 .header .search-icon,.header-container.type9 .menu-icon > a,
 .header-container.type10 .header .form-search #cat,.header-container.type10 .header .form-search button.button,
+.header-container.type28 .header .form-search #cat,.header-container.type28 .header .form-search button.button,
 .header-container.type11 .header .form-search #cat,.header-container.type11 .header .form-search button.button,
+.header-container.type23 .header .form-search #cat,.header-container.type23 .header .form-search button.button,
+.header-container.type24 .header .form-search #cat,.header-container.type24 .header .form-search button.button,
 .header-container.type15 .header .form-search #cat,.header-container.type15 .header .form-search button.button,.header-container.type15 .header .search-icon,
 .header-container.type12 .header .form-search #cat,.header-container.type12 .header .form-search button.button{
     color:#333333;
@@ -241,56 +370,81 @@ button.button span,.pager li >a:hover,.pager li >a:focus,.pager .pages .current,
 .header-container.type1 .header .form-search #search,
 .header-container.type2 .header .form-search #search,
 .header-container.type3 .header .form-search #search,
+.header-container.type19 .header .form-search #search,
+.header-container.type20 .header .form-search #search,
+.header-container.type21 .header .form-search #search,
 .header-container.type4 .header .form-search #search,
 .header-container.type5 .header .form-search #search,
 .header-container.type6 .header .form-search #search,
+.header-container.type22 .header .form-search #search,
 .header-container.type14 .header .form-search #search,
 .header-container.type15 .header .form-search #search,
 .header-container.type7 .header .form-search #search,
 .header-container.type13 .header .form-search #search,
+.header-container.type26 .header .form-search #search,
 .header-container.type8 .header .form-search #search,
 .header-container.type9 .header .form-search #search,
 .header-container.type10 .header .form-search #search,
+.header-container.type28 .header .form-search #search,
 .header-container.type11 .header .form-search #search,
+.header-container.type23 .header .form-search #search,
+.header-container.type24 .header .form-search #search,
 .header-container.type12 .header .form-search #search{
-    color:#777777;
+    color:#8d8d8d;
 }
 .header-container.type1 .mybag-link,.header-container.type1 .selectbox .select,.header-container.type1 .compare-link > a,
 .header-container.type1 .top-links-icon,
 .header-container.type12 .mybag-link,.header-container.type12 .selectbox .select,.header-container.type12 .compare-link > a,
 .header-container.type12 .top-links-icon,
 .header-container.type11 .mini-cart .mybag-link,.header-container.type11 .selectbox .select,.header-container.type11 .compare-link > a,
+.header-container.type23 .mini-cart .mybag-link,.header-container.type23 .selectbox .select,.header-container.type23 .compare-link > a,
+.header-container.type24 .mini-cart .mybag-link,.header-container.type24 .selectbox .select,.header-container.type24 .compare-link > a,
+.header-container.header-newskin .mini-cart .mybag-link,.header-container.header-newskin .selectbox .select,.header-container.header-newskin .compare-link > a,
 .header-container.type2 .mybag-link,
-.header-container.type3 .mybag-link, .header-container.type3 .mybag-link .cart-qty,
+.header-container.type3 .mybag-link, .header-container.type19 .mybag-link,.header-container.type3 .mybag-link .cart-qty,
+.header-container.type20 .mybag-link,
+.header-container.type20 .mybag-link .cart-qty
+.header-container.type21 .mybag-link,
 .header-container.type4 .mybag-link,
 .header-container.type5 .mybag-link,
 .header-container.type6 .mybag-link,
+.header-container.type22 .mybag-link,
 .header-container.type14 .mybag-link i,.header-container.type14 .mybag-link .cart-info,
 .header-container.type7 .mybag-link,
 .header-container.type13 .mybag-link,
+.header-container.type26 .mybag-link,
 .header-container.type8 .mybag-link,.header-container.type8 .mybag-link .cart-info,.header-container.type8 .selectbox .select,.header-container.type8 .compare-link > a,
 .header-container.type15 .mybag-link,.header-container.type15 .mybag-link .cart-info,.header-container.type15 .selectbox .select,.header-container.type15 .compare-link > a,
 .header-container.type9 .mybag-link, .header-container.type9 .mybag-link .cart-qty,
 .header-container.type10 .mybag-link, .header-container.type10 .mybag-link .cart-qty,
-.header-container.type3.sticky-header .menu-wrapper .mybag-link .cart-qty{
+.header-container.type3.sticky-header .menu-wrapper .mybag-link .cart-qty,.header-container.type20.sticky-header .menu-wrapper .mybag-link .cart-qty{
     color:#ffffff;
 }
 .header-container.type1 .mybag-link i,.header-container.type1 .compare-link > a i,
 .header-container.type12 .mybag-link i,.header-container.type12 .compare-link > a i,
 .header-container.type11 .mini-cart .mybag-link i,.header-container.type11 .compare-link > a i,
+.header-container.type23 .mini-cart .mybag-link i,.header-container.type23 .compare-link > a i,
+.header-container.type24 .mini-cart .mybag-link i,.header-container.type24 .compare-link > a i,
+.header-container.header-newskin .mini-cart .mybag-link i,.header-container.header-newskin .compare-link > a i,
 .header-container.type2 .mybag-link i,
 .header-container.type3 .mybag-link i,
+.header-container.type19 .mybag-link i,
+.header-container.type20 .mybag-link i,
+.header-container.type21 .mybag-link i,
 .header-container.type4 .mybag-link i,
 .header-container.type5 .mybag-link i,
 .header-container.type6 .mybag-link i,
+.header-container.type22 .mybag-link i,
 .header-container.type14 .mybag-link i,
 .header-container.type7 .mybag-link i,
 .header-container.type13 .mybag-link i,
+.header-container.type26 .mybag-link i,
 .header-container.type8 .mybag-link i,.header-container.type8 .compare-link > a i,
 .header-container.type15 .mybag-link i,.header-container.type15 .compare-link > a i,
 .header-container.type9 .mybag-link i,
 .header-container.type10 .mybag-link i,
-.header-container.type3.sticky-header .menu-wrapper .mybag-link i{
+.header-container.type3.sticky-header .menu-wrapper .mybag-link i,
+.header-container.type20.sticky-header .menu-wrapper .mybag-link i{
     color:#393f4f;
 }
 .main-nav .menu>li.menu-full-width .nav-sublist-dropdown,.main-nav .menu>li.menu-static-width .nav-sublist-dropdown,.fixed-header .menu>li.menu-full-width .nav-sublist-dropdown,.fixed-header .menu>li.menu-static-width .nav-sublist-dropdown{
@@ -300,17 +454,25 @@ button.button span,.pager li >a:hover,.pager li >a:focus,.pager .pages .current,
 .main-nav .menu>li.menu-full-width .nav-sublist-dropdown a,.main-nav .menu>li.menu-static-width .nav-sublist-dropdown a,.fixed-header .menu>li.menu-full-width .nav-sublist-dropdown a,.fixed-header .menu>li.menu-static-width .nav-sublist-dropdown a{
     color:#777777;
 }
-.main-nav ul.menu>li .nav-sublist-dropdown,.main-nav .menu>li.menu-item .nav-sublist-dropdown .container ul .menu-item-has-children .nav-sublist,.fixed-header ul.menu>li .nav-sublist-dropdown,.fixed-header .menu>li.menu-item .nav-sublist-dropdown .container ul .menu-item-has-children .nav-sublist{
-    background-color:#ee3d43;
-}
 .fixed-header .menu >li.menu-item .nav-sublist-dropdown a,.main-nav .menu >li.menu-item .nav-sublist-dropdown a{
-    color:#ffffff;
-}
-.fixed-header .menu>li.menu-item-has-children .nav-sublist-dropdown .container ul >li:hover >a,
-.main-nav .menu>li.menu-item-has-children .nav-sublist-dropdown .container ul>li:hover>a,.menu.side-menu li.menu-item-has-children .nav-sublist-dropdown .container ul>li:hover>a{
-    background-color:#f26e72;
+    color:#777777;
 }
 .fixed-header .menu >li.menu-item .nav-sublist-dropdown li:hover > a,.main-nav .menu >li.menu-item .nav-sublist-dropdown li:hover > a{
+    color:#777777;
+}
+.footer-middle{
+    background-color:#161a21;
+}
+.footer-middle, .footer-middle p, .footer-middle .contact-info i{
+    color:#a8a8a8;
+}
+.footer-middle a{
+    color:#a8a8a8;
+}
+.footer-middle a:hover{
+    color:#a8a8a8;
+}
+.footer-middle .block .block-title strong{
     color:#ffffff;
 }
 .footer-ribbon{
@@ -318,6 +480,18 @@ button.button span,.pager li >a:hover,.pager li >a:focus,.pager .pages .current,
 }
 .footer-ribbon:before{
     border-right-color:#ca3136;
+}
+.footer-bottom{
+    background-color:#161a21;
+}
+.footer-bottom, .footer-bottom p{
+    color:#a8a8a8;
+}
+.footer-bottom a{
+    color:#a8a8a8;
+}
+.footer-bottom a:hover{
+    color:#a8a8a8;
 }
 #totop{
 }

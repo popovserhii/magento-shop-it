@@ -16,7 +16,7 @@
         <!-- Mage_Catalog -->
         <reference name="root">
             <action method="setTemplate">
-                <template>page/empty.phtml</template>
+                <template>smartwave/quickview/page/quickpage.phtml</template>
             </action>
         </reference>
         <reference name="content">

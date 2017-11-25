@@ -83,7 +83,10 @@ Default layout, loads most of the pages
                     <block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs"/>
                 </block>
             </block>
-
+            <block type="page/html_wrapper" name="bottom_container" as="bottomContainer" translate="label">
+                <label>Bottom Container</label>
+                <action method="setElementClass"><value>bottom-container</value></action>
+            </block>
             <block type="core/text_list" name="left" as="left" translate="label">
                 <label>Left Column</label>
             </block>

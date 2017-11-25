@@ -22,11 +22,6 @@
     else
         $hide_smallthumb_single = "true";
 ?>
-<?php
-    $zoom_disabled = Mage::getStoreConfig("porto_settings/product_view/disable_product_zoom", $code);
-    $zoom_type = Mage::getStoreConfig("porto_settings/product_view/zoom_type", $code);
-    $thumb_type = Mage::getStoreConfig("porto_settings/product_view/thumbnail_image_type", $code);
-?>
 <?php if (count($this->getGalleryImages()) > 0): ?>
 <ul id="etalage_<?php echo $rnd_str; ?>">
 <?php foreach ($this->getGalleryImages() as $_image): ?>
@@ -69,6 +64,11 @@
     <a href="javascript:void(0)" class="etalage-next"><i class="icon-angle-left"></i></a>
 <?php endif; ?>
 </div>
+<?php
+    $zoom_disabled = Mage::getStoreConfig("porto_settings/product_view/disable_product_zoom", $code);
+    $zoom_type = Mage::getStoreConfig("porto_settings/product_view/zoom_type", $code);
+    $thumb_type = Mage::getStoreConfig("porto_settings/product_view/thumbnail_image_type", $code);
+?>
 <div class="product-view-zoom-area">
 </div>
 <script type="text/javascript">
@@ -95,7 +95,13 @@
         });
         jQuery('.etalage-prev').on('click', function(){ etalage_<?php echo $rnd_str; ?>_previous(); });
         jQuery('.etalage-next').on('click', function(){ etalage_<?php echo $rnd_str; ?>_next(); });
-        jQuery("a.fancy-images_<?php echo $rnd_str; ?>").fancybox();
+        jQuery("a.fancy-images_<?php echo $rnd_str; ?>").fancybox({
+            helpers : {
+                overlay : {
+                    locked : false
+                }
+            }
+        });
         function reloadEtalage(){
             var src_img_width = <?php echo $ratio_width; ?>;
             var src_img_height = "auto";
@@ -121,7 +127,7 @@
             height = "auto";
             thumb_position = "bottom";
             <?php endif; ?>
-            
+
             jQuery('#etalage_<?php echo $rnd_str; ?>').etalage({
                 thumb_image_width: width,
                 thumb_image_height: height,

@@ -30,6 +30,7 @@
         </div>
     </div>
     <div class="header container">
+        <div class="menu-icon"><a href="javascript:void(0)" title="<?php echo $this->__('Menu'); ?>"><i class="fa fa-bars"></i></a></div>
         <?php if ($this->getIsHomePage()):?>
         <h1 class="logo"><strong><?php echo $this->getLogoAlt(); ?></strong><a href="<?php echo $this->getUrl(''); ?>" title="<?php echo $this->getLogoAlt(); ?>" class="logo"><img src="<?php echo $this->getLogoSrc(); ?>" alt="<?php echo $this->getLogoAlt(); ?>" /></a></h1>
         <?php else:?>
@@ -42,7 +43,6 @@
             <a href="javascript:void(0)" class="search-icon"><i class="icon-search"></i></a>
             <?php echo $this->getChildHtml('topSearch'); ?>
         </div>
-        <div class="menu-icon"><a href="javascript:void(0)" title="<?php echo $this->__('Menu'); ?>"><i class="fa fa-bars"></i></a></div>
         <?php echo $this->getChildHtml('topMenu') ?>
         <?php echo $this->getChildHtml("demo_header_tooltip"); ?>
     </div>

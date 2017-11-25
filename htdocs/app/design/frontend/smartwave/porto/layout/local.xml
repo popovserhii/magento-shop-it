@@ -7,6 +7,7 @@
             <action method="addBodyClass" ifconfig="porto_design/basic/dark_light" condition="dark"><classname>dark</classname></action>
             <action method="addBodyClass" ifconfig="porto_settings/general/rtl"><classname>rtl</classname></action>
             <action method="addBodyClass" ifconfig="porto_settings/header/type" condition="11"><classname>side-header</classname></action>
+            <action method="addBodyClass" ifconfig="porto_settings/header/type" condition="24"><classname>side-header</classname></action>
             <action method="addBodyClass" ifconfig="porto_settings/general/layout" condition="full_width"><classname>full-width</classname></action>
         </reference>
         <reference name="head">
@@ -59,8 +60,6 @@
             <action method="addCss"><stylesheet helper="porto/cssconfig/getSettingsFile"/></action>
             <action method="addCss" ifconfig="porto_settings/general/rtl" condition="0"><stylesheet>css/custom.css</stylesheet></action>
             <action method="addCss" ifconfig="porto_settings/general/rtl" condition="1"><stylesheet>css/rtl-custom.css</stylesheet></action>
-
-            <action method="addJs"><script>jquery/jquery.maskedinput.js</script></action>
         </reference>
         <reference name="header">
             <action method="setTemplate" ifconfig="porto_settings/header/type" condition="0"><template>page/html/header_type1.phtml</template></action>
@@ -80,6 +79,18 @@
             <action method="setTemplate" ifconfig="porto_settings/header/type" condition="14"><template>page/html/header_type15.phtml</template></action>
             <action method="setTemplate" ifconfig="porto_settings/header/type" condition="15"><template>page/html/header_type16.phtml</template></action>
             <action method="setTemplate" ifconfig="porto_settings/header/type" condition="16"><template>page/html/header_type17.phtml</template></action>
+            <action method="setTemplate" ifconfig="porto_settings/header/type" condition="17"><template>page/html/header_type18.phtml</template></action>
+            <action method="setTemplate" ifconfig="porto_settings/header/type" condition="18"><template>page/html/header_type19.phtml</template></action>
+            <action method="setTemplate" ifconfig="porto_settings/header/type" condition="19"><template>page/html/header_type20.phtml</template></action>
+            <action method="setTemplate" ifconfig="porto_settings/header/type" condition="20"><template>page/html/header_type21.phtml</template></action>
+            <action method="setTemplate" ifconfig="porto_settings/header/type" condition="21"><template>page/html/header_type22.phtml</template></action>
+            <action method="setTemplate" ifconfig="porto_settings/header/type" condition="22"><template>page/html/header_type23.phtml</template></action>
+            <action method="setTemplate" ifconfig="porto_settings/header/type" condition="23"><template>page/html/header_type24.phtml</template></action>
+            <action method="setTemplate" ifconfig="porto_settings/header/type" condition="24"><template>page/html/header_type25.phtml</template></action>
+            <action method="setTemplate" ifconfig="porto_settings/header/type" condition="25"><template>page/html/header_type26.phtml</template></action>
+            <action method="setTemplate" ifconfig="porto_settings/header/type" condition="26"><template>page/html/header_type27.phtml</template></action>
+            <action method="setTemplate" ifconfig="porto_settings/header/type" condition="27"><template>page/html/header_type28.phtml</template></action>
+            <action method="setTemplate" ifconfig="porto_settings/header/type" condition="28"><template>page/html/header_type29.phtml</template></action>
             <block type="directory/currency" name="store_currency" template="page/switch/currency.phtml"/>
 			<block type="catalog/product_compare_sidebar" name="compare_link">
 				<action method="setTemplate" ifconfig="porto_settings/product_compare/show_link"><template>catalog/product/compare/compare_link.phtml</template></action>
@@ -102,22 +113,30 @@
         </reference>
         <reference name="top.menu">
             <action method="unsetChild" ifconfig="porto_settings/header/type" condition="9"><name>catalog.topnav</name></action>
+            <action method="unsetChild" ifconfig="porto_settings/header/type" condition="27"><name>catalog.topnav</name></action>
             <block type="core/template" name="topnav.sidemenu">
                 <action method="setTemplate" ifconfig="porto_settings/header/type" condition="9"><template>smartwave/megamenu/html/topnav.sidemenu.phtml</template></action>
+                <action method="setTemplate" ifconfig="porto_settings/header/type" condition="27"><template>smartwave/megamenu/html/topnav.sidemenu.phtml</template></action>
             </block>
             <block type="core/template" name="topnav.sidemobilemenu">
                 <action method="setTemplate" ifconfig="porto_settings/header/type" condition="9"><template>smartwave/megamenu/html/topnav.sidemobilemenu.phtml</template></action>
+                <action method="setTemplate" ifconfig="porto_settings/header/type" condition="27"><template>smartwave/megamenu/html/topnav.sidemobilemenu.phtml</template></action>
             </block>
             <action method="unsetChild" ifconfig="porto_settings/header/type" condition="11"><name>catalog.topnav</name></action>
+            <action method="unsetChild" ifconfig="porto_settings/header/type" condition="24"><name>catalog.topnav</name></action>
             <block type="core/template" name="sidemenu">
                 <action method="setTemplate" ifconfig="porto_settings/header/type" condition="11"><template>smartwave/megamenu/html/sidemenu.phtml</template></action>
+                <action method="setTemplate" ifconfig="porto_settings/header/type" condition="24"><template>smartwave/megamenu/html/sidemenu.phtml</template></action>
             </block>
         </reference>
         <reference name="mobile.nav">
             <action method="setTemplate" ifconfig="porto_settings/header/type" condition="11"><template>smartwave/megamenu/html/sidemobilemenu.phtml</template></action>
+            <action method="setTemplate" ifconfig="porto_settings/header/type" condition="24"><template>smartwave/megamenu/html/sidemobilemenu.phtml</template></action>
         </reference>
         <reference name="page.header">
             <action method="setTemplate" ifconfig="porto_settings/header/type" condition="10"><template>page/html/page_header_bg.phtml</template></action>
+            <action method="setTemplate" ifconfig="porto_settings/header/type" condition="17"><template>page/html/page_header_bg.phtml</template></action>
+            <action method="setTemplate" ifconfig="porto_settings/header/type" condition="22"><template>page/html/page_header_bg.phtml</template></action>
         </reference>
         <reference name="left">
             <remove name="currency"/>
@@ -226,9 +245,23 @@
             <block type="cms/block" name="product.right.custom1" before="-"><action method="setBlockId"><block_id>porto_product_right_side_1</block_id></action></block>
             <block type="cms/block" name="product.right.custom2" after="product.right.custom1"><action method="setBlockId"><block_id>porto_product_right_side_2</block_id></action></block>
         </reference>
+        <reference name="product.info">
+            <block type="catalog/product_list_upsell" name="product.info.upsell" as="upsell_products">
+                <action method="setColumnCount"><columns>4</columns></action>
+                <action method="setItemLimit"><type>upsell</type><limit>4</limit></action>
+            </block>
+        </reference>
         <reference name="product.info.upsell">
-            <action method="setColumnCount"><columns>5</columns></action>
-            <action method="setItemLimit"><type>upsell</type><limit>20</limit></action>
+            <action method="setColumnCount"><columns>4</columns></action>
+            <action method="setItemLimit"><type>upsell</type><limit>4</limit></action>
+            <action method="setTemplate" ifconfig="porto_settings/product_view/add_upsell_background" condition="0"><template>catalog/product/list/upsell.phtml</template></action>
+        </reference>
+        <reference name="bottom_container">
+            <block type="catalog/product_list_upsell" name="product.bottom.upsell">
+                <action method="setColumnCount"><columns>4</columns></action>
+                <action method="setItemLimit"><type>upsell</type><limit>4</limit></action>
+                <action method="setTemplate" ifconfig="porto_settings/product_view/add_upsell_background" condition="1"><template>catalog/product/list/upsell.phtml</template></action>
+            </block>
         </reference>
     </catalog_product_view>
     <catalogsearch_result_index>

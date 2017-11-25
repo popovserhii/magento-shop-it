@@ -14,7 +14,7 @@ http://www.gnu.org/licenses/gpl.html
 (function( $ ){
 	var $window = $(window);
 	var windowHeight = $window.height();
-
+	var pixelRatio = !!window.devicePixelRatio ? window.devicePixelRatio : 1;
 	$window.resize(function () {
 		windowHeight = $window.height();
 	});
@@ -23,8 +23,8 @@ http://www.gnu.org/licenses/gpl.html
 		var $this = $(this);
 		var getHeight;
 		var paddingTop = 0;
-		
-		//get the starting position of each element to have parallax applied to it		
+
+		//get the starting position of each element to have parallax applied to it
         if(firstTop == null){
 		    $this.each(function(){
 		        firstTop = $this.offset().top;
@@ -39,15 +39,15 @@ http://www.gnu.org/licenses/gpl.html
 				return jqo.height();
 			};
 		}
-			
+
 		// setup defaults if arguments aren't specified
 		if (arguments.length < 1 || xpos === null) xpos = "50%";
 		if (arguments.length < 2 || speedFactor === null) speedFactor = 0.1;
 		if (arguments.length < 3 || outerHeight === null) outerHeight = true;
-		
+
 		// function to be called whenever the window is scrolled or resized
 		function update(){
-			var pos = $window.scrollTop();				
+			var pos = $window.scrollTop();
 
 			$this.each(function(){
 				var $element = $(this);
@@ -57,11 +57,16 @@ http://www.gnu.org/licenses/gpl.html
 				// Check if totally above or totally below viewport
 				if (top + height < pos || top > pos + windowHeight) {
 					return;
+				} 
+				if(pixelRatio == 1) {
+					$this.css('backgroundPosition', xpos + " " + Math.round((firstTop - pos) * speedFactor) + "px");
+				}else{
+					$this.css('backgroundPosition',"center center");
+					$this.css('backgroundAttachment',"initial");
+					$this.css('backgroundSize',"cover");
 				}
-
-				$this.css('backgroundPosition', xpos + " " + Math.round((firstTop - pos) * speedFactor) + "px");
 			});
-		}		
+		}
 
 		$window.bind('scroll', update).resize(update);
 		update();

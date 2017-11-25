@@ -4,7 +4,7 @@
     <?php echo Mage::app()->getLayout()->getMessagesBlock()->getGroupedHtml(); ?> 
 </div>
 
-<?php echo $this->getChildHtml('smartwave_blog_comments_toolbar'); ?>
+<?php echo $this->getChildHtml('aw_blog_list_toolbar'); ?>
 <div class="posts-wrap">
 <?php foreach ($posts as $post): ?>
     <div class="postWrapper">
@@ -44,4 +44,4 @@
     </div>
 <?php endforeach; ?>
 </div>
-<?php echo $this->getChildHtml('smartwave_blog_comments_toolbar'); ?>
+<?php echo $this->getChildHtml('aw_blog_list_toolbar'); ?>

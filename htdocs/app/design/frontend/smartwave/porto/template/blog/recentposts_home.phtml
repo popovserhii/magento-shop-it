@@ -1,33 +1,43 @@
+<?php
+$show_date = $this->getData('full_date')? $this->getData('full_date'): 0;
+?>
 <div class="recent-posts">
 <?php if ($posts = $this->getRecent()): ?>
 <div class="owl-carousel">
 <?php foreach ($posts as $post): ?>
     <div class="item">
-        <?php
-            $post_date = Mage::helper('core')->formatDate($post->getCreatedTime(), 'long', false)
-        ?>
-        <div class="row">
-            <div class="col-sm-5">
-                <div class="post-image">
-                <?php
-                    if($post_image = $post->getImage()){
-                ?>
-                    <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).$post_image; ?>" alt=""/>
-                <?php
-                    }
-                ?>
+        <div class="recent-inner">
+            <?php
+            $post_date = Mage::helper('core')->formatDate($post->getCreatedTime(), 'short', false);
+            $currentDate = Mage::getModel('core/date')->date('d-M-Y', strtotime($post->getCreatedTime()));
+            ?>
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="post-image">
+                        <?php
+                        if($post_image = $post->getImage()){
+                            ?>
+                            <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).$post_image; ?>" alt=""/>
+                            <?php
+                        }
+                        ?>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-7">
-                <div class="post-date">
-                    <span class="day"><?php echo $post->getDay(); ?></span>
-                    <span class="month"><?php echo $post->getMonthShort(); ?></span>
+                <div class="col-sm-7">
+                    <div class="post-date">
+                        <?php if($show_date):?>
+                        <span class="long-date"><?php echo $currentDate;?></span>
+                        <?php else:?>
+                        <span class="day"><?php echo $post->getDay(); ?></span>
+                        <span class="month"><?php echo $post->getMonthShort(); ?></span>
+                        <?php endif;?>
+                    </div>
+                    <div class="postTitle">
+                        <h2><a href="<?php echo $post->getAddress(); ?>" ><?php echo $post->getTitle(); ?></a></h2>
+                    </div>
+                    <div class="postContent"><?php echo $post->getShortContent(); ?></div>
+                    <a class="readmore" href="<?php echo $post->getAddress(); ?>"><?php echo $this->__("Read more >");?></a>
                 </div>
-                <div class="postTitle">
-                    <h2><a href="<?php echo $post->getAddress(); ?>" ><?php echo $post->getTitle(); ?></a></h2>
-                </div>
-                <div class="postContent"><?php echo $post->getShortContent(); ?></div>
-                <a class="readmore" href="<?php echo $post->getAddress(); ?>"><?php echo $this->__("Read more >");?></a>
             </div>
         </div>
     </div>

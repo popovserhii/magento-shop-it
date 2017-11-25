@@ -137,7 +137,7 @@ jQuery(document).ready(function($){
     
     navList.find('li:has(ul)',this).each(function() {
         $(this).prepend(etOpener);
-    })
+    });
     
     navList.find('.open-child').click(function(){
         if ($(this).parent().hasClass('over')) {
@@ -146,9 +146,9 @@ jQuery(document).ready(function($){
             $(this).parent().parent().find('>li.over').removeClass('over').find('>ul').slideUp(200);
             $(this).parent().addClass('over').find('>ul').slideDown(200);
         }
-    });    
-    $('.menu-icon, .close-mobile-nav, .header-container.type10 .dropdown-menu > .menu-container > a').click(function(event) {
-		if(!$('body').hasClass('md-mobile-menu') && ($(".header-container").hasClass('type11') || $(".header-container").hasClass('type13') || $(".header-container").hasClass('type7')))
+    });
+    $('.menu-icon, .close-mobile-nav, .close-sidebar-menu, .header-container.type10 .dropdown-menu > .menu-container > a, .header-container.type28 .dropdown-menu > .menu-container > a').click(function(event) {
+		if(!$('body').hasClass('md-mobile-menu') && ($(".header-container").hasClass('type11') || $(".header-container").hasClass('type13') || $(".header-container").hasClass('type7') || $(".header-container").hasClass('type23')))
 			$('body').addClass('md-mobile-menu');
         if(!$('body').hasClass('mobile-nav-shown')) {
             $('body').addClass('mobile-nav-shown', function() {

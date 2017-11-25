@@ -1,6 +1,11 @@
 <?php $menuHelper = Mage::helper('megamenu'); ?>
-<?php $only_categories = $this->getOnlyCategories(); ?>
+<?php
+$only_categories = $this->getOnlyCategories();
+$store = Mage::app()->getStore();
+$code  = $store->getCode();
+?>
 <div class="mobile-nav side-block container">
+    <span class="close-sidebar-menu"><i class="icon-cancel"></i></span>
     <div class="menu-all-pages-container">
         <ul class="menu">
         <?php if(!$menuHelper->getConfig('popup/ajax_load_popups')): ?>
@@ -10,6 +15,10 @@
         <?php endif; ?>
         </ul>
     </div>
+    <?php
+    $custom_block = Mage::getStoreConfig('porto_settings/header/static_block_mobile', $code);
+    ?>
+    <?php echo '<div class="custom-block">'.$this->getLayout()->createBlock('cms/block')->setBlockId($custom_block)->toHtml().'</div>'; ?>
 </div>
 <div class="mobile-nav-overlay close-mobile-nav"></div>
 <script type="text/javascript">

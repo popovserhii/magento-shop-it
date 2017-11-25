@@ -3,6 +3,7 @@
         $store = Mage::app()->getStore();
         $code  = $store->getCode();
         $display_subtotal_price = Mage::getStoreConfig("tax/cart_display/subtotal", $code);
+        $header_type = Mage::getStoreConfig('porto_settings/header/type', $code);
     ?>
     <?php $_cartQty = $this->getSummaryCount(); ?>
     <?php
@@ -10,9 +11,12 @@
         $_subtotal = $this->helper('checkout')->formatPrice(Mage::getSingleton('checkout/cart')->getQuote()->getGrandTotal())
     ?>
     <?php $_items = $this->getRecentItems() ?>
-    <a href="javascript:void(0)" class="mybag-link"><i class="icon-mini-cart"></i><span class="cart-info"><span class="cart-qty"><?php echo $_cartQty ?></span><span><?php echo $this->__('item(s)') ?></span></span></a>
+    <a href="javascript:void(0)" class="mybag-link"><i class="icon-mini-cart"></i><span class="cart-info"><span class="cart-qty"><?php echo $_cartQty ?></span><span><?php echo $this->__('Item(s)') ?></span></span></a>
         <div class="topCartContent block-content theme-border-color">
             <div class="inner-wrapper"><?php /*extra div to smooth slideUp and slideDown*/ ?>
+                <?php if($header_type == 19):?>
+                    <div class="total-count"><span><?php echo $this->__('%s Items', $_cartQty);?></span> <a class="link-cart" href="<?php echo $this->getUrl('checkout/cart'); ?>"><?php echo $this->__('View Cart') ?></a></div>
+                <?php endif;?>
                 <?php $_items = $this->getRecentItems() ?>
                 <?php if(count($_items)): ?>
                     <ol class="mini-products-list">
@@ -25,7 +29,9 @@
                         <span class="price-total"><?php echo $_subtotal ?></span>
                     </div>
                     <div class="actions">
+                    <?php if($header_type != 19):?>
                         <a class="btn btn-default" href="<?php echo $this->getUrl('checkout/cart'); ?>"><i class="icon-basket"></i><?php echo $this->__('View Cart') ?></a>
+                    <?php endif;?>
                 <?php if($_cartQty && $this->isPossibleOnepageCheckout()): ?>
                         <a class="btn btn-default" href="<?php echo $this->getCheckoutUrl(); ?>"><i class="icon-right-thin"></i><?php echo $this->__('Checkout') ?></a>
                 <?php endif; ?>

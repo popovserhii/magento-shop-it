@@ -17,8 +17,11 @@
     
     $enable_addtocart_sticky = Mage::getStoreConfig("porto_settings/product_view/enable_addtocart_sticky",$code);
     $move_product_tab = Mage::getStoreConfig("porto_settings/product_view/move_product_tab",$code);
+    $move_custom_block = Mage::getStoreConfig("porto_settings/product_view/move_custom_block",$code);
+    $custom_block_tab_id = Mage::getStoreConfig("porto_settings/product_view/custom_block_tab",$code);
     $custom_block_id = Mage::getStoreConfig("porto_settings/product_view/custom_block_id",$code);
     $custom_block_html = "";
+    $custom_block_tab_html = "";
     if(Mage::app()->getFrontController()->getRequest()->getModuleName() == "quickview") {
         $custom_block_html = "";
     }
@@ -27,7 +30,11 @@
         if($custom_block)
             $custom_block_html = $custom_block->toHtml();
     }
-    
+    if($custom_block_tab_id){
+        $custom_block_tab = $this->getLayout()->createBlock('cms/block')->setBlockId($custom_block_tab_id);
+        if($custom_block_tab)
+            $custom_block_tab_html = $custom_block_tab->toHtml();
+    }
     $sticky_header = "";
     if(!Mage::getStoreConfig("porto_settings/header/sticky_header", $code))
         $sticky_header = "no-sticky-header";
@@ -122,7 +129,7 @@ if($enable_addtocart_sticky){
 <?php
 }
 ?>
-        <?php if($custom_block_html): ?>
+        <?php if($custom_block_html && !$move_custom_block): ?>
         <div class="row">
             <div class="col-sm-9">
         <?php endif; ?>
@@ -171,7 +178,6 @@ if($enable_addtocart_sticky){
                 <div class="product-name">
                     <h1 <?php if($enabled_richsnippets): ?>itemprop="name"<?php endif; ?>><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
                 </div>
-				<?php if (Mage::helper('core')->isModuleEnabled('Amasty_Shopby')) { echo Mage::helper('amshopby')->showLinks($_product);} ?>
                 <?php if($enabled_richsnippets): ?>
                 <?php
                     $storeId = Mage::app()->getStore()->getId();
@@ -191,7 +197,7 @@ if($enable_addtocart_sticky){
                 if (Mage::helper('catalog')->isModuleEnabled('Mage_Review')):
                 ?>
                 <?php 
-                    $review_html = $this->getReviewsSummaryHtml($product, 'short');
+                    $review_html = $this->getReviewsSummaryHtml($product);
                     if($review_html){
                         echo $review_html;
                     }else{
@@ -200,6 +206,9 @@ if($enable_addtocart_sticky){
                         <div class="rating-box">
                             <div class="rating" style="width:0"></div>
                         </div>
+                        <p class="rating-links">
+                            <a href="javascript:void(0)"><?php echo $this->__('%s Review(s)', 0);?></a>
+                        </p>
                     </div>
                 <?php                            
                     }
@@ -209,12 +218,20 @@ if($enable_addtocart_sticky){
                         <div class="rating-box">
                             <div class="rating" style="width:0"></div>
                         </div>
+                        <p class="rating-links">
+                            <a href="javascript:void(0)"><?php echo $this->__('%s Review(s)', 0);?></a>
+                        </p>
                     </div>
                 <?php endif; ?>
                 <?php if ($_product->getShortDescription()):?>
-                    <div class="short-description">
+                    <div class="short-description <?php if($move_custom_block):?>no-border<?php endif;?>"">
                         <h2><?php echo $this->__('Quick Overview') ?></h2>
                         <div class="std" <?php if($enabled_richsnippets): ?>itemprop="description"<?php endif; ?>><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+                    </div>
+                <?php endif;?>
+                <?php if($custom_block_html && $move_custom_block):?>
+                    <div class="short-custom-block">
+                        <?php echo $custom_block_html; ?>
                     </div>
                 <?php endif;?>
                 <div class="product-info">
@@ -222,9 +239,6 @@ if($enable_addtocart_sticky){
                         <?php echo $this->getChildHtml('product_type_data'); ?>
                         <?php echo $this->getTierPriceHtml(); ?>
                         <?php echo $price_properties; ?>
-						<div class="detail-code-wrap pos-abs">
-							<div class="detail-code inline"><?php echo $this->__('SKU:'); ?><span class="detail-code-i" name="goods_code"><?php echo $_product->getSku() ?></span></div>
-						</div>
                     </div>
                     <?php echo $this->getChildHtml('extrahint') ?>
                     <?php if ($this->canEmailToFriend()): ?>
@@ -262,7 +276,7 @@ if($enable_addtocart_sticky){
             </div>
 
         </div>
-        <?php if($custom_block_html): ?>
+        <?php if($custom_block_html && !$move_custom_block): ?>
             </div>
             <div class="col-sm-3">
                 <?php echo $custom_block_html; ?>
@@ -464,7 +478,20 @@ if($enable_addtocart_sticky){
     <?php $upsell = $this->getChildHtml('upsell_products'); ?>
     <?php if(Mage::getStoreConfig("porto_settings/product_view/move_upsell",$code)) echo $upsell; ?>
     <div class="product-collateral">
-        <?php echo $this->getChildHtml('product_additional_data'); ?>
+        <div class="collateral-inner">
+            <div class="row">
+                <div class="<?php if($custom_block_tab_id):?>col-sm-9<?php else:?>col-sm-12<?php endif;?>">
+                    <?php echo $this->getChildHtml('product_additional_data'); ?>
+                </div>
+                <?php if($custom_block_tab_id):?>
+                    <div class="col-sm-3">
+                        <div class="custom-block-tab">
+                            <?php echo $custom_block_tab_html; ?>
+                        </div>
+                    </div>
+                <?php endif;?>
+            </div>
+        </div>
     </div>
     <?php if(!Mage::getStoreConfig("porto_settings/product_view/move_upsell",$code)) echo $upsell; ?>
 </div>

@@ -21,7 +21,19 @@ class Smartwave_Porto_Model_System_Config_Source_Setting_Header_Type
             array('value' => '13', 'label' => Mage::helper('porto')->__('Type 14')),
             array('value' => '14', 'label' => Mage::helper('porto')->__('Type 15')),
             array('value' => '15', 'label' => Mage::helper('porto')->__('Type 16')),
-            array('value' => '16', 'label' => Mage::helper('porto')->__('Type 17'))
+            array('value' => '16', 'label' => Mage::helper('porto')->__('Type 17')),
+            array('value' => '17', 'label' => Mage::helper('porto')->__('Type 18')),
+            array('value' => '18', 'label' => Mage::helper('porto')->__('Type 19')),
+            array('value' => '19', 'label' => Mage::helper('porto')->__('Type 20')),
+            array('value' => '20', 'label' => Mage::helper('porto')->__('Type 21')),
+            array('value' => '21', 'label' => Mage::helper('porto')->__('Type 22')),
+            array('value' => '22', 'label' => Mage::helper('porto')->__('Type 23')),
+            array('value' => '23', 'label' => Mage::helper('porto')->__('Type 24')),
+            array('value' => '24', 'label' => Mage::helper('porto')->__('Type 25')),
+            array('value' => '25', 'label' => Mage::helper('porto')->__('Type 26')),
+            array('value' => '26', 'label' => Mage::helper('porto')->__('Type 27')),
+            array('value' => '27', 'label' => Mage::helper('porto')->__('Type 28')),
+            array('value' => '28', 'label' => Mage::helper('porto')->__('Type 29'))
         );
     }
 }

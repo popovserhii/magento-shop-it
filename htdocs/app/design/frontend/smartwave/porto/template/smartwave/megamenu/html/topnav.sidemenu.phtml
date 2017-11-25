@@ -1,8 +1,9 @@
 <?php
 $store = Mage::app()->getStore();
 $code  = $store->getCode();
-$custom_block = Mage::getStoreConfig('porto_settings/header/static_block_2', $code);
-$menu_title = Mage::getStoreConfig('porto_settings/header/menu_title', $code);
+$headerType = Mage::getStoreConfig('porto_settings/header/type', $code);
+$custom_block = $headerType == 9 ? Mage::getStoreConfig('porto_settings/header/static_block_2', $code) : Mage::getStoreConfig('porto_settings/header/static_block_3', $code);
+$menu_title = $headerType == 9 ? Mage::getStoreConfig('porto_settings/header/menu_title', $code) : Mage::getStoreConfig('porto_settings/header/menu_title_2', $code);
 ?>
 <?php $only_categories = $this->getOnlyCategories(); ?>
 <div class="header-wrapper">
