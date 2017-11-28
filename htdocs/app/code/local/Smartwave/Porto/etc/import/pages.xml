@@ -782,7 +782,8 @@ jQuery(function($){
       <cms_block>
          <title>Porto - Homepage 6</title>
          <identifier>porto_home_6</identifier>
-         <content><![CDATA[<div class="row" style="margin:0 -10px;">
+         <content><![CDATA[
+<div class="row" style="margin:0 -10px;">
   <div class="col-md-3" style="padding:0 10px;">
     <div class="home-side-menu" style="margin-bottom:20px;">
       <h2 class="side-menu-title">CATEGORIES</h2>

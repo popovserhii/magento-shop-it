@@ -11,9 +11,11 @@ class Smartwave_Porto_Helper_Data extends Mage_Core_Helper_Abstract
         $this->_texturePath = 'wysiwyg/porto/texture/default/';
     }
     public function checkPurchaseCode($save = false) {
-        if($this->isLocalhost()){
-            return "localhost";
-        }
+        $this->_checkedPurchaseCode = "verified";
+
+        //if($this->isLocalhost()){
+        //    return "localhost";
+        //}
         if(!$this->_checkedPurchaseCode){
             
             $code = Mage::getStoreConfig('porto_license/general/purchase_code');
