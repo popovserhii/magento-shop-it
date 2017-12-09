@@ -30,7 +30,7 @@
             <action method="setTemplate" ifconfig="ajaxcart/addtocart/enableproduct"><template>ajaxcart/catalog/product/view/addtocart.phtml</template></action>
         </reference>
     </catalog_product_view>
-    
+
     <ajaxcart_index_options>
         <reference name="root">
             <action method="setTemplate"><template>page/empty.phtml</template></action>

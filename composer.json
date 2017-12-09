@@ -9,11 +9,12 @@
   "require": {
     "magento-hackathon/magento-composer-installer": "*",
     "aydin-hassan/magento-core-composer-installer" : "~1.0",
-    "magento/core": "1.9.3.6",
+    "magento/core": "1.9.3.7",
     "dweeves/magmi": "dev-master",
     "popov/magento-deleter": "dev-master",
     "popov/magento-cmd-export": "dev-master",
     "popov/magento-magmi-import": "dev-master",
+    "popov/magento-extra": "dev-master",
     "agere/magento-mirasvit-advanced-product-feeds": "dev-master",
     "mage-eag/mage-enhanced-admin-grids": "0.9.*",
     "rossmc/rsqs": "dev-master"
@@ -41,6 +42,10 @@
     {
       "type": "git",
       "url": "https://github.com/popovserhii/magento-magmi-import.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/popovserhii/magento-extra.git"
     },
     {
       "type": "git",
