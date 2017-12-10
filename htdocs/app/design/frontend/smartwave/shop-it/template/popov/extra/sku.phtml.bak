@@ -1,0 +1,2 @@
+<?php die(__FILE__) ?>
+<div>Hello World</div>

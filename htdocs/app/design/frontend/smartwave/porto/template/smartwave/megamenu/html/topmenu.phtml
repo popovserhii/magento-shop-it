@@ -23,7 +23,7 @@ jQuery(function($){
             type: "default",
             delayTime: <?php echo $menuHelper->getConfig('popup/popup_delay'); ?>
         });
-<?php if($menuHelper->getConfig('popup/ajax_load_popups')): ?>
+		<?php if($menuHelper->getConfig('popup/ajax_load_popups')): ?>
         url = "<?php echo Mage::getBaseUrl()."swmegamenu/index/showpopup" ?>";
         $(".main-nav ul.menu > li.menu-static-width, .main-nav ul.menu > li.menu-full-width, .main-nav ul.menu > li.menu-item").off("mouseover").on("mouseover",function(){
             if(!$(this).hasClass("ajax-loaded") && !$(this).hasClass("ajax-loading") && $(this).attr("data-id")) {
@@ -44,7 +44,7 @@ jQuery(function($){
                 });
             }
         });
-<?php endif; ?>
+		<?php endif; ?>
     });
 });
 </script>

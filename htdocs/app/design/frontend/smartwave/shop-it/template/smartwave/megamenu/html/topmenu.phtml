@@ -1,0 +1,86 @@
+<?php
+/**
+ * The MIT License (MIT)
+ * Copyright (c) 2017 Serhii Popov
+ * This source file is subject to The MIT License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * https://opensource.org/licenses/MIT
+ *
+ * @category Popov
+ * @package Popov_<package>
+ * @author Serhii Popov <popow.sergiy@gmail.com>
+ * @license https://opensource.org/licenses/MIT The MIT License (MIT)
+ */
+/**
+ * This template allow render Smartwave Megamenu in static block
+ * @var $block Smartwave_Megamenu_Block_Navigation
+ */
+?>
+<?php $menuHelper = Mage::helper('megamenu'); ?>
+<?php $menuData = $menuHelper->getMenuData(); //extract($menuData); ?>
+<?php $categories = $menuData['_categories']; ?>
+<?php $block = $menuData['_block']; ?>
+
+<?php
+$html[] = '<li class="menu-item menu-item-has-children menu-parent-item">';
+$html[] = '<a href="#">' . $this->__('Product Catalog') . '</a>';
+$html[] = '<div class="nav-sublist-dropdown" style="display: none;">';
+$html[] = '<div class="container">';
+$html[] = '<ul>';
+$html[] = $block->drawColumns($categories, '', count($categories), '', 'narrow', $mode = 'dt');
+$html[] = '</ul>';
+$html[] = '</div>';
+$html[] = '</div>';
+$html[] = '</li>';
+?>
+
+<div class="header-wrapper">
+    <div class="main-nav">
+        <div class="container">
+            <div class="menu-wrapper">
+                <div class="menu-all-pages-container">
+                    <ul class="menu">
+                        <?php //echo $menuHelper->getMenuContent(); ?>
+                        <?= implode("\n", $html) ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+  var SW_MENU_POPUP_WIDTH = <?php echo $menuData['_popupWidth']; ?>;
+  jQuery(function($){
+    $(document).ready(function(){
+      $('.main-nav .menu').et_menu({
+        type: "default",
+        delayTime: <?php echo $menuHelper->getConfig('popup/popup_delay'); ?>
+      });
+        <?php if($menuHelper->getConfig('popup/ajax_load_popups')): ?>
+      url = "<?php echo Mage::getBaseUrl()."swmegamenu/index/showpopup" ?>";
+      $(".main-nav ul.menu > li.menu-static-width, .main-nav ul.menu > li.menu-full-width, .main-nav ul.menu > li.menu-item").off("mouseover").on("mouseover",function(){
+        if(!$(this).hasClass("ajax-loaded") && !$(this).hasClass("ajax-loading") && $(this).attr("data-id")) {
+          var cur_menu_item = $(this);
+          param = "?category_id="+$(this).attr("data-id");
+          $(cur_menu_item).addClass("ajax-loading");
+          $.ajax({
+            url: url+param,
+            dataType: 'json',
+            type: 'post',
+            success: function(data) {
+              $(cur_menu_item).removeClass("ajax-loading").addClass("ajax-loaded");
+              $(cur_menu_item).children(".nav-sublist-dropdown").children(".container").html(data['popup_content']).hide().fadeIn();
+            },
+            error: function(){
+              $(cur_menu_item).removeClass("ajax-loading");
+            }
+          });
+        }
+      });
+        <?php endif; ?>
+    });
+  });
+</script>

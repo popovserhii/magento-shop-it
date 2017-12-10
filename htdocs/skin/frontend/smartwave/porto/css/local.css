@@ -3961,3 +3961,5 @@ body.side-header .top-container,body.side-header .main-container,body.side-heade
 .header-container.type29 .main-nav ul.menu >li.menu-full-width >a:after,.header-container.type29 .main-nav ul.menu >li.menu-item-has-children >a:after,.header-container.type29 .main-nav ul.menu >li.menu-static-width >a:after{content:'\e81a';right:5px}
 .header-container.type29 .main-nav .menu > li:nth-last-child(1) .nav-sublist-dropdown .container > ul .menu-item-has-children .nav-sublist,.header-container.type29 .main-nav .menu > li:nth-last-child(2) .nav-sublist-dropdown .container > ul .menu-item-has-children .nav-sublist{left:100%;right:auto}
 .header-container.type29 .header .custom-block{display:inline-block;font-family: 'Oswald';font-size:14px;font-weight:400;}
+
+
