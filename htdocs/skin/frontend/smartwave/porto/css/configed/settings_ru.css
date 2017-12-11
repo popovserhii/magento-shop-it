@@ -1,6 +1,6 @@
 /**
  * WARNING: Do not change this file. Your changes will be lost.
- * 2017-12-10 22:30:16 */
+ * 2017-12-10 23:15:45 */
 
 select {
     -webkit-appearance: none;
@@ -1249,6 +1249,11 @@ a.addtowishlist:hover, .link-wishlist:hover, a.comparelink:hover, .link-compare:
         width: 34%;
     }
 }
+
+.header > .logo {
+   max-width: 250px;
+}
+
 /* custom style for menu */
 .fixed-header .menu > li:nth-last-child(1) .nav-sublist-dropdown .container > ul .menu-item-has-children .nav-sublist, .fixed-header .menu > li:nth-last-child(2) .nav-sublist-dropdown .container > ul .menu-item-has-children .nav-sublist, .main-nav .menu > li:nth-last-child(1) .nav-sublist-dropdown .container > ul .menu-item-has-children .nav-sublist, .main-nav .menu > li:nth-last-child(2) .nav-sublist-dropdown .container > ul .menu-item-has-children .nav-sublist {
     left: 100%;
