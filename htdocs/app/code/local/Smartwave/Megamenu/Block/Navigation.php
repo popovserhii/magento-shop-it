@@ -118,7 +118,7 @@ class Smartwave_Megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
             $html[] = '<li class="'.$parentClass.' '.$active.' '.$float.'" '.$data_id.'>';
             $html[] = '<a href="'.$this->getCategoryUrl($category).'">'.$cat_icon.$name.$catLabel.'</a>';
             
-            if ($mode != 'mb') {
+             if ($mode != 'mb') {
                 if($blockType == 'staticwidth'){
                     $html[] = '<div class="nav-sublist-dropdown" style="display: none; width:'.$staticWidth.';">';
                     $html[] = '<div class="container">';
@@ -299,9 +299,9 @@ class Smartwave_Megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
                     if ($child->getId() == $keyCurrent) $active = ' act';
                 }
                 // ---category label
-                $label = $this->_getLabelHtml($catModel, $level);
+                 $label = $this->_getLabelHtml($catModel, $level);
                 // --- format category name ---
-                $name = $this->escapeHtml($child->getName());
+                   $name = $this->escapeHtml($child->getName());
                 if (Mage::getStoreConfig('megamenu/general/non_breaking_space'))
                     $name = str_replace(' ', '&nbsp;', $name);
                 $class = 'menu-item';
@@ -373,7 +373,7 @@ class Smartwave_Megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
         {
             if ($type == 'wide') {
                 //$class = 'col-sm-'.$colWidth; ---version 1.0.0---
-				$class = 'col-sw-'.$colWidth; //---version 1.0.2---
+				//$class = 'col-sw-'.$colWidth; //---version 1.0.2---
                 if (!count($value)) continue;                
                 $html.= $this->drawMenuItem($value, 1, $type, $colWidth);                
 //                if ($i == $colWidth)
